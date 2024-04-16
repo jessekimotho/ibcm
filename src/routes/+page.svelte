@@ -1,6 +1,7 @@
 <script>
 	import importBooks from '$lib/js/initDatabase';
 	import BibleSelector from '$lib/BibleSelector.svelte';
+	import BibleRangeSelector from '$lib/BibleRangeSelector.svelte';
 
 	let importing = false;
 
@@ -17,3 +18,4 @@
 </button>
 
 <BibleSelector />
+<BibleRangeSelector />
