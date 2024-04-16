@@ -1,5 +1,6 @@
 <script>
-	import importBooks from  '$lib/js/initDatabase'
+	import importBooks from '$lib/js/initDatabase';
+	import BibleSelector from '$lib/BibleSelector.svelte';
 
 	let importing = false;
 
@@ -14,3 +15,5 @@
 <button on:click={handleImport} disabled={importing}>
 	{importing ? 'Importing...' : 'Import Bible Data'}
 </button>
+
+<BibleSelector />
