@@ -1,5 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
+	import db from '$lib/js/db.js';
+
 	let books = [];
 	let chapters = [];
 	let verses = [];
@@ -9,27 +11,29 @@
 	let verseText = '';
 
 	onMount(async () => {
-		const resBooks = await fetch('/api/books');
-		books = await resBooks.json();
+		books = await db.books.toArray(); // Load books directly from IndexedDB
 	});
 
 	async function loadChapters() {
-		const resChapters = await fetch(`/api/chapters/${selectedBookId}`);
-		chapters = await resChapters.json();
-		verses = []; // Clear verses when book changes
-		verseText = ''; // Clear verse text when book changes
+		if (selectedBookId) {
+			chapters = await db.chapters.where({ book_id: Number(selectedBookId) }).toArray();
+			verses = []; // Clear verses when book changes
+			verseText = ''; // Clear verse text when book changes
+		}
 	}
 
 	async function loadVerses() {
-		const resVerses = await fetch(`/api/verses/${selectedChapterId}`);
-		verses = await resVerses.json();
-		verseText = ''; // Clear verse text when chapter changes
+		if (selectedChapterId) {
+			verses = await db.verses.where({ chapter_id: Number(selectedChapterId) }).toArray();
+			verseText = ''; // Clear verse text when chapter changes
+		}
 	}
 
 	async function showVerseText() {
-		const resVerse = await fetch(`/api/verse/${selectedVerseId}`);
-		const data = await resVerse.json();
-		verseText = data.text;
+		if (selectedVerseId) {
+			const verse = await db.verses.get(Number(selectedVerseId));
+			verseText = verse ? verse.text : ''; // Show the text of the selected verse
+		}
 	}
 </script>
 
