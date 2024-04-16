@@ -1,4 +1,5 @@
-import db from '$lib/js/db.js';
+import db from './db';
+
 
 const bookNames = [
     "Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel",
@@ -16,36 +17,37 @@ async function importBooks() {
         return fetch(`/bible/${fileName}.json`)
             .then(res => res.json())
             .then(data => ({ book, data }))
-            .catch(error => {
-                console.error(`Error fetching data for ${book}:`, error);
-                return null;
-            });
+            .catch(error => console.error(`Error fetching data for ${book}:`, error));
     });
 
     const booksData = await Promise.all(fetchPromises);
-    const filteredBooksData = booksData.filter(i => i !== null); // Ensure only successful fetches are processed
+    const filteredBooksData = booksData.filter(i => i !== null);
 
     try {
         await db.transaction('rw', db.books, db.chapters, db.verses, async () => {
             for (const { book, data } of filteredBooksData) {
-                const bookId = await db.books.add({ name: book });
+                await db.books.add({ name: book });
                 for (const chapter of data.chapters) {
-                    const chapterId = await db.chapters.add({
-                        book_id: bookId,
-                        number: chapter.chapter
+                    await db.chapters.add({
+                        book_name: book,
+                        number: chapter.chapter // Ensure 'number' matches the key path exactly
                     });
-                    const verses = chapter.verses.map(verse => ({
-                        chapter_id: chapterId,
-                        number: verse.verse, // Assuming your JSON has verse numbers
-                        text: verse.text
-                    }));
-                    await db.verses.bulkAdd(verses);
+                    for (const verse of chapter.verses) {
+                        await db.verses.add({
+                            book_name: book,
+                            chapter_number: chapter.chapter,
+                            verse_number: verse.verse,
+                            text: verse.text // Ensure these match the compound key definition
+                        });
+                    }
+                    
                 }
-                console.log(`Import successful for ${book}!`);
+                 console.log(`Import successful for ${book}!`);
             }
         });
+        console.log('Import successful!');
     } catch (error) {
-        console.error(`Error during database transaction:`, error);
+        console.error('Error during database transaction:', error);
     }
 }
 
