@@ -9,16 +9,17 @@
 		versesOutput = [];
 		errorMessage = '';
 
-		// More precise regex to capture all input cases
-		const match = userInput.match(/^(\w+)\s+(\d+)(?::(\d+))?(?:-(\d+)(?::(\d+))?)?$/);
+		// Enhanced regex to handle spaces around input parts
+		const match = userInput
+			.trim()
+			.match(/^(\w+)\s+(\d+)(?:\s*:\s*(\d+))?(?:\s*-\s*(\d+)(?:\s*:\s*(\d+))?)?$/);
 		if (!match) {
 			errorMessage =
-				"Invalid input format. Use 'Book Chapter', 'Book Chapter:Verse', 'Book Chapter:Verse - Chapter:Verse', or 'Book Chapter - Chapter'.";
+				"Invalid input format. Please ensure the format matches 'Book Chapter', 'Book Chapter:Verse', 'Book Chapter:Verse-Verse', or 'Book Chapter-Chapter'.";
 			return;
 		}
 
-		const [, bookName, startChapter, startVerse, endChapter = startChapter, endVerse = startVerse] =
-			match;
+		const [, bookName, startChapter, startVerse, endChapterOrVerse, endVerse] = match;
 
 		try {
 			const book = await db.books.where({ name: bookName }).first();
@@ -27,33 +28,39 @@
 				return;
 			}
 
-			// Query construction based on input type
 			let query;
 			if (startVerse) {
-				if (endVerse) {
-					if (startChapter !== endChapter) {
-						// Multiple chapters, possibly with verse range in the last chapter
-						query = db.verses.where('chapter_id').between(Number(startChapter), Number(endChapter));
-					} else {
-						// Single chapter, specific verse range
-						query = db.verses
-							.where({ chapter_id: Number(startChapter) })
-							.and(
-								(verse) => verse.number >= Number(startVerse) && verse.number <= Number(endVerse)
-							);
-					}
+				if (endChapterOrVerse && !endVerse) {
+					// Verse range within the same chapter
+					query = db.verses
+						.where({ chapter_id: Number(startChapter) })
+						.and(
+							(verse) =>
+								verse.number >= Number(startVerse) && verse.number <= Number(endChapterOrVerse)
+						);
+				} else if (endVerse) {
+					// Verse range spanning multiple chapters (adjust logic here if necessary)
+					query = db.verses
+						.where('chapter_id')
+						.between(Number(startChapter), Number(endChapterOrVerse))
+						.and((verse) => verse.number >= Number(startVerse) && verse.number <= Number(endVerse));
 				} else {
 					// Single verse
 					query = db.verses.where({ chapter_id: Number(startChapter), number: Number(startVerse) });
 				}
+			} else if (endChapterOrVerse) {
+				// Chapter range
+				query = db.verses
+					.where('chapter_id')
+					.between(Number(startChapter), Number(endChapterOrVerse));
 			} else {
-				// Full chapters, possibly multiple
-				query = db.verses.where('chapter_id').between(Number(startChapter), Number(endChapter));
+				// Entire single chapter
+				query = db.verses.where({ chapter_id: Number(startChapter) });
 			}
 
 			versesOutput = await query.toArray();
 
-			if (versesOutput.length === 0) {
+			if (versesOutput.length == 0) {
 				errorMessage = 'No verses found for the specified range.';
 			}
 		} catch (error) {
@@ -64,7 +71,11 @@
 </script>
 
 <div>
-	<input type="text" bind:value={userInput} placeholder="e.g., Genesis 1:3-15" />
+	<input
+		type="text"
+		bind:value={userInput}
+		placeholder="e.g., Genesis 1, Genesis 1:1, Genesis 1:1-3, Genesis 3-4"
+	/>
 	<button on:click={fetchVerses}>Fetch Verses</button>
 	{#if errorMessage}
 		<p class="error">{errorMessage}</p>
