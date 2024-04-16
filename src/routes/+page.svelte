@@ -1,2 +1,16 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import importBooks from  '$lib/js/initDatabase'
+
+	let importing = false;
+
+	async function handleImport() {
+		importing = true;
+		await importBooks();
+		importing = false;
+		alert('Import completed!');
+	}
+</script>
+
+<button on:click={handleImport} disabled={importing}>
+	{importing ? 'Importing...' : 'Import Bible Data'}
+</button>
