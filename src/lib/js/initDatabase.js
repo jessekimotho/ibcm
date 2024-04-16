@@ -13,33 +13,34 @@ const bookNames = [
 async function importBooks() {
     const fetchPromises = bookNames.map(book => {
         const fileName = book.replace(/\s/g, '');
-        return fetch(`/bible/${fileName}.json`).then(res => res.json().then(data => ({ book, data }))).catch(error => {
-            console.error(`Error fetching data for ${book}:`, error);
-            return null; // Continue processing other books even if one fails
-        });
+        return fetch(`/bible/${fileName}.json`)
+            .then(res => res.json())
+            .then(data => ({ book, data }))
+            .catch(error => {
+                console.error(`Error fetching data for ${book}:`, error);
+                return null;
+            });
     });
 
     const booksData = await Promise.all(fetchPromises);
+    const filteredBooksData = booksData.filter(i => i !== null); // Ensure only successful fetches are processed
 
     try {
         await db.transaction('rw', db.books, db.chapters, db.verses, async () => {
-            for (const item of booksData.filter(i => i !== null)) {
-                const { book, data } = item;
+            for (const { book, data } of filteredBooksData) {
                 const bookId = await db.books.add({ name: book });
-                const chapters = data.chapters.map(chapter => ({ book_id: bookId, number: chapter.chapter }));
-                const chapterIds = await db.chapters.bulkAdd(chapters, { returnKeys: true });
-
-                const verses = [];
-                data.chapters.forEach((chapter, index) => {
-                    chapter.verses.forEach(verse => {
-                        verses.push({
-                            chapter_id: chapterIds[index],
-                            text: verse.text
-                        });
+                for (const chapter of data.chapters) {
+                    const chapterId = await db.chapters.add({
+                        book_id: bookId,
+                        number: chapter.chapter
                     });
-                });
-
-                await db.verses.bulkAdd(verses);
+                    const verses = chapter.verses.map(verse => ({
+                        chapter_id: chapterId,
+                        number: verse.verse, // Assuming your JSON has verse numbers
+                        text: verse.text
+                    }));
+                    await db.verses.bulkAdd(verses);
+                }
                 console.log(`Import successful for ${book}!`);
             }
         });

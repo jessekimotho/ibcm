@@ -8,6 +8,4 @@ db.version(1).stores({
     verses: '++id, chapter_id, text'
 });
 
-
-
 export default db;
