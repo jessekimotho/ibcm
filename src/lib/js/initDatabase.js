@@ -28,21 +28,22 @@ async function importBooks() {
             for (const { book, data } of filteredBooksData) {
                 await db.books.add({ name: book });
                 for (const chapter of data.chapters) {
+                    const chapterNumber = parseInt(chapter.chapter); // Convert to integer
                     await db.chapters.add({
                         book_name: book,
-                        number: chapter.chapter // Ensure 'number' matches the key path exactly
+                        number: chapterNumber // Ensure 'number' matches the key path exactly
                     });
                     for (const verse of chapter.verses) {
+                        const verseNumber = parseInt(verse.verse); // Convert to integer
                         await db.verses.add({
                             book_name: book,
-                            chapter_number: chapter.chapter,
-                            verse_number: verse.verse,
+                            chapter_number: chapterNumber,
+                            verse_number: verseNumber,
                             text: verse.text // Ensure these match the compound key definition
                         });
                     }
-                    
                 }
-                 console.log(`Import successful for ${book}!`);
+                console.log(`Import successful for ${book}!`);
             }
         });
         console.log('Import successful!');
