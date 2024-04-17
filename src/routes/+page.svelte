@@ -4,10 +4,12 @@
 	import BibleRangeSelector from '$lib/BibleRangeSelector.svelte';
 	import ReferenceChecker from '$lib/ReferenceChecker.svelte';
 	import DevotionImport from '$lib/DevotionImport.svelte';
+	import Devotion from '$lib/Devotion.svelte';
 </script>
 
 <BibleImport />
 <DevotionImport />
+<Devotion />
+<ReferenceChecker />
 <!-- <BibleSelector /> -->
 <!-- <BibleRangeSelector /> -->
-<ReferenceChecker />

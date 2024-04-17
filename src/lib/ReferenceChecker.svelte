@@ -1,10 +1,13 @@
 <script>
 	import db from '$lib/js/db.js';
+	import { selectedPassage } from '$lib/js/store.js'; // Import the store
 
-	let userInput = '';
 	let chaptersOutput = []; // This will hold chapters and their verses
 	let errorMessage = '';
 	let classification = '';
+
+	$: console.log($selectedPassage);
+	$: classifyAndFetch($selectedPassage);
 
 	async function fetchSingleChapter(bookName, chapterNumber) {
 		const book = await db.books.where('bookName').equals(bookName).first();
@@ -107,8 +110,8 @@
 		}
 	}
 
-	function classifyAndFetch() {
-		const trimmedInput = userInput.trim();
+	function classifyAndFetch(reference) {
+		const trimmedInput = reference.trim();
 		const formattedInput = capitalizeInput(trimmedInput);
 		errorMessage = '';
 		chaptersOutput = [];
@@ -149,12 +152,15 @@
 </script>
 
 <div>
+	<!-- <h2>Selected Passage:</h2>
+	<p>{$selectedPassageValue}</p>
+
 	<input
 		type="text"
 		bind:value={userInput}
 		on:input={classifyAndFetch}
 		placeholder="Enter reference (e.g., Genesis 1, Genesis 1:1, Genesis 1:1-3, Genesis 3-4)"
-	/>
+	/> -->
 	<p>Classification: {classification}</p>
 	{#if errorMessage}
 		<p class="error">{errorMessage}</p>
