@@ -164,7 +164,7 @@
 
 	{#each chaptersOutput as chapter}
 		<h3>Chapter {chapter.chapterNumber}</h3>
-		<ol>
+		<ol start={chapter.verses[0]?.verseNumber}>
 			{#each chapter.verses as verse}
 				<li>{verse.text}</li>
 			{/each}
