@@ -5,9 +5,10 @@ const db = new Dexie('BibleDatabase');
 
 // Define the database schema
 db.version(1).stores({
-    books: 'bookName', // 'name' of the book as the primary key
-    chapters: '[bookName+chapterNumber],bookName', // Compound primary key for chapters and a secondary index on book_name
-    verses: '[bookName+chapterNumber+verseNumber],bookName,chapterNumber' // Compound primary key for verses and secondary indexes on book_name and chapter_number
+    books: 'bookName',
+    chapters: '[bookName+chapterNumber],bookName', 
+    verses: '[bookName+chapterNumber+verseNumber],bookName,chapterNumber', 
+    daily_entries: '++id, date, year1_passages, year2_passages, revised_memory_verse, used_prayer_journal, daily_notes, meditation_verse, planner_tasks'
 });
 
 export default db;

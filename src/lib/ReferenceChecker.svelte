@@ -1,5 +1,4 @@
 <script>
-	import { onMount } from 'svelte';
 	import db from '$lib/js/db.js';
 
 	let userInput = '';
@@ -7,7 +6,6 @@
 	let errorMessage = '';
 	let classification = '';
 
-	// Fetching chapters and verses based on different classifications
 	async function fetchSingleChapter(bookName, chapterNumber) {
 		const book = await db.books.where('bookName').equals(bookName).first();
 		if (!book) {
