@@ -12,41 +12,50 @@ const bookNames = [
 ];
 
 async function importBooks() {
+    // Fetch and prepare data for all books
     const fetchPromises = bookNames.map(book => {
-        const fileName = book.replace(/\s/g, '');
+        const fileName = book.replace(/\s/g, '');  // Remove spaces for file names
         return fetch(`/bible/${fileName}.json`)
             .then(res => res.json())
             .then(data => ({ book, data }))
-            .catch(error => console.error(`Error fetching data for ${book}:`, error));
+            .catch(error => {
+                console.error(`Error fetching data for ${book}:`, error);
+                return null; // Continue with other fetches even if one fails
+            });
     });
 
     const booksData = await Promise.all(fetchPromises);
-    const filteredBooksData = booksData.filter(i => i !== null);
+    const filteredBooksData = booksData.filter(i => i !== null);  // Filter out failed fetches
 
     try {
+        // Use a transaction for all DB operations
         await db.transaction('rw', db.books, db.chapters, db.verses, async () => {
             for (const { book, data } of filteredBooksData) {
-                await db.books.add({ name: book });
+                // Add book, update if it already exists due to primary key constraint
+                await db.books.put({ bookName: book });
+
                 for (const chapter of data.chapters) {
-                    const chapterNumber = parseInt(chapter.chapter); // Convert to integer
-                    await db.chapters.add({
-                        book_name: book,
-                        number: chapterNumber // Ensure 'number' matches the key path exactly
+                    const chapterNumber = parseInt(chapter.chapter); // Ensure chapter number is an integer
+                    await db.chapters.put({
+                        bookName: book,
+                        chapterNumber: chapterNumber
                     });
+
                     for (const verse of chapter.verses) {
-                        const verseNumber = parseInt(verse.verse); // Convert to integer
-                        await db.verses.add({
-                            book_name: book,
-                            chapter_number: chapterNumber,
-                            verse_number: verseNumber,
-                            text: verse.text // Ensure these match the compound key definition
+                        const verseNumber = parseInt(verse.verse); // Ensure verse number is an integer
+                        await db.verses.put({
+                            bookName: book,
+                            chapterNumber: chapterNumber,
+                            verseNumber: verseNumber,
+                            text: verse.text
                         });
                     }
                 }
-                console.log(`Import successful for ${book}!`);
+                console.log(`Import successful for ${book}!`);  // Log successful import for each book
             }
         });
-        console.log('Import successful!');
+
+        console.log('Overall import process completed successfully!');
     } catch (error) {
         console.error('Error during database transaction:', error);
     }
