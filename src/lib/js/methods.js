@@ -150,11 +150,13 @@ export function capitalizeInput(input) {
     return input.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 }
 
+// Enhanced regex to handle cross-chapter verse range as well as simpler cases
+const regex = /^(\d*\s*\w+[\w\s]*?)\s+(\d+)(:\d+)?(-(\d+)(:\d+)?)?$/;
+    
+
 export function classifyAndFetch(reference) {
     const trimmedInput = reference.trim();
 
-    // Enhanced regex to handle cross-chapter verse range as well as simpler cases
-    const regex = /^(\d*\s*\w+[\w\s]*?)\s+(\d+)(:\d+)?(-(\d+)(:\d+)?)?$/;
     const match = trimmedInput.match(regex);
 
     if (!match) {
