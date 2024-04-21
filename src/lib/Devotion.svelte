@@ -2,10 +2,19 @@
 	import { onMount } from 'svelte';
 	import { selectedPassage } from '$lib/js/store.js'; // Store import
 	import db from '$lib/js/db.js'; // DB import
+	import { writable } from 'svelte/store';
 
 	let selectedDate = new Date();
 	let dateString = formatDateString(selectedDate); // Initialize dateString from selectedDate
 	let devotionDetails = null;
+
+	// Initialize a local writable store for input binding
+	let passageInput = writable('');
+
+	// Subscribe to selectedPassage to update the input field whenever it changes externally
+	selectedPassage.subscribe((value) => {
+		passageInput.set(value);
+	});
 
 	function formatDateString(date) {
 		return date.toISOString().split('T')[0]; // Formats the date to "yyyy-MM-dd"
@@ -26,12 +35,20 @@
 	function selectPassage(passage) {
 		selectedPassage.set(passage);
 	}
+
+	// Update the store when the input field changes
+	function handleInputChange(event) {
+		selectedPassage.set(event.target.value);
+	}
 </script>
 
 <div>
 	<label for="datePicker">Select a date:</label>
 	<input type="date" id="datePicker" bind:value={dateString} on:change={changeDate} />
-	<!-- Bind dateString instead of selectedDate -->
+
+	<!-- Input field for editing or entering passage directly -->
+	<label for="passageInput">Edit Passage:</label>
+	<input type="text" id="passageInput" bind:value={$passageInput} on:input={handleInputChange} />
 
 	{#if devotionDetails}
 		<div>
