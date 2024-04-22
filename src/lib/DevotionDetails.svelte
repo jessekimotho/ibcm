@@ -50,6 +50,8 @@
 	}
 </script>
 
+
+Devotional Details
 {#if error}
 	<p class="error">{error}</p>
 {:else if devotionDetails}
