@@ -1,142 +1,3662 @@
 [
-    {
-        "date": "2024-01-01",
-        "y1p1": "Genesis 1",
-        "y1p2": "Matthew 1:1-12",
-        "y1p3": "Psalms 1",
-        "y1p4": "Proverbs 1:1-9",
-        "y2p1": "2 Kings 9",
-        "y2p2": "Acts 7:30-40",
-        "prayer_passage": "1 John 2:1"
-    },
-    {
-        "date": "2024-01-02",
-        "y1p1": "Genesis 2",
-        "y1p2": "Matthew 1:13-25",
-        "y1p3": "Psalms 2",
-        "y1p4": "Proverbs 1:10-16",
-        "y2p1": "2 Kings 10",
-        "y2p2": "Acts 7:41-51",
-        "prayer_passage": "Deutronomy 4:24"
-    },
-    {
-        "date": "2024-01-03",
-        "y1p1": "Genesis 3",
-        "y1p2": "Matthew 2:1-12",
-        "y1p3": "Psalms 3",
-        "y1p4": "Proverbs 1:17-25",
-        "y2p1": "2 Kings 11",
-        "y2p2": "Acts 8:1-8",
-        "prayer_passage": "1 Peter 2:6"
-    },
-    {
-        "date": "2024-01-04",
-        "y1p1": "Genesis 4",
-        "y1p2": "Matthew 2:13-123",
-        "y1p3": "Psalms 4",
-        "y1p4": "Proverbs 1:26-33",
-        "y2p1": "2 Kings 12",
-        "y2p2": "Acts 7:41-51",
-        "prayer_passage": "2 Corinthians 6:18"
-    },
-    {
-        "date": "2024-01-05",
-        "y1p1": "Genesis 5:1-6:11",
-        "y1p2": "Matthew 3",
-        "y1p3": "Psalms 5",
-        "y1p4": "Proverbs 2:1-5",
-        "y2p1": "2 Kings 13",
-        "y2p2": "Acts 8:9-17",
-        "prayer_passage": "2 Corinthians 9:8"
-    },
-    {
-        "date": "2024-01-06",
-        "y1p1": "Genesis 6:12-7:24",
-        "y1p2": "Matthew 4:1-12",
-        "y1p3": "Psalms 6",
-        "y1p4": "Proverbs 2:6-11",
-        "y2p1": "2 Kings 14",
-        "y2p2": "Acts 8:18-28",
-        "prayer_passage": "Revelation 3:14"
-    },
-    {
-        "date": "2024-01-07",
-        "y1p1": "Genesis 8:1-9:11",
-        "y1p2": "Matthew 4:13-25",
-        "y1p3": "Psalms 7",
-        "y1p4": "Proverbs 2:12-17",
-        "y2p1": "2 Kings 15",
-        "y2p2": "Acts 8:29-40",
-        "prayer_passage": "Hebrews 3:1"
-    },
-    {
-        "date": "2024-01-08",
-        "y1p1": "Genesis 9:12-10:32",
-        "y1p2": "Matthew 5:1-12",
-        "y1p3": "Psalms 8",
-        "y1p4": "Proverbs 2:18-22",
-        "y2p1": "2 Kings 16",
-        "y2p2": "Acts 9:1-9",
-        "prayer_passage": "1 John 2:2"
-    },
-    {
-        "date": "2024-01-09",
-        "y1p1": "Genesis 11",
-        "y1p2": "Matthew 5:13-20",
-        "y1p3": "Psalms 9",
-        "y1p4": "Proverbs 3:1-8",
-        "y2p1": "2 Kings 17",
-        "y2p2": "Acts 9:10-21",
-        "prayer_passage": "Daniel 7:9"
-    },
-    {
-        "date": "2024-01-10",
-        "y1p1": "Genesis 12",
-        "y1p2": "Matthew 5:21-37",
-        "y1p3": "Psalms 10",
-        "y1p4": "Proverbs 3:9-18",
-        "y2p1": "2 Kings 18",
-        "y2p2": "Acts 9:22-30",
-        "prayer_passage": "Hebrews 12:2"
-    },
-    {
-        "date": "2024-01-11",
-        "y1p1": "Genesis 13:1-14:12",
-        "y1p2": "Matthew 5:38-48",
-        "y1p3": "Psalms 11",
-        "y1p4": "Proverbs 3:19-26",
-        "y2p1": "2 Kings 19",
-        "y2p2": "Acts 9:31-43",
-        "prayer_passage": "Hebrews 5:9"
-    },
-    {
-        "date": "2024-01-12",
-        "y1p1": "Genesis 14:13-15:21",
-        "y1p2": "Matthew 6:1-15",
-        "y1p3": "Psalms 12",
-        "y1p4": "Proverbs 3:27-35",
-        "y2p1": "2 Kings 20",
-        "y2p2": "Acts 10:1-8",
-        "prayer_passage": "Acts 3:15"
-    },
-    {
-        "date": "2024-01-13",
-        "y1p1": "Genesis 16-17",
-        "y1p2": "Matthew 6:16-24",
-        "y1p3": "Psalms 13-14",
-        "y1p4": "Proverbs 4:1-6",
-        "y2p1": "2 Kings 21",
-        "y2p2": "Acts 10:9-18",
-        "prayer_passage": "Isaiah 60:16"
-    },
-    {
-        "date": "2024-01-14",
-        "y1p1": "Genesis 18",
-        "y1p2": "Matthew 6:25-34",
-        "y1p3": "Psalms 15-16",
-        "y1p4": "Proverbs 4:7-13",
-        "y2p1": "2 Kings 22",
-        "y2p2": "Acts 10:19-28",
-        "prayer_passage": "Isaiah 40:28"
-    }
+	{
+		"date": "2024-01-01",
+		"y1p1": "Genesis 1",
+		"y1p2": "Matthew 1:1-12",
+		"y1p3": "Psalms 1",
+		"y1p4": "Proverbs 1:1-9",
+		"y2p1": "2 Kings 9",
+		"y2p2": "Acts 7:30-40",
+		"prayer_passage": "1 John 2:1"
+	},
+	{
+		"date": "2024-01-02",
+		"y1p1": "Genesis 2",
+		"y1p2": "Matthew 1:13-25",
+		"y1p3": "Psalms 2",
+		"y1p4": "Proverbs 1:10-16",
+		"y2p1": "2 Kings 10",
+		"y2p2": "Acts 7:41-51",
+		"prayer_passage": "Deuteronomy 4:24"
+	},
+	{
+		"date": "2024-01-03",
+		"y1p1": "Genesis 3",
+		"y1p2": "Matthew 2:1-12",
+		"y1p3": "Psalms 3",
+		"y1p4": "Proverbs 1:17-25",
+		"y2p1": "2 Kings 11",
+		"y2p2": "Acts 8:1-8",
+		"prayer_passage": "1 Peter 2:6"
+	},
+	{
+		"date": "2024-01-04",
+		"y1p1": "Genesis 4",
+		"y1p2": "Matthew 2:13-123",
+		"y1p3": "Psalms 4",
+		"y1p4": "Proverbs 1:26-33",
+		"y2p1": "2 Kings 12",
+		"y2p2": "Acts 7:41-51",
+		"prayer_passage": "2 Corinthians 6:18"
+	},
+	{
+		"date": "2024-01-05",
+		"y1p1": "Genesis 5:1-6:11",
+		"y1p2": "Matthew 3",
+		"y1p3": "Psalms 5",
+		"y1p4": "Proverbs 2:1-5",
+		"y2p1": "2 Kings 13",
+		"y2p2": "Acts 8:9-17",
+		"prayer_passage": "2 Corinthians 9:8"
+	},
+	{
+		"date": "2024-01-06",
+		"y1p1": "Genesis 6:12-7:24",
+		"y1p2": "Matthew 4:1-12",
+		"y1p3": "Psalms 6",
+		"y1p4": "Proverbs 2:6-11",
+		"y2p1": "2 Kings 14",
+		"y2p2": "Acts 8:18-28",
+		"prayer_passage": "Revelation 3:14"
+	},
+	{
+		"date": "2024-01-07",
+		"y1p1": "Genesis 8:1-9:11",
+		"y1p2": "Matthew 4:13-25",
+		"y1p3": "Psalms 7",
+		"y1p4": "Proverbs 2:12-17",
+		"y2p1": "2 Kings 15",
+		"y2p2": "Acts 8:29-40",
+		"prayer_passage": "Hebrews 3:1"
+	},
+	{
+		"date": "2024-01-08",
+		"y1p1": "Genesis 9:12-10:32",
+		"y1p2": "Matthew 5:1-12",
+		"y1p3": "Psalms 8",
+		"y1p4": "Proverbs 2:18-22",
+		"y2p1": "2 Kings 16",
+		"y2p2": "Acts 9:1-9",
+		"prayer_passage": "1 John 2:2"
+	},
+	{
+		"date": "2024-01-09",
+		"y1p1": "Genesis 11",
+		"y1p2": "Matthew 5:13-20",
+		"y1p3": "Psalms 9",
+		"y1p4": "Proverbs 3:1-8",
+		"y2p1": "2 Kings 17",
+		"y2p2": "Acts 9:10-21",
+		"prayer_passage": "Daniel 7:9"
+	},
+	{
+		"date": "2024-01-10",
+		"y1p1": "Genesis 12",
+		"y1p2": "Matthew 5:21-37",
+		"y1p3": "Psalms 10",
+		"y1p4": "Proverbs 3:9-18",
+		"y2p1": "2 Kings 18",
+		"y2p2": "Acts 9:22-30",
+		"prayer_passage": "Hebrews 12:2"
+	},
+	{
+		"date": "2024-01-11",
+		"y1p1": "Genesis 13:1-14:12",
+		"y1p2": "Matthew 5:38-48",
+		"y1p3": "Psalms 11",
+		"y1p4": "Proverbs 3:19-26",
+		"y2p1": "2 Kings 19",
+		"y2p2": "Acts 9:31-43",
+		"prayer_passage": "Hebrews 5:9"
+	},
+	{
+		"date": "2024-01-12",
+		"y1p1": "Genesis 14:13-15:21",
+		"y1p2": "Matthew 6:1-15",
+		"y1p3": "Psalms 12",
+		"y1p4": "Proverbs 3:27-35",
+		"y2p1": "2 Kings 20",
+		"y2p2": "Acts 10:1-8",
+		"prayer_passage": "Acts 3:15"
+	},
+	{
+		"date": "2024-01-13",
+		"y1p1": "Genesis 16-17",
+		"y1p2": "Matthew 6:16-24",
+		"y1p3": "Psalms 13-14",
+		"y1p4": "Proverbs 4:1-6",
+		"y2p1": "2 Kings 21",
+		"y2p2": "Acts 10:9-18",
+		"prayer_passage": "Isaiah 60:16"
+	},
+	{
+		"date": "2024-01-14",
+		"y1p1": "Genesis 18",
+		"y1p2": "Matthew 6:25-34",
+		"y1p3": "Psalms 15-16",
+		"y1p4": "Proverbs 4:7-13",
+		"y2p1": "2 Kings 22",
+		"y2p2": "Acts 10:19-28",
+		"prayer_passage": "Isaiah 40:28"
+	},
+	{
+		"date": "2024-01-15",
+		"y1p1": "Genesis 19",
+		"y1p2": "Matthew 7:1-11",
+		"y1p3": "Psalms 17",
+		"y1p4": "Proverbs 4:14-19",
+		"y2p1": "2 Kings 23",
+		"y2p2": "Acts 10:29-37",
+		"prayer_passage": "Isaiah 43:15"
+	},
+	{
+		"date": "2024-01-16",
+		"y1p1": "Genesis 20",
+		"y1p2": "Matthew 7:12-20",
+		"y1p3": "Psalms 18:1-24",
+		"y1p4": "Proverbs 4-20-27",
+		"y2p1": "2 Kings 24",
+		"y2p2": "Acts:10-38-48",
+		"prayer_passage": "Colossians 1:18"
+	},
+	{
+		"date": "2024-01-17",
+		"y1p1": "Genesis 21",
+		"y1p2": "Matthew 7:21-29",
+		"y1p3": "Psalms 18:25-50",
+		"y1p4": "Proverbs 5:1-6",
+		"y2p1": "2 Kings 25",
+		"y2p2": "Acts 11:1-9",
+		"prayer_passage": "Revelation 1:8"
+	},
+	{
+		"date": "2024-01-18",
+		"y1p1": "Genesis 22",
+		"y1p2": "Matthew 8:1-9",
+		"y1p3": "Psalms 19",
+		"y1p4": "Proverbs 5:7-13",
+		"y2p1": "1 Chronicles 1",
+		"y2p2": "Acts 11:10-18",
+		"prayer_passage": "Colossians 1:13"
+	},
+	{
+		"date": "2024-01-19",
+		"y1p1": "Genesis 23",
+		"y1p2": "Matthew 8:10-22",
+		"y1p3": "Psalms 20",
+		"y1p4": "Proverbs 14-17",
+		"y2p1": "1 Chronicles 2",
+		"y2p2": "Acts 11 :19-30",
+		"prayer_passage": "1 Timothy 6:15"
+	},
+	{
+		"date": "2024-01-20",
+		"y1p1": "Genesis 24:1-38",
+		"y1p2": "Matthew 8:23-34",
+		"y1p3": "Psalms 21",
+		"y1p4": "Proverbs 5: 18-23",
+		"y2p1": "1 Chronicles 3",
+		"y2p2": "Acts 12:1-10",
+		"prayer_passage": "2 Timothy 2: 13"
+	},
+	{
+		"date": "2024-01-21",
+		"y1p1": "Genesis 24:39-67",
+		"y1p2": "Matthew 9:1-8",
+		"y1p3": "Psalms 22:1-18",
+		"y1p4": "Proverbs 6:1-11",
+		"y2p1": "1 Chronicles 4",
+		"y2p2": "Acts 12:11-25",
+		"prayer_passage": "Zechariah 6:12"
+	},
+	{
+		"date": "2024-01-22",
+		"y1p1": "Genesis 25",
+		"y1p2": "Matthew 9:9-17",
+		"y1p3": "Psalms 22:19-31",
+		"y1p4": "Proverbs 6:12-19",
+		"y2p1": "1 Chronicles 5",
+		"y2p2": "Acts 13:1-10",
+		"prayer_passage": "John 6 :33"
+	},
+	{
+		"date": "2024-01-23",
+		"y1p1": "Genesis 26",
+		"y1p2": "Matthew 9:18-26",
+		"y1p3": "Psalms 23",
+		"y1p4": "Proverbs 6 :27-35",
+		"y2p1": "1 Chronicles 6:1-40",
+		"y2p2": "Acts 13:11-19",
+		"prayer_passage": "John 6:35"
+	},
+	{
+		"date": "2024-01-24",
+		"y1p1": "Genesis 27:1-24",
+		"y1p2": "Matthew 9:27-38",
+		"y1p3": "Psalms 24",
+		"y1p4": "Proverbs 6:27-35",
+		"y2p1": "1 Chronicles 6:41-81",
+		"y2p2": "Acts 13:20-29",
+		"prayer_passage": "Luke 5:34"
+	},
+	{
+		"date": "2024-01-25",
+		"y1p1": "Genesis 27:25-46",
+		"y1p2": "Matthew 10:1-6",
+		"y1p3": "Psalms 25",
+		"y1p4": "Proverbs 7:1-5",
+		"y2p1": "1 Chronicles 7",
+		"y2p2": "Acts 13:30-39",
+		"prayer_passage": "Revelation 22:16"
+	},
+	{
+		"date": "2024-01-26",
+		"y1p1": "Genesis 28",
+		"y1p2": "Matthew 10:7-15",
+		"y1p3": "Psalms 26",
+		"y1p4": "Proverbs 7:6-16",
+		"y2p1": "1 Chronicles 8",
+		"y2p2": "Acts 13:40-52",
+		"prayer_passage": "Psalms 18:30"
+	},
+	{
+		"date": "2024-01-27",
+		"y1p1": "Genesis 29:1-17",
+		"y1p2": "Matthew 10:16-28",
+		"y1p3": "Psalms 27",
+		"y1p4": "Proverbs 7:17-27",
+		"y2p1": "1 Chronicles 9",
+		"y2p2": "Acts 14:1-12",
+		"prayer_passage": "John 1:1"
+	},
+	{
+		"date": "2024-01-28",
+		"y1p1": "Genesis 29:18-35",
+		"y1p2": "Matthew 10:29-42",
+		"y1p3": "Psalms 28",
+		"y1p4": "Proverbs 8:1-9",
+		"y2p1": "1 Chronicles 10",
+		"y2p2": "Acts 14:13-28",
+		"prayer_passage": "Hebrews 2:10"
+	},
+	{
+		"date": "2024-01-29",
+		"y1p1": "Genesis 30:1-24",
+		"y1p2": "Matthew 11:1-6",
+		"y1p3": "Psalms 29",
+		"y1p4": "Proverbs 8:10-18",
+		"y2p1": "1 Chronicles 11",
+		"y2p2": "Acts 15:1-10",
+		"prayer_passage": "1 Peter 5:4"
+	},
+	{
+		"date": "2024-01-30",
+		"y1p1": "Genesis 30:25-43",
+		"y1p2": "Matthew 11:7-20",
+		"y1p3": "Psalms 30",
+		"y1p4": "Proverbs 8:19-31",
+		"y2p1": "1 Chronicles 12",
+		"y2p2": "Acts 15:11-18",
+		"prayer_passage": "Luke 23:35"
+	},
+	{
+		"date": "2024-01-31",
+		"y1p1": "Genesis 31:1-26",
+		"y1p2": "Matthew 11:21-30",
+		"y1p3": "Psalms 31:1-12",
+		"y1p4": "Proverbs 8:32-56",
+		"y2p1": "1 Chronicles 13",
+		"y2p2": "Acts 15:19-29",
+		"prayer_passage": "Romans 3:24"
+	},
+	{
+		"date": "2024-02-01",
+		"y1p1": "Genesis 31:27-55",
+		"y1p2": "Matthew 12:1-9",
+		"y1p3": "Psalms 31:13-24",
+		"y1p4": "Proverbs 9:1-5",
+		"y2p1": "1 Chronicles 14",
+		"y2p2": "Acts 15:30-41",
+		"prayer_passage": "Romans 8:39"
+	},
+	{
+		"date": "2024-02-02",
+		"y1p1": "Genesis 32:1-16",
+		"y1p2": "Matthew 12:10-22",
+		"y1p3": "Psalms 32",
+		"y1p4": "Proverbs 9:6-11",
+		"y2p1": "1 Chronicles 15",
+		"y2p2": "Acts 16:1-10",
+		"prayer_passage": "Luke 9:20"
+	},
+	{
+		"date": "2024-02-03",
+		"y1p1": "Genesis 32:17-32",
+		"y1p2": "Matthew 12:23-30",
+		"y1p3": "Psalms 33:1-11",
+		"y1p4": "Proverbs 9 :12-18",
+		"y2p1": "1 Chronicles 16",
+		"y2p2": "Acts 16:11-18",
+		"prayer_passage": "1 Colossians 5:7"
+	},
+	{
+		"date": "2024-02-04",
+		"y1p1": "Genesis 33",
+		"y1p2": "Matthew 12:31-37",
+		"y1p3": "Psalms 33:12-22",
+		"y1p4": "Proverbs 10:1-8",
+		"y2p1": "1 Chronicles 17",
+		"y2p2": "Acts 16:19-31",
+		"prayer_passage": "Luke 2:11"
+	},
+	{
+		"date": "2024-02-05",
+		"y1p1": "Genesis 34",
+		"y1p2": "Matthew 12:38-50",
+		"y1p3": "Psalms 34:1-11",
+		"y1p4": "Proverbs 10:6-16",
+		"y2p1": "1 Chronicles 18",
+		"y2p2": "Acts 16:32-40",
+		"prayer_passage": "1 Colossians 1:24"
+	},
+	{
+		"date": "2024-02-06",
+		"y1p1": "Genesis 35",
+		"y1p2": "Matthew 13:1-9",
+		"y1p3": "Psalms 34:12-22",
+		"y1p4": "Proverbs 10:17-24",
+		"y2p1": "1 Chronicles 19",
+		"y2p2": "Acts 17:1-12",
+		"prayer_passage": "Mark 15:32"
+	},
+	{
+		"date": "2024-02-07",
+		"y1p1": "Genesis 36:1-22",
+		"y1p2": "Matthew 13:10-17",
+		"y1p3": "Psalms 35:1-13",
+		"y1p4": "Proverbs 10:24-32",
+		"y2p1": "1 Chronicles 20",
+		"y2p2": "Acts 17:13-22",
+		"prayer_passage": "John 14:6"
+	},
+	{
+		"date": "2024-02-08",
+		"y1p1": "Genesis 36:23-43",
+		"y1p2": "Matthew 13:18-30",
+		"y1p3": "Psalms 35:14-28",
+		"y1p4": "Proverbs 11:1-7",
+		"y2p1": "1 Chronicles 21",
+		"y2p2": "Acts 17:23-34",
+		"prayer_passage": "John 14:26"
+	},
+	{
+		"date": "2024-02-09",
+		"y1p1": "Genesis 37:1-18",
+		"y1p2": "Matthew 13:31-43",
+		"y1p3": "Psalms 36",
+		"y1p4": "Proverbs 11:8-15",
+		"y2p1": "1 Chronicles 22",
+		"y2p2": "Acts 18:1-13",
+		"prayer_passage": "Psalms 65:5"
+	},
+	{
+		"date": "2024-02-10",
+		"y1p1": "Genesis 37:19-36",
+		"y1p2": "Matthew 13:44-58",
+		"y1p3": "Psalms 37:1-20",
+		"y1p4": "Proverbs 11:16-26",
+		"y2p1": "1 Chronicles 23",
+		"y2p2": "Acts 18:14-28",
+		"prayer_passage": "Luke 2:25"
+	},
+	{
+		"date": "2024-02-11",
+		"y1p1": "Genesis 38:1-14",
+		"y1p2": "Matthew 14:1-11",
+		"y1p3": "Psalms 37:21-40",
+		"y1p4": "Proverbs 11:27-31",
+		"y2p1": "1 Chronicles 24",
+		"y2p2": "Acts 19:1-10",
+		"prayer_passage": "Isaiah 28:16"
+	},
+	{
+		"date": "2024-02-12",
+		"y1p1": "Genesis 38:15-30",
+		"y1p2": "Matthew 14:12-18",
+		"y1p3": "Psalms 38:1-11",
+		"y1p4": "Proverbs 12:1-7",
+		"y2p1": "1 Chronicles 25",
+		"y2p2": "Acts 19:11-20",
+		"prayer_passage": "Isaiah 42:6"
+	},
+	{
+		"date": "2024-02-13",
+		"y1p1": "Genesis 39",
+		"y1p2": "Matthew 14:19-24",
+		"y1p3": "Psalms 38:12-22",
+		"y1p4": "Proverbs 12:6-14",
+		"y2p1": "1 Chronicles 26",
+		"y2p2": "Acts 19:21-30",
+		"prayer_passage": "Luke 1:78"
+	},
+	{
+		"date": "2024-02-14",
+		"y1p1": "Genesis 40",
+		"y1p2": "Matthew 14:25-36",
+		"y1p3": "Psalms 39",
+		"y1p4": "Proverbs 12:15-22",
+		"y2p1": "1 Chronicles 27",
+		"y2p2": "Acts 19:31-41",
+		"prayer_passage": "Romans 11:26"
+	},
+	{
+		"date": "2024-02-15",
+		"y1p1": "Genesis 41:1-27",
+		"y1p2": "Matthew 15:1-9",
+		"y1p3": "Psalms 40",
+		"y1p4": "Proverbs 12:23-28",
+		"y2p1": "1 Chronicles 28",
+		"y2p2": "Acts 20:1-12",
+		"prayer_passage": "Haggai 2:7"
+	},
+	{
+		"date": "2024-02-16",
+		"y1p1": "Genesis 41:26-57",
+		"y1p2": "Matthew 15:10-20",
+		"y1p3": "Psalms 41",
+		"y1p4": "Proverbs 13:1-6",
+		"y2p1": "1 Chronicles 29",
+		"y2p2": "Acts 20:13-25",
+		"prayer_passage": "John 6:9"
+	},
+	{
+		"date": "2024-02-17",
+		"y1p1": "Genesis 42:1-19",
+		"y1p2": "Matthew 15:21-29",
+		"y1p3": "Psalms 42",
+		"y1p4": "Proverbs 13:7-12",
+		"y2p1": "2 Chronicles 1",
+		"y2p2": "Acts 20:26-38",
+		"prayer_passage": "John 10:11"
+	},
+	{
+		"date": "2024-02-18",
+		"y1p1": "Genesis 42:20-38",
+		"y1p2": "Matthew 8:30-39",
+		"y1p3": "Psalms 43",
+		"y1p4": "Proverbs 13:13-19",
+		"y2p1": "2 Chronicles 2",
+		"y2p2": "Acts 21:1-9",
+		"prayer_passage": "John 8:12"
+	},
+	{
+		"date": "2024-02-19",
+		"y1p1": "Genesis 43",
+		"y1p2": "Matthew 16:1-12",
+		"y1p3": "Psalms 44:1-14",
+		"y1p4": "Proverbs 13:20-25",
+		"y2p1": "2 Chronicles 3",
+		"y2p2": "Acts 21:10-20",
+		"prayer_passage": "John 11:25"
+	},
+	{
+		"date": "2024-02-20",
+		"y1p1": "Genesis 44",
+		"y1p2": "Matthew 16:13-19",
+		"y1p3": "Psalms 44:15-26",
+		"y1p4": "Proverbs 14:1-9",
+		"y2p1": "2 Chronicles 4",
+		"y2p2": "Acts 21:21-30",
+		"prayer_passage": "John 15:1"
+	},
+	{
+		"date": "2024-02-21",
+		"y1p1": "Genesis 45",
+		"y1p2": "Matthew 16:20-28",
+		"y1p3": "Psalms 45",
+		"y1p4": "Proverbs 14:10-18",
+		"y2p1": "2 Chronicles 5",
+		"y2p2": "Acts 21:31-40",
+		"prayer_passage": "Exodus 3:14"
+	},
+	{
+		"date": "2024-02-22",
+		"y1p1": "Genesis 46",
+		"y1p2": "Matthew 17:1-13",
+		"y1p3": "Psalms 46",
+		"y1p4": "Proverbs 14:19-27",
+		"y2p1": "2 Chronicles 6",
+		"y2p2": "Acts 22:1-9",
+		"prayer_passage": "Genesis 1:1"
+	},
+	{
+		"date": "2024-02-23",
+		"y1p1": "Genesis 47",
+		"y1p2": "Matthew 17:14-27",
+		"y1p3": "Psalms 47",
+		"y1p4": "Proverbs 14:26-35",
+		"y2p1": "2 Chronicles 7",
+		"y2p2": "Acts 22:10-20",
+		"prayer_passage": "Mark 15:34"
+	},
+	{
+		"date": "2024-02-24",
+		"y1p1": "Genesis 48",
+		"y1p2": "Matthew 18:1-11",
+		"y1p3": "Psalms 48",
+		"y1p4": "Proverbs 15:1-8",
+		"y2p1": "2 Chronicles 8",
+		"y2p2": "Acts 22:21-30",
+		"prayer_passage": "Genesis 21:33"
+	},
+	{
+		"date": "2024-02-25",
+		"y1p1": "Genesis 49",
+		"y1p2": "Matthew 18:12-22",
+		"y1p3": "Psalms 49",
+		"y1p4": "Proverbs 15:9-17",
+		"y2p1": "2 Chronicles 9",
+		"y2p2": "Acts 23:1-11",
+		"prayer_passage": "Genesis 16:13"
+	},
+	{
+		"date": "2024-02-26",
+		"y1p1": "Genesis 50",
+		"y1p2": "Matthew 18:23-35",
+		"y1p3": "Psalms 50:1-11",
+		"y1p4": "Proverbs 15:18-24",
+		"y2p1": "2 Chronicles 10",
+		"y2p2": "Acts 23:12-21",
+		"prayer_passage": "Genesis 17:1"
+	},
+	{
+		"date": "2024-02-27",
+		"y1p1": "Exodus 1",
+		"y1p2": "Matthew 19:1-12",
+		"y1p3": "Psalms 50:12-23",
+		"y1p4": "Proverbs 15:25-33",
+		"y2p1": "2 Chronicles 11",
+		"y2p2": "Acts 23:22-35",
+		"prayer_passage": "Genesis 14:22"
+	},
+	{
+		"date": "2024-02-28",
+		"y1p1": "Exodus 2",
+		"y1p2": "Matthew 19:13-22",
+		"y1p3": "Psalms 51",
+		"y1p4": "Proverbs 16:1-8",
+		"y2p1": "2 Chronicles 12",
+		"y2p2": "Acts 24:1-13",
+		"prayer_passage": "1 John 5:20"
+	},
+	{
+		"date": "2024-02-29",
+		"y1p1": "Ecclesiastes 3",
+		"y1p2": "2 Peter 3:1-13",
+		"y1p3": "Psalms 90:1-10",
+		"y1p4": "Proverbs 27:1-7",
+		"y2p1": "Ecclesiastes 3",
+		"y2p2": "2 Peter 2:1-13",
+		"prayer_passage": "Jeremiah 10:10"
+	},
+	{
+		"date": "2024-03-01",
+		"y1p1": "Exodus 3",
+		"y1p2": "Matthew 19:23-30",
+		"y1p3": "Psalms 52",
+		"y1p4": "Proverbs 16:9-17",
+		"y2p1": "2 Chronicles 13",
+		"y2p2": "Acts 24:14-27",
+		"prayer_passage": "Ephesians 1:17"
+	},
+	{
+		"date": "2024-03-02",
+		"y1p1": "Exodus 4",
+		"y1p2": "Matthew 20:1-16",
+		"y1p3": "Psalms 53",
+		"y1p4": "Proverbs 16:18-26",
+		"y2p1": "2 Chronicles 14",
+		"y2p2": "Acts 25:1-12",
+		"prayer_passage": "James 1:17"
+	},
+	{
+		"date": "2024-03-03",
+		"y1p1": "Exodus 5",
+		"y1p2": "Matthew 20:17-28",
+		"y1p3": "Psalms 5",
+		"y1p4": "Proverbs 16:27-33",
+		"y2p1": "2 Chronicles 15",
+		"y2p2": "Acts 25:13-27",
+		"prayer_passage": "2 Colossians 1:3"
+	},
+	{
+		"date": "2024-03-04",
+		"y1p1": "Exodus 6",
+		"y1p2": "Matthew 20:29-34",
+		"y1p3": "Psalms 55:1-11",
+		"y1p4": "Proverbs 17:1-7",
+		"y2p1": "2 Chronicles 16",
+		"y2p2": "Acts 26:1-11",
+		"prayer_passage": "Psalms 68:5"
+	},
+	{
+		"date": "2024-03-05",
+		"y1p1": "Exodus 7",
+		"y1p2": "Matthew 21:1-11",
+		"y1p3": "Psalms 55:12-23",
+		"y1p4": "Proverbs 17:8-14",
+		"y2p1": "2 Chronicles 17",
+		"y2p2": "Acts 26:12-21",
+		"prayer_passage": "Hebrews 12:9"
+	},
+	{
+		"date": "2024-03-06",
+		"y1p1": "Exodus 8",
+		"y1p2": "Matthew 21:12-22",
+		"y1p3": "Psalms 56",
+		"y1p4": "Proverbs 17: 15-22",
+		"y2p1": "2 Chronicles 18",
+		"y2p2": "Acts 26:22-32",
+		"prayer_passage": "Romans 8:29"
+	},
+	{
+		"date": "2024-03-07",
+		"y1p1": "Exodus 9",
+		"y1p2": "Matthew 21:23-28",
+		"y1p3": "Psalms 57",
+		"y1p4": "Proverbs 17:23-28",
+		"y2p1": "2 Chronicles 19",
+		"y2p2": "Acts 27:1-11",
+		"prayer_passage": "Colossians 1:15"
+	},
+	{
+		"date": "2024-03-08",
+		"y1p1": "Exodus 10",
+		"y1p2": "Matthew 21:33-46",
+		"y1p3": "Psalms 58",
+		"y1p4": "Proverbs 18:1-5",
+		"y2p1": "2 Chronicles 20",
+		"y2p2": "Acts 27:12-20",
+		"prayer_passage": " Jeremiah 2:13"
+	},
+	{
+		"date": "2024-03-09",
+		"y1p1": "Exodus 11",
+		"y1p2": "Matthew 22:1-14",
+		"y1p3": "Psalms 59",
+		"y1p4": "Proverbs 18: 6-12",
+		"y2p1": "2 Chronicles 21",
+		"y2p2": "Acts 27:21-32",
+		"prayer_passage": "Colossians 2:9"
+	},
+	{
+		"date": "2024-03-10",
+		"y1p1": "Exodus 12:1-24",
+		"y1p2": "Matthew 22:15-22",
+		"y1p3": "Psalms 60-61",
+		"y1p4": "Proverbs 18:13-18",
+		"y2p1": "2 Chronicles 22",
+		"y2p2": "Acts 27:33-44",
+		"prayer_passage": "Psalms 89:17"
+	},
+	{
+		"date": "2024-03-11",
+		"y1p1": "Exodus 12:24-51",
+		"y1p2": "Matthew 22:23-33",
+		"y1p3": "Psalms 62",
+		"y1p4": "Proverbs 18:19-24",
+		"y2p1": "2 Chronicles 23",
+		"y2p2": "Acts 28:1-10",
+		"prayer_passage": "Psalms 89:18"
+	},
+	{
+		"date": "2024-03-12",
+		"y1p1": "Exodus 13",
+		"y1p2": "Matthew 22:34-46",
+		"y1p3": "Psalms 63",
+		"y1p4": "Proverbs 19:1-8",
+		"y2p1": "2 Chronicles 24",
+		"y2p2": "Acts 28:11-18",
+		"prayer_passage": "Luke 2:32"
+	},
+	{
+		"date": "2024-03-13",
+		"y1p1": "Exodus 14",
+		"y1p2": "Matthew 23:1-17",
+		"y1p3": "Psalms 64",
+		"y1p4": "Proverbs 19:9-15",
+		"y2p1": "2 Chronicles 25",
+		"y2p2": "Acts 28:19-31",
+		"prayer_passage": "Psalms 86:10"
+	},
+	{
+		"date": "2024-03-14",
+		"y1p1": "Exodus 15",
+		"y1p2": "Matthew 23:18-28",
+		"y1p3": "Psalms 65",
+		"y1p4": "Proverbs 19:16-22",
+		"y2p1": "2 Chronicles 26",
+		"y2p2": "Romans 1:1-9",
+		"prayer_passage": "Ephesians 4:6"
+	},
+	{
+		"date": "2024-03-15",
+		"y1p1": "Exodus 16",
+		"y1p2": "Matthew 23:29-39",
+		"y1p3": "Psalms 66:1-9",
+		"y1p4": "Proverbs 19:23-29",
+		"y2p1": "2 Chronicles 27",
+		"y2p2": "Romans 1:10-21",
+		"prayer_passage": "Psalms 86:15"
+	},
+	{
+		"date": "2024-03-16",
+		"y1p1": "Exodus 17",
+		"y1p2": "Matthew 24:1-13",
+		"y1p3": "Psalms 66:10-20",
+		"y1p4": "Proverbs 20:1-7",
+		"y2p1": "2 Chronicles 28",
+		"y2p2": "Romans 1:22-32",
+		"prayer_passage": "Psalms 57:2"
+	},
+	{
+		"date": "2024-03-17",
+		"y1p1": "Exodus 18",
+		"y1p2": "Matthew 24:14-26",
+		"y1p3": "Psalms 67",
+		"y1p4": "Proverbs 20:8-15",
+		"y2p1": "2 Chronicles 29",
+		"y2p2": "Romans 2:1-13",
+		"prayer_passage": "1 Timothy 3:16"
+	},
+	{
+		"date": "2024-03-18",
+		"y1p1": "Exodus 19",
+		"y1p2": "Matthew 24:27-39",
+		"y1p3": "Psalms 68:1-12",
+		"y1p4": "Proverbs 20:16-22",
+		"y2p1": "2 Chronicles 30",
+		"y2p2": "Romans 2:14-29",
+		"prayer_passage": "Job 35:10"
+	},
+	{
+		"date": "2024-03-19",
+		"y1p1": "Exodus 20",
+		"y1p2": "Matthew 24:40-51",
+		"y1p3": "Psalms 68:13-21",
+		"y1p4": "Proverbs 20:23-30",
+		"y2p1": "2 Chronicles 31",
+		"y2p2": "Romans 3:1-12",
+		"prayer_passage": "Psalms 18:2"
+	},
+	{
+		"date": "2024-03-20",
+		"y1p1": "Exodus 21:1-17",
+		"y1p2": "Matthew 25:1-13",
+		"y1p3": "Psalms 68:22-35",
+		"y1p4": "Proverbs 21:1-8",
+		"y2p1": "2 Chronicles 32",
+		"y2p2": "Romans 3:13-23",
+		"prayer_passage": "Psalms 18:2"
+	},
+	{
+		"date": "2024-03-21",
+		"y1p1": "Exodus 21:18-36",
+		"y1p2": "Matthew 25:14-30",
+		"y1p3": "Psalms 69:1-8",
+		"y1p4": "Proverbs 21:9-16",
+		"y2p1": "2 Chronicles 33",
+		"y2p2": "Romans 3:24-31",
+		"prayer_passage": "Psalms 18:2"
+	},
+	{
+		"date": "2024-03-22",
+		"y1p1": "Exodus 22",
+		"y1p2": "Matthew 25:31-46",
+		"y1p3": "Psalms 69:9-16",
+		"y1p4": "Proverbs 21:17-22",
+		"y2p1": "2 Chronicles 34",
+		"y2p2": "Romans 4:1-13",
+		"prayer_passage": "Mark 12:26"
+	},
+	{
+		"date": "2024-03-23",
+		"y1p1": "Exodus 23",
+		"y1p2": "Matthew 26:1-13",
+		"y1p3": "Psalms 69:17-24",
+		"y1p4": "Proverbs 21:23-31",
+		"y2p1": "2 Chronicles 35",
+		"y2p2": "Romans 4:14-25",
+		"prayer_passage": "Mark 12:27"
+	},
+	{
+		"date": "2024-03-24",
+		"y1p1": "Exodus 25:21-40",
+		"y1p2": "Matthew 26:31-44",
+		"y1p3": "Psalms 71:1-11",
+		"y1p4": "Proverbs 22:16-21",
+		"y2p1": "Ezra 2:1-36",
+		"y2p2": "Romans 6:1-11",
+		"prayer_passage": "2 Colossians 1:3"
+	},
+	{
+		"date": "2024-03-25",
+		"y1p1": "Exodus 26",
+		"y1p2": "Matthew 26:45-60",
+		"y1p3": "Psalms 71:12-24",
+		"y1p4": "Proverbs 22:22-29",
+		"y2p1": "Ezra 2:37-70",
+		"y2p2": "Romans 6:12-23",
+		"prayer_passage": " Jeremiah 32:27"
+	},
+	{
+		"date": "2024-03-26",
+		"y1p1": "Exodus 27",
+		"y1p2": "Matthew 26:61-75",
+		"y1p3": "Psalms 72",
+		"y1p4": "Proverbs 23:1-8",
+		"y2p1": "Ezra 3",
+		"y2p2": "1 Peter 5:10",
+		"prayer_passage": null
+	},
+	{
+		"date": "2024-03-27",
+		"y1p1": "Exodus 24",
+		"y1p2": "Matthew 26:14-20",
+		"y1p3": "Psalms 69:25-36",
+		"y1p4": "Proverbs 22:1-7",
+		"y2p1": "2 Chronicles 36",
+		"y2p2": "Romans 5:1-10",
+		"prayer_passage": "Psalms 29:3"
+	},
+	{
+		"date": "2024-03-28",
+		"y1p1": "Exodus 25:1-20",
+		"y1p2": "Matthew 26:21-30",
+		"y1p3": "Psalms 70",
+		"y1p4": "Proverbs 22:8-15",
+		"y2p1": "Ezra 1",
+		"y2p2": "Romans 5:11-21",
+		"prayer_passage": "Deuteronomy 10:17"
+	},
+	{
+		"date": "2024-03-29",
+		"y1p1": "Exodus 28:1-21",
+		"y1p2": "Matthew 27:1-10",
+		"y1p3": "Psalms 73:1-14",
+		"y1p4": "Proverbs 23:9-14",
+		"y2p1": "Ezra 4",
+		"y2p2": "Romans 7:13-25",
+		"prayer_passage": "Genesis 24:3"
+	},
+	{
+		"date": "2024-03-30",
+		"y1p1": "Exodus 28:22-43",
+		"y1p2": "Matthew 27:11-20",
+		"y1p3": "Psalms 73:15-28",
+		"y1p4": "Proverbs 23:15-22",
+		"y2p1": "Ezra 5",
+		"y2p2": "Romans 8:1:-12",
+		"prayer_passage": "Ezra 5:11"
+	},
+	{
+		"date": "2024-03-31",
+		"y1p1": "Exodus 29:1-22",
+		"y1p2": "Psalms 74:1-12",
+		"y1p3": "Ezra 6",
+		"y1p4": "Matthew 27:21-31",
+		"y2p1": "Proverbs 23:23-35",
+		"y2p2": "Romans 8:13-25",
+		"prayer_passage": "1 Timothy 1:1"
+	},
+	{
+		"date": "2024-04-01",
+		"y1p1": "Exodus 29:23-46",
+		"y1p2": "Matthew 27:32-40",
+		"y1p3": "Psalms 74:13-23",
+		"y1p4": "Proverbs 24:1-8",
+		"y2p1": "Ezra 7",
+		"y2p2": "Romans 8:26-39",
+		"prayer_passage": "1 Samuel 2:3"
+	},
+	{
+		"date": "2024-04-02",
+		"y1p1": "Exodus 30",
+		"y1p2": "Matthew 27:41-56",
+		"y1p3": "Psalms 75-76",
+		"y1p4": "Proverbs 24:9-16",
+		"y2p1": "Ezra 8",
+		"y2p2": "Romans 9:1-9",
+		"prayer_passage": "2 Colossians 13:11"
+	},
+	{
+		"date": "2024-04-03",
+		"y1p1": "Exodus 31",
+		"y1p2": "Matthew 27:57-66",
+		"y1p3": "Psalms 77",
+		"y1p4": "Proverbs 24:17-25",
+		"y2p1": "Ezra 9",
+		"y2p2": "Romans 9:10-21",
+		"prayer_passage": "Matthew 27:46"
+	},
+	{
+		"date": "2024-04-04",
+		"y1p1": "Exodus 32",
+		"y1p2": "Matthew 28:1-10",
+		"y1p3": "Psalms 78:1-13",
+		"y1p4": "Proverbs 24:26-34",
+		"y2p1": "Ezra 10:1-24",
+		"y2p2": "Romans 9:22-23",
+		"prayer_passage": "Psalms 42:8"
+	},
+	{
+		"date": "2024-04-05",
+		"y1p1": "Exodus 33",
+		"y1p2": "Matthew 28:11-20",
+		"y1p3": "Psalms 78:14-25",
+		"y1p4": "Proverbs 25:1-7",
+		"y2p1": "Ezra 10:25-44",
+		"y2p2": "Romans 10:1-10",
+		"prayer_passage": "Psalms 59:17"
+	},
+	{
+		"date": "2024-04-06",
+		"y1p1": "Exodus 34",
+		"y1p2": "Mark 1:1-11",
+		"y1p3": "Psalms 78:26-37",
+		"y1p4": "Proverbs 25:8-14",
+		"y2p1": "Nehemiah 1",
+		"y2p2": "Romans 10:11-21",
+		"prayer_passage": "Psalms 109:1"
+	},
+	{
+		"date": "2024-04-07",
+		"y1p1": "Exodus 35",
+		"y1p2": "Mark 1:12-22",
+		"y1p3": "Psalms 78:38-51",
+		"y1p4": "Proverbs 25:15-20",
+		"y2p1": "Nehemiah 2",
+		"y2p2": "Romans 11:1-12",
+		"prayer_passage": "John 11:25"
+	},
+	{
+		"date": "2024-04-08",
+		"y1p1": "Exodus 36",
+		"y1p2": "Mark 1:23-33",
+		"y1p3": "Psalms 78:52-61",
+		"y1p4": "Proverbs 25:21-28",
+		"y2p1": "Nehemiah 3",
+		"y2p2": "Romans 11:13-24",
+		"prayer_passage": "Psalms 4:1"
+	},
+	{
+		"date": "2024-04-09",
+		"y1p1": "Exodus 37",
+		"y1p2": "Mark 1:34-45",
+		"y1p3": "Psalms 78:62-72",
+		"y1p4": "Proverbs 26:1-7",
+		"y2p1": "Nehemiah 4",
+		"y2p2": "Romans 11:25-36",
+		"prayer_passage": "Romans 15:5"
+	},
+	{
+		"date": "2024-04-10",
+		"y1p1": "Exodus 38",
+		"y1p2": "Mark 2:1-14",
+		"y1p3": "Psalms 79",
+		"y1p4": "Proverbs 26:8-14",
+		"y2p1": "Nehemiah 5",
+		"y2p2": "Romans 12:1-10",
+		"prayer_passage": "Philippians 4:7"
+	},
+	{
+		"date": "2024-04-11",
+		"y1p1": "Exodus 39:1-21",
+		"y1p2": "Mark 2:15-28",
+		"y1p3": "Psalms 80",
+		"y1p4": "Proverbs 26:15-21",
+		"y2p1": "Nehemiah 6",
+		"y2p2": "Romans 12:11-21",
+		"prayer_passage": "Numbers 27:16"
+	},
+	{
+		"date": "2024-04-12",
+		"y1p1": "Exodus 39:22-43",
+		"y1p2": "Mark 3:1-12",
+		"y1p3": "Psalms 81",
+		"y1p4": "Proverbs 26:22-28",
+		"y2p1": "Nehemiah 7",
+		"y2p2": "Romans 13",
+		"prayer_passage": "Isaiah 54:5"
+	},
+	{
+		"date": "2024-04-13",
+		"y1p1": "Exodus 40",
+		"y1p2": "Mark 5:13-22",
+		"y1p3": "Psalms 82-83",
+		"y1p4": "Proverbs 27:1-7",
+		"y2p1": "Nehemiah 8",
+		"y2p2": "Romans 14:1-12",
+		"prayer_passage": "Isaiah 54:5"
+	},
+	{
+		"date": "2024-04-14",
+		"y1p1": "Leviticus 1",
+		"y1p2": "Mark 3:23-35",
+		"y1p3": "Psalms 84",
+		"y1p4": "Proverbs 27:8-13",
+		"y2p1": "Nehemiah 9",
+		"y2p2": "Romans 14:13-23",
+		"prayer_passage": "Deuteronomy 1:21"
+	},
+	{
+		"date": "2024-04-15",
+		"y1p1": "Leviticus 2",
+		"y1p2": "Mark 4:1-12",
+		"y1p3": "Psalms 85",
+		"y1p4": "Proverbs 27:14-20",
+		"y2p1": "Nehemiah 10",
+		"y2p2": "Romans 15:1-11",
+		"prayer_passage": "Deuteronomy 32:4"
+	},
+	{
+		"date": "2024-04-16",
+		"y1p1": "Leviticus 3",
+		"y1p2": "Mark 4:13-25",
+		"y1p3": "Psalms 86-87",
+		"y1p4": "Proverbs 27:21-27",
+		"y2p1": "Nehemiah 11",
+		"y2p2": "Romans 15:12-22",
+		"prayer_passage": "Deuteronomy 32:4"
+	},
+	{
+		"date": "2024-04-17",
+		"y1p1": "Leviticus 4",
+		"y1p2": "Mark 4:26-41",
+		"y1p3": "Psalms 88",
+		"y1p4": "Proverbs 28:1-7",
+		"y2p1": "Nehemiah 12",
+		"y2p2": "Romans 15:23-33",
+		"prayer_passage": "Romans 16:27"
+	},
+	{
+		"date": "2024-04-18",
+		"y1p1": "Leviticus 5",
+		"y1p2": "Mark 5:1-10",
+		"y1p3": "Psalms 89:1-12",
+		"y1p4": "Proverbs 28:8-14",
+		"y2p1": "Nehemiah 13",
+		"y2p2": "Romans 16:1-13",
+		"prayer_passage": "Titus 3:6"
+	},
+	{
+		"date": "2024-04-19",
+		"y1p1": "Leviticus 6",
+		"y1p2": "Mark 5:11-20",
+		"y1p3": "Psalms 89:13-25",
+		"y1p4": "Proverbs 28:15-21",
+		"y2p1": "Esther 1",
+		"y2p2": "Romans 16:14-27",
+		"prayer_passage": "Psalms 84:9"
+	},
+	{
+		"date": "2024-04-20",
+		"y1p1": "Leviticus 7",
+		"y1p2": "Mark 5:21-34",
+		"y1p3": "Psalms 89:26-37",
+		"y1p4": "Proverbs 28:22-28",
+		"y2p1": "Esther 2",
+		"y2p2": "1 Corinthians 1:1-10",
+		"prayer_passage": "Nehemiah 9:17"
+	},
+	{
+		"date": "2024-04-21",
+		"y1p1": "Leviticus 8",
+		"y1p2": "Mark 5:35-43",
+		"y1p3": "Psalms 89:38-52",
+		"y1p4": "Proverbs 29:1-7",
+		"y2p1": "Esther 3-4",
+		"y2p2": "1 Corinthians 1:11-20",
+		"prayer_passage": "1 Kings 18:24"
+	},
+	{
+		"date": "2024-04-22",
+		"y1p1": "Leviticus 9",
+		"y1p2": "Mark 6:1-13",
+		"y1p3": "Psalms 90",
+		"y1p4": "Proverbs 29:8-13",
+		"y2p1": "Esther 5-6",
+		"y2p2": "1 Corinthians 1:21-31",
+		"prayer_passage": "Titus 1:2"
+	},
+	{
+		"date": "2024-04-23",
+		"y1p1": "Leviticus 10",
+		"y1p2": "Mark 6:14-28",
+		"y1p3": "Psalms 91",
+		"y1p4": "Proverbs 29:14-21",
+		"y2p1": "Esther 7-8",
+		"y2p2": "1 Corinthians 2",
+		"prayer_passage": "Psalms 77:14"
+	},
+	{
+		"date": "2024-04-24",
+		"y1p1": "Leviticus 11:1-24",
+		"y1p2": "Mark 6:29-44",
+		"y1p3": "Psalms 92",
+		"y1p4": "Proverbs 29:22-27",
+		"y2p1": "Esther 9-10",
+		"y2p2": "1 Corinthians 3:1-10",
+		"prayer_passage": "Deuteronomy 32 :18"
+	},
+	{
+		"date": "2024-04-25",
+		"y1p1": "Leviticus 11:25-47",
+		"y1p2": "Mark 6:45-56",
+		"y1p3": "Psalms 93",
+		"y1p4": "Proverbs 30:1-9",
+		"y2p1": "Job 1",
+		"y2p2": "1 Corinthians 3:11-23",
+		"prayer_passage": "James 1:5"
+	},
+	{
+		"date": "2024-04-26",
+		"y1p1": "Leviticus 12",
+		"y1p2": "Mark 7:1-13",
+		"y1p3": "Psalms 94:1-10",
+		"y1p4": "Proverbs 30:10-16",
+		"y2p1": "Job 2-3",
+		"y2p2": "1 Corinthians 4:1-10",
+		"prayer_passage": "Hebrews 12:23"
+	},
+	{
+		"date": "2024-04-27",
+		"y1p1": "Leviticus 13:1-28",
+		"y1p2": "Mark 7:14-23",
+		"y1p3": "Psalms 94:11-23",
+		"y1p4": "Proverbs 30:17-23",
+		"y2p1": "Job 4-5",
+		"y2p2": "1 Corinthians 4:11-21",
+		"prayer_passage": "2 Corinthians 2:14"
+	},
+	{
+		"date": "2024-04-28",
+		"y1p1": "Leviticus 13:29-59",
+		"y1p2": "Mark 7:24-37",
+		"y1p3": "Psalms 95",
+		"y1p4": "Proverbs 30:24-33",
+		"y2p1": "Job 6-7",
+		"y2p2": "1 Corinthians 5",
+		"prayer_passage": "Job 5:9"
+	},
+	{
+		"date": "2024-04-29",
+		"y1p1": "Leviticus 14:1-31",
+		"y1p2": "Mark 8:1-12",
+		"y1p3": "Psalms 96",
+		"y1p4": "Proverbs 31:1-9",
+		"y2p1": "Job 8",
+		"y2p2": "1 Corinthians 6:1-10",
+		"prayer_passage": "Genesis 48:15"
+	},
+	{
+		"date": "2024-04-30",
+		"y1p1": "Leviticus 14: 32-57",
+		"y1p2": "Mark 8:13-26",
+		"y1p3": "Psalms 97",
+		"y1p4": "Proverbs 31:10-15",
+		"y2p1": "Job 9",
+		"y2p2": "1 Corinthians 6:11-20",
+		"prayer_passage": "1 Thessalonians 2:4"
+	},
+	{
+		"date": "2024-05-01",
+		"y1p1": "Leviticus 15",
+		"y1p2": "Mark 8:27-38",
+		"y1p3": "Psalms 98",
+		"y1p4": "Proverbs 31:16-22",
+		"y2p1": "Job 10-11",
+		"y2p2": "1 Corinthians 7:1-9",
+		"prayer_passage": "Isaiah 53:11"
+	},
+	{
+		"date": "2024-05-02",
+		"y1p1": "Leviticus 16",
+		"y1p2": "Mark 9:1-13",
+		"y1p3": "Psalms 99",
+		"y1p4": "Proverbs 31:23-31",
+		"y2p1": "Job 12",
+		"y2p2": "1 Corinthians 7:10-19",
+		"prayer_passage": "Psalms 22:28"
+	},
+	{
+		"date": "2024-05-03",
+		"y1p1": "Leviticus 17",
+		"y1p2": "Mark 9:14-24",
+		"y1p3": "Psalms 100-101",
+		"y1p4": "Proverbs 1:1-9",
+		"y2p1": "Job 13",
+		"y2p2": "1 Corinthians 7:20-30",
+		"prayer_passage": "Psalms 116:5"
+	},
+	{
+		"date": "2024-05-04",
+		"y1p1": "Leviticus 18",
+		"y1p2": "Mark 9:25:37",
+		"y1p3": "Psalms 102:1-14",
+		"y1p4": "Proverbs 1:10-16",
+		"y2p1": "Job 14",
+		"y2p2": "1 Corinthians 7:31-40",
+		"prayer_passage": "Psalms 95:3"
+	},
+	{
+		"date": "2024-05-05",
+		"y1p1": "Leviticus 19",
+		"y1p2": "Mark 9:38-50",
+		"y1p3": "Psalms 102:15-28",
+		"y1p4": "Proverbs 1:17-25",
+		"y2p1": "Job 15",
+		"y2p2": "1 Corinthians 8",
+		"prayer_passage": "Hebrews 4:14"
+	},
+	{
+		"date": "2024-05-06",
+		"y1p1": "Leviticus 20",
+		"y1p2": "Mark 10:1-12",
+		"y1p3": "Psalms 103:1-11",
+		"y1p4": "Proverbs 1:26-33",
+		"y2p1": "Job 16",
+		"y2p2": "1 Corinthians 9:1-13",
+		"prayer_passage": "Psalms 47:2"
+	},
+	{
+		"date": "2024-05-07",
+		"y1p1": "Leviticus 21",
+		"y1p2": "Mark 10:13-23",
+		"y1p3": "Psalms 103:12-22",
+		"y1p4": "Proverbs 2:1-5",
+		"y2p1": "Job 17-18",
+		"y2p2": "1 Corinthians 9:14-27",
+		"prayer_passage": "Hebrews 13:20"
+	},
+	{
+		"date": "2024-05-08",
+		"y1p1": "Leviticus 22",
+		"y1p2": "Mark 10:24-34",
+		"y1p3": "Psalms 104:1-9",
+		"y1p4": "Proverbs 2:6-11",
+		"y2p1": "Job 19",
+		"y2p2": "1 Corinthians 10:1-10",
+		"prayer_passage": "1 John 5 :7"
+	},
+	{
+		"date": "2024-05-09",
+		"y1p1": "Leviticus 23:1-22",
+		"y1p2": "Mark 10:35-45",
+		"y1p3": "Psalms 104:10-23",
+		"y1p4": "Proverbs 2:12-17",
+		"y2p1": "Job 20",
+		"y2p2": "1 Corinthians 10:11-19",
+		"prayer_passage": "Mark 1:24"
+	},
+	{
+		"date": "2024-05-10",
+		"y1p1": "Leviticus 23:23-44",
+		"y1p2": "Mark 10:46-52",
+		"y1p3": "Psalms 104:24-35",
+		"y1p4": "Proverbs 2:18-22",
+		"y2p1": "Job 21",
+		"y2p2": "1 Corinthians 10:20-33",
+		"prayer_passage": "Genesis 48:16"
+	},
+	{
+		"date": "2024-05-11",
+		"y1p1": "Leviticus 24",
+		"y1p2": "Mark 11:1-11",
+		"y1p3": "Psalms 105:1-15",
+		"y1p4": "Proverbs 3:1-8",
+		"y2p1": "Job 22",
+		"y2p2": "1 Corinthians 11:1-11",
+		"prayer_passage": "Deuteronomy 28:58"
+	},
+	{
+		"date": "2024-05-12",
+		"y1p1": "Leviticus 25:1-28",
+		"y1p2": "Mark 11:12-26",
+		"y1p3": "Psalms 105:16-30",
+		"y1p4": "Proverbs 3:9-18",
+		"y2p1": "Job 23-24",
+		"y2p2": "1 Corinthians 11:12-22",
+		"prayer_passage": "Ephesians 5:23"
+	},
+	{
+		"date": "2024-05-13",
+		"y1p1": "Leviticus 25:29-55",
+		"y1p2": "Mark 11:27-33",
+		"y1p3": "Psalms 105:31-45",
+		"y1p4": "Proverbs 3:19-26",
+		"y2p1": "Job 25-26",
+		"y2p2": "1 Corinthians 11:23-34",
+		"prayer_passage": "Psalms 42:11"
+	},
+	{
+		"date": "2024-05-14",
+		"y1p1": "Leviticus 26",
+		"y1p2": "Mark 12:1-11",
+		"y1p3": "Psalms 106:1-15",
+		"y1p4": "Proverbs 3:27-35",
+		"y2p1": "Job 27",
+		"y2p2": "1 Corinthians 12:1-10",
+		"prayer_passage": "Matthew 6:9"
+	},
+	{
+		"date": "2024-05-15",
+		"y1p1": "Leviticus 26:23-46",
+		"y1p2": "Mark 12:12-17",
+		"y1p3": "Psalms 106:16-31",
+		"y1p4": "Proverbs 4:1-6",
+		"y2p1": "Job 28",
+		"y2p2": "1 Corinthians 12:11-20",
+		"prayer_passage": "Ephesians 1:3"
+	},
+	{
+		"date": "2024-05-16",
+		"y1p1": "Leviticus 27",
+		"y1p2": "Mark 12:18-31",
+		"y1p3": "Psalms 106:32-48",
+		"y1p4": "Proverbs 4:7-13",
+		"y2p1": "Job 29",
+		"y2p2": "1 Corinthians 12:21-31",
+		"prayer_passage": "Psalms 55:19"
+	},
+	{
+		"date": "2024-05-17",
+		"y1p1": "Numbers 1:1-27",
+		"y1p2": "Mark 12:32-44",
+		"y1p3": "Psalms 107:1-8",
+		"y1p4": "Proverbs 4:14-19",
+		"y2p1": "Job 30",
+		"y2p2": "1 Corinthians 13",
+		"prayer_passage": "Hebrews 3:4"
+	},
+	{
+		"date": "2024-05-18",
+		"y1p1": "Numbers 1:28-54",
+		"y1p2": "Mark 13:1-11",
+		"y1p3": "Psalms 107:9-21",
+		"y1p4": "Proverbs 4:20-27",
+		"y2p1": "Job 31",
+		"y2p2": "1 Corinthians 14:1-10",
+		"prayer_passage": "1 Thessalonians 5:24"
+	},
+	{
+		"date": "2024-05-19",
+		"y1p1": "Numbers 2",
+		"y1p2": "Mark 13:22-22",
+		"y1p3": "Psalms 107:22-34",
+		"y1p4": "Proverbs 5:1-6",
+		"y2p1": "Job 32",
+		"y2p2": "1 Corinthians 14:11-20",
+		"prayer_passage": "John 3:31"
+	},
+	{
+		"date": "2024-05-20",
+		"y1p1": "Numbers 3:1-26",
+		"y1p2": "Mark 13:23-39",
+		"y1p3": "Psalms 107:35-43",
+		"y1p4": "Proverbs 5:7-13",
+		"y2p1": "Job 33",
+		"y2p2": "1 Corinthians 14:21-30",
+		"prayer_passage": "Luke 13:35"
+	},
+	{
+		"date": "2024-05-21",
+		"y1p1": "Numbers 3:27-51",
+		"y1p2": "Mark 14:1-11",
+		"y1p3": "Psalms 108",
+		"y1p4": "Proverbs 5:14-17",
+		"y2p1": "Job 34",
+		"y2p2": "1 Corinthians 14:31-40",
+		"prayer_passage": "Isaiah 51:12"
+	},
+	{
+		"date": "2024-05-22",
+		"y1p1": "Numbers 4:1-20",
+		"y1p2": "Mark 14:12-21",
+		"y1p3": "Psalms 109:1-15",
+		"y1p4": "Proverbs 5:18-23",
+		"y2p1": "Job 35",
+		"y2p2": "1 Corinthians 15:1-10",
+		"prayer_passage": "Isaiah 52:6"
+	},
+	{
+		"date": "2024-05-23",
+		"y1p1": "Numbers 4:21-49",
+		"y1p2": "Mark 14:22-34",
+		"y1p3": "Psalms 109:16-31",
+		"y1p4": "Proverbs 6:1-11",
+		"y2p1": "Job 36",
+		"y2p2": "1 Corinthians 15:11-22",
+		"prayer_passage": "Hebrews 12:3"
+	},
+	{
+		"date": "2024-05-24",
+		"y1p1": "Numbers 5",
+		"y1p2": "Mark 14:35-47",
+		"y1p3": "Psalms 110",
+		"y1p4": "Proverbs 6:12-19",
+		"y2p1": "Job 37",
+		"y2p2": "1 Corinthians 15:23-34",
+		"prayer_passage": "Ephesians 1:23"
+	},
+	{
+		"date": "2024-05-25",
+		"y1p1": "Numbers 6",
+		"y1p2": "Mark 14:48-60",
+		"y1p3": "Psalms 111",
+		"y1p4": "Proverbs 6:20-26",
+		"y2p1": "Job 38:1-20",
+		"y2p2": "1 Corinthians 15:35-45",
+		"prayer_passage": "Isaiah 44:24"
+	},
+	{
+		"date": "2024-05-26",
+		"y1p1": "Numbers 7:1-29",
+		"y1p2": "Mark 14:61-72",
+		"y1p3": "Psalms 112-113",
+		"y1p4": "Proverbs 6:27-35",
+		"y2p1": "Job 38:21-41",
+		"y2p2": "1 Corinthians 15:46-58",
+		"prayer_passage": "Isaiah 44:24"
+	},
+	{
+		"date": "2024-05-27",
+		"y1p1": "Numbers 7:30-59",
+		"y1p2": "Mark 15:1-11",
+		"y1p3": "Psalms 114",
+		"y1p4": "Proverbs 7:1-5",
+		"y2p1": "Job 39",
+		"y2p2": "1 Corinthians 16:1-12",
+		"prayer_passage": "Isaiah 42:5"
+	},
+	{
+		"date": "2024-05-28",
+		"y1p1": "Numbers 7:60-89",
+		"y1p2": "Mark 15:12-22",
+		"y1p3": "Psalms 115",
+		"y1p4": "Proverbs 7:6-16",
+		"y2p1": "Job 40",
+		"y2p2": "1 Corinthians 16:13-24",
+		"prayer_passage": "Isaiah 42:5"
+	},
+	{
+		"date": "2024-05-29",
+		"y1p1": "Numbers 8",
+		"y1p2": "Mark 15:23-34",
+		"y1p3": "Psalms 116-117",
+		"y1p4": "Proverbs 7:17-27",
+		"y2p1": "Job 41",
+		"y2p2": "2 Corinthians 1:1-12",
+		"prayer_passage": "Isaiah 42:5"
+	},
+	{
+		"date": "2024-05-30",
+		"y1p1": "Numbers 9",
+		"y1p2": "Mark 15:35-47",
+		"y1p3": "Psalms 118:1-15",
+		"y1p4": "Proverbs 8:1-9",
+		"y2p1": "Job 42",
+		"y2p2": "2 Corinthians 1:13-24",
+		"prayer_passage": "Psalms 68:35"
+	},
+	{
+		"date": "2024-05-31",
+		"y1p1": "Numbers 10",
+		"y1p2": "Mark 16:1-11",
+		"y1p3": "Psalms 118:16-29",
+		"y1p4": "Proverbs 8:10-18",
+		"y2p1": "Ecclesiastes 1",
+		"y2p2": "2 Corinthians 2",
+		"prayer_passage": "2 Peter 1:3"
+	},
+	{
+		"date": "2024-06-01",
+		"y1p1": "Numbers 11",
+		"y1p2": "Mark 16:12-20",
+		"y1p3": null,
+		"y1p4": "Proverbs 8:19-31",
+		"y2p1": "Ecclesiastes 2",
+		"y2p2": "2 Corinthians 3",
+		"prayer_passage": "Isaiah 49:10"
+	},
+	{
+		"date": "2024-06-02",
+		"y1p1": "Numbers 12",
+		"y1p2": "Luke 1:1-10",
+		"y1p3": "Psalms 119 :1-16",
+		"y1p4": "Proverbs 8:32-36",
+		"y2p1": "Ecclesiastes 3",
+		"y2p2": "2 Corinthians 4",
+		"prayer_passage": "Revelation 2:1"
+	},
+	{
+		"date": "2024-06-03",
+		"y1p1": "Numbers 13",
+		"y1p2": "Luke 1:11-20",
+		"y1p3": "Psalms 119:33-48",
+		"y1p4": "Proverbs9:1-5",
+		"y2p1": "Ecclesiastes 4-5",
+		"y2p2": "2 Corinthians 5:1-10",
+		"prayer_passage": "Revelation 2:1"
+	},
+	{
+		"date": "2024-06-04",
+		"y1p1": "Numbers 14:1-19",
+		"y1p2": "Luke 21-33",
+		"y1p3": "Psalms 119:49-64",
+		"y1p4": "Proverbs 9:6-11",
+		"y2p1": "Ecclesiastes 6",
+		"y2p2": "2 Corinthians 2:5-11-25",
+		"prayer_passage": "Revelation 2:8"
+	},
+	{
+		"date": "2024-06-05",
+		"y1p1": "Numbers 20-25",
+		"y1p2": "Luke 1:34-45",
+		"y1p3": "Psalms 119:65-80",
+		"y1p4": "Proverbs 9:12-18",
+		"y2p1": "Ecclesiastes 7",
+		"y2p2": "2 Corinthians 6",
+		"prayer_passage": "Revelation 2:12"
+	},
+	{
+		"date": "2024-06-06",
+		"y1p1": "Numbers 15:1-20",
+		"y1p2": "Luke 1:46-55",
+		"y1p3": "Psalms 119:81-96",
+		"y1p4": "Proverbs 10:1-8",
+		"y2p1": "Ecclesiastes 8",
+		"y2p2": "2 Corinthians 7",
+		"prayer_passage": "Revelation 2:18"
+	},
+	{
+		"date": "2024-06-07",
+		"y1p1": "Numbers 15:21-41",
+		"y1p2": "Luke 1:56-64",
+		"y1p3": "Psalms 119:97-112",
+		"y1p4": "Proverbs 10:8-16",
+		"y2p1": "Ecclesiastes 9",
+		"y2p2": "2 Corinthians 8:1-12",
+		"prayer_passage": "Revelation 2:23"
+	},
+	{
+		"date": "2024-06-08",
+		"y1p1": "Numbers 16:1-24",
+		"y1p2": "Luke1: 65-80",
+		"y1p3": "Psalms 119:113-128",
+		"y1p4": "Proverbs 10:17-24",
+		"y2p1": "Ecclesiastes 10",
+		"y2p2": "2 Corinthians 8:13-24",
+		"prayer_passage": "Revelation 3:1"
+	},
+	{
+		"date": "2024-06-09",
+		"y1p1": "Numbers 16:25-50",
+		"y1p2": "Luke 2:1-11",
+		"y1p3": "Psalms 119:129-144",
+		"y1p4": "Proverbs 10: 24-32",
+		"y2p1": "Ecclesiastes :11-12",
+		"y2p2": "2 Corinthians 9",
+		"prayer_passage": "Revelation 3:7"
+	},
+	{
+		"date": "2024-06-10",
+		"y1p1": "Numbers 17",
+		"y1p2": "Luke 2:12-19",
+		"y1p3": "Psalms 119:145-160",
+		"y1p4": "Proverbs 11:1-7",
+		"y2p1": "Song of Solomon 1:2",
+		"y2p2": "2 Corinthians 10:1-9",
+		"prayer_passage": "Revelation 3:7"
+	},
+	{
+		"date": "2024-06-11",
+		"y1p1": "Numbers 18",
+		"y1p2": "Luke 2:20-32",
+		"y1p3": "Psalms 119:161-176",
+		"y1p4": "Proverbs 11:8-15",
+		"y2p1": "Song of Solomon3-4",
+		"y2p2": "2 Corinthians 10:10-18",
+		"prayer_passage": null
+	},
+	{
+		"date": "2024-06-12",
+		"y1p1": "Numbers 19",
+		"y1p2": "Like 2:33-40",
+		"y1p3": "Psalms 120-121",
+		"y1p4": "Proverbs 11:16-26",
+		"y2p1": "Song of Solomon5-6",
+		"y2p2": "2 Corinthians 11:1-11",
+		"prayer_passage": "1 Timothy 2-6"
+	},
+	{
+		"date": "2024-06-13",
+		"y1p1": "Numbers 20",
+		"y1p2": "Luke 2:41-52",
+		"y1p3": "Psalms 122 -123",
+		"y1p4": "Proverbs 11:27-31",
+		"y2p1": "Song of Solomon7-8",
+		"y2p2": "2 Corinthians 11:12-21",
+		"prayer_passage": "Ephesians 3:20"
+	},
+	{
+		"date": "2024-06-14",
+		"y1p1": "1 Numbers 21",
+		"y1p2": "Luke 3:1-11",
+		"y1p3": "Psalms 124-125",
+		"y1p4": "Proverbs 12:1-7",
+		"y2p1": "Isaiah 1",
+		"y2p2": "2 Corinthians 11:22-33",
+		"prayer_passage": "Judges 1:24"
+	},
+	{
+		"date": "2024-06-15",
+		"y1p1": "Numbers 22:1-20",
+		"y1p2": "Luke 3:12-22",
+		"y1p3": "Psalms 126-127",
+		"y1p4": "Proverbs 12:8-14",
+		"y2p1": "Isaiah 2",
+		"y2p2": "2 Corinthians 12:1-10",
+		"prayer_passage": "Judges 1:24"
+	},
+	{
+		"date": "2024-06-16",
+		"y1p1": "Numbers 22:21-41",
+		"y1p2": "Luke 3:23-30",
+		"y1p3": "Psalms 128-129",
+		"y1p4": "Proverbs 12:15-22",
+		"y2p1": "Isaiah 3",
+		"y2p2": "2 Corinthians 12:11-21",
+		"prayer_passage": "Luke 1:49"
+	},
+	{
+		"date": "2024-06-17",
+		"y1p1": "Numbers 23",
+		"y1p2": "Luke 3:31-38",
+		"y1p3": "Psalms 130-131",
+		"y1p4": "Proverbs 12:22-28",
+		"y2p1": "Isaiah 4-5",
+		"y2p2": "2 Corinthians 13",
+		"prayer_passage": "Romans 16:25"
+	},
+	{
+		"date": "2024-06-18",
+		"y1p1": "Numbers 24",
+		"y1p2": "Luke 4:1-12",
+		"y1p3": "Psalms 132-133",
+		"y1p4": "Proverbs 13:1-6",
+		"y2p1": "Isaiah 6",
+		"y2p2": "Galatians 1:1-12",
+		"prayer_passage": "1 Corinthians 4:4"
+	},
+	{
+		"date": "2024-06-19",
+		"y1p1": "Numbers 25",
+		"y1p2": "Luke 4:13-21",
+		"y1p3": "Psalms 134-135",
+		"y1p4": "Proverbs 13:7-12",
+		"y2p1": "Isaiah 7",
+		"y2p2": "Galatians 1:13-24",
+		"prayer_passage": "1 Peter 2:23"
+	},
+	{
+		"date": "2024-06-20",
+		"y1p1": "Numbers 26:1-27",
+		"y1p2": "Luke 4:22-32",
+		"y1p3": "Psalms 136",
+		"y1p4": "Proverbs 13:13-19",
+		"y2p1": "Isaiah 8",
+		"y2p2": "Galatians 2 :1-10",
+		"prayer_passage": "Psalms 121:1-3"
+	},
+	{
+		"date": "2024-06-21",
+		"y1p1": "Numbers 26:28-65",
+		"y1p2": "Luke 4:33-44",
+		"y1p3": "Psalms 137-138",
+		"y1p4": "Proverbs 13:20-25",
+		"y2p1": "Isaiah 9",
+		"y2p2": "Galatians 2 :11-21",
+		"prayer_passage": "Proverbs 24:12"
+	},
+	{
+		"date": "2024-06-22",
+		"y1p1": "Numbers 27",
+		"y1p2": "Luke 5:1-11",
+		"y1p3": "Psalms 139:1-13",
+		"y1p4": "Proverbs 14:1-9",
+		"y2p1": "Isaiah 0",
+		"y2p2": "Galatians 3:1-10",
+		"prayer_passage": "Proverbs 24:12"
+	},
+	{
+		"date": "2024-06-23",
+		"y1p1": "Numbers 28",
+		"y1p2": "Luke 5:12-25",
+		"y1p3": "Psalms 139:14-24",
+		"y1p4": "Proverbs 14:10-18",
+		"y2p1": "Isaiah 11-12",
+		"y2p2": "Galatians 3:11-20",
+		"prayer_passage": "Revelation 10:6"
+	},
+	{
+		"date": "2024-06-24",
+		"y1p1": "Numbers 29:1-19",
+		"y1p2": "Luke 5:26-39",
+		"y1p3": "Psalms 140",
+		"y1p4": "Proverbs 14:19-27",
+		"y2p1": "Isaiah 13",
+		"y2p2": "Galatians 3:21-29",
+		"prayer_passage": "1 John 4:10"
+	},
+	{
+		"date": "2024-06-25",
+		"y1p1": "Numbers 29 :20-40",
+		"y1p2": "Luke 6:1-11",
+		"y1p3": "Psalms 141-142",
+		"y1p4": "Proverbs 14:28-35",
+		"y2p1": "Isaiah 14",
+		"y2p2": "Galatians 4:1-10",
+		"prayer_passage": "Romans 8:1"
+	},
+	{
+		"date": "2024-06-26",
+		"y1p1": "Numbers 30",
+		"y1p2": "Luke 6:12-19",
+		"y1p3": "Psalms 143",
+		"y1p4": "Proverbs 15 :1-8",
+		"y2p1": "Isaiah 15-16",
+		"y2p2": "Galatians 4:11-20",
+		"prayer_passage": "Daniel 2:28"
+	},
+	{
+		"date": "2024-06-27",
+		"y1p1": "Numbers 31:1-27",
+		"y1p2": "Luke 6:20-38",
+		"y1p3": "Psalms 144",
+		"y1p4": "Proverbs 15:9-17",
+		"y2p1": "Isaiah 17-18",
+		"y2p2": "Galatians 4:21-31",
+		"prayer_passage": "Hebrews 2:11"
+	},
+	{
+		"date": "2024-06-28",
+		"y1p1": "Numbers 31 :28-54",
+		"y1p2": "Luke 6:39-49",
+		"y1p3": "Psalms 145",
+		"y1p4": "Proverbs 15 :18-24",
+		"y2p1": "Isaiah 19",
+		"y2p2": "Galatians 5:1-13",
+		"prayer_passage": "Romans 8:27"
+	},
+	{
+		"date": "2024-06-29",
+		"y1p1": "Numbers 32:1-19",
+		"y1p2": "Luke 7:1-11",
+		"y1p3": "Psalms 146-147",
+		"y1p4": "Proverbs 15 :25-33",
+		"y2p1": "Isaiah 20-21",
+		"y2p2": "Galatians 5:14-26",
+		"prayer_passage": "Romans 8:27"
+	},
+	{
+		"date": "2024-06-30",
+		"y1p1": "Numbers 32:20-42",
+		"y1p2": "Luke 7:12- 23",
+		"y1p3": "Psalms 148",
+		"y1p4": "Proverbs 16:1-8",
+		"y2p1": "Isaiah 22",
+		"y2p2": "Galatians 6:1-9",
+		"prayer_passage": "Hebrews 10:37"
+	},
+	{
+		"date": "2024-07-01",
+		"y1p1": "Numbers 33:1-37",
+		"y1p2": "Luke 7:24-35",
+		"y1p3": "Psalms 149-150",
+		"y1p4": "Proverbs 16:9-17",
+		"y2p1": "Isaiah 23-24",
+		"y2p2": "Galatians 6:10-18",
+		"prayer_passage": "Numbers 24:19"
+	},
+	{
+		"date": "2024-07-02",
+		"y1p1": "Numbers 33:38-56",
+		"y1p2": "Luke 7:36-50",
+		"y1p3": "Psalms 1",
+		"y1p4": "Proverbs 16:18-26",
+		"y2p1": "Isaiah 25-26",
+		"y2p2": "Ephesians 1:1-10",
+		"prayer_passage": "Psalms 2:4"
+	},
+	{
+		"date": "2024-07-03",
+		"y1p1": "Numbers 34",
+		"y1p2": "Luke 8:1-8",
+		"y1p3": "Psalms 2",
+		"y1p4": "Proverbs 16:27-33",
+		"y2p1": "Isaiah 27-28",
+		"y2p2": "Ephesians 1:11-23",
+		"prayer_passage": "Revelation 5:13"
+	},
+	{
+		"date": "2024-07-04",
+		"y1p1": "Numbers 35",
+		"y1p2": "Luke 8:9-18",
+		"y1p3": "Psalms 3",
+		"y1p4": "Proverbs 17:1-7",
+		"y2p1": "Isaiah 29",
+		"y2p2": "Ephesians 2:1-10",
+		"prayer_passage": "Romans 8:32"
+	},
+	{
+		"date": "2024-07-05",
+		"y1p1": "Numbers 36",
+		"y1p2": "Luke 8:19-26",
+		"y1p3": "Psalms 4",
+		"y1p4": "Proverbs 17:8-14",
+		"y2p1": "Isaiah 30",
+		"y2p2": "Ephesians 2:11-22",
+		"prayer_passage": "Hebrews 12:25"
+	},
+	{
+		"date": "2024-07-06",
+		"y1p1": "Deuteronomy 1",
+		"y1p2": "Luke 8:27-39",
+		"y1p3": "Psalms 5",
+		"y1p4": "Proverbs 17:15-22",
+		"y2p1": "Isaiah 31-32",
+		"y2p2": "Ephesians 3:1-9",
+		"prayer_passage": "Revelation 1:4"
+	},
+	{
+		"date": "2024-07-07",
+		"y1p1": "Deuteronomy 2",
+		"y1p2": "Luke 8:40-56",
+		"y1p3": "Psalms 6",
+		"y1p4": "Proverbs 17:23-28",
+		"y2p1": "Isaiah 33",
+		"y2p2": "Ephesians 3:11-21",
+		"prayer_passage": "Job 37:16"
+	},
+	{
+		"date": "2024-07-08",
+		"y1p1": "Deuteronomy 3",
+		"y1p2": "Luke 9:1-11",
+		"y1p3": "Psalms 7",
+		"y1p4": "Proverbs 18:1-5",
+		"y2p1": "Isaiah 34-35",
+		"y2p2": "Ephesians 4:1-10",
+		"prayer_passage": "Acts 10:42"
+	},
+	{
+		"date": "2024-07-09",
+		"y1p1": "Deuteronomy 4",
+		"y1p2": "Luke 9:12-27",
+		"y1p3": "Psalms 8",
+		"y1p4": "Proverbs 18:6-12",
+		"y2p1": "Isaiah 36",
+		"y2p2": "Ephesians 4:11-19",
+		"prayer_passage": "Psalms 136:4"
+	},
+	{
+		"date": "2024-07-10",
+		"y1p1": "Deuteronomy 5",
+		"y1p2": "Luke 9:28-36",
+		"y1p3": "Psalms 9",
+		"y1p4": "Proverbs 18:13-18",
+		"y2p1": "Isaiah 37",
+		"y2p2": "Ephesians 4:20-32",
+		"prayer_passage": "Psalms 136:5"
+	},
+	{
+		"date": "2024-07-11",
+		"y1p1": "Deuteronomy 6",
+		"y1p2": "Luke 9:37-5o",
+		"y1p3": "Psalms 10",
+		"y1p4": "Proverbs 18:19-24",
+		"y2p1": "Isaiah 38-39",
+		"y2p2": "Ephesians 5:1-10",
+		"prayer_passage": "Psalms 136:6"
+	},
+	{
+		"date": "2024-07-12",
+		"y1p1": "Deuteronomy 7",
+		"y1p2": "Luke 9:51-62",
+		"y1p3": "Psalms 11",
+		"y1p4": "Proverbs 19:1-8",
+		"y2p1": "Isaiah 40",
+		"y2p2": "Ephesians 5:11-21",
+		"prayer_passage": "Psalms 136:7"
+	},
+	{
+		"date": "2024-07-13",
+		"y1p1": "Deuteronomy 8",
+		"y1p2": "Luke 10:1-12",
+		"y1p3": "Psalms 12",
+		"y1p4": "Proverbs 19:9-15",
+		"y2p1": "Isaiah 41",
+		"y2p2": "Ephesians 5:22-23",
+		"prayer_passage": "Psalms 136:10"
+	},
+	{
+		"date": "2024-07-14",
+		"y1p1": "Deuteronomy 9",
+		"y1p2": "Luke 10:13-22",
+		"y1p3": "Psalms 13-14",
+		"y1p4": "Proverbs 19:16-22",
+		"y2p1": "Isaiah 42",
+		"y2p2": "Ephesians 6:1-12",
+		"prayer_passage": "Psalms 136:13"
+	},
+	{
+		"date": "2024-07-15",
+		"y1p1": "Deuteronomy 10",
+		"y1p2": "Luke 10:23-37",
+		"y1p3": "Psalms 15-16",
+		"y1p4": "Proverbs 19:23-29",
+		"y2p1": "Isaiah 43",
+		"y2p2": "Ephesians 6:13-24",
+		"prayer_passage": "Psalms 136:16"
+	},
+	{
+		"date": "2024-07-16",
+		"y1p1": "Deuteronomy 11",
+		"y1p2": "Luke 10:38-42",
+		"y1p3": "Psalms 17",
+		"y1p4": "Proverbs 20:1-7",
+		"y2p1": "Isaiah 44",
+		"y2p2": "Philemon 1:1-8",
+		"prayer_passage": "Psalms 136:17"
+	},
+	{
+		"date": "2024-07-17",
+		"y1p1": "Deuteronomy 12",
+		"y1p2": "Luke 11:1-13",
+		"y1p3": "Psalms 18:1-24",
+		"y1p4": "Proverbs 20:8-15",
+		"y2p1": "Isaiah 45",
+		"y2p2": "Philemon 1:9-20",
+		"prayer_passage": "Hebrews 4:13"
+	},
+	{
+		"date": "2024-07-18",
+		"y1p1": "Deuteronomy 13",
+		"y1p2": "Luke 11:14-20",
+		"y1p3": "Psalms 18:25-50",
+		"y1p4": "Proverbs 20:16-22",
+		"y2p1": "Isaiah 46-47",
+		"y2p2": "Philemon 1:21-30",
+		"prayer_passage": "Psalms 110:4"
+	},
+	{
+		"date": "2024-07-19",
+		"y1p1": "Deuteronomy 14",
+		"y1p2": "Luke 11:21-28",
+		"y1p3": "Psalms 19",
+		"y1p4": "Proverbs 20:23-30",
+		"y2p1": "Isaiah 48",
+		"y2p2": "Philemon 2:1-8",
+		"prayer_passage": "Psalms 76:11"
+	},
+	{
+		"date": "2024-07-20",
+		"y1p1": "Deuteronomy 15",
+		"y1p2": "Luke 11:29-36",
+		"y1p3": "Psalms 20",
+		"y1p4": "Proverbs 21:1-8",
+		"y2p1": "Isaiah 49",
+		"y2p2": "Philemon 2:9-18",
+		"prayer_passage": "1 Thessalonians 1:10"
+	},
+	{
+		"date": "2024-07-21",
+		"y1p1": "Deuteronomy 16",
+		"y1p2": "Luke 11:37-44",
+		"y1p3": "Psalms 21",
+		"y1p4": "Proverbs 21:9-16",
+		"y2p1": "Isaiah 50-51",
+		"y2p2": "Philemon 2:19-30",
+		"prayer_passage": "Romans 8:11"
+	},
+	{
+		"date": "2024-07-22",
+		"y1p1": "Deuteronomy 17",
+		"y1p2": "Luke 11:45-54",
+		"y1p3": "Psalms 22:1-18",
+		"y1p4": "Proverbs 21:17-22",
+		"y2p1": "Isaiah 52-53",
+		"y2p2": "Philemon 3:1-9",
+		"prayer_passage": "2 Corinthians 9:15"
+	},
+	{
+		"date": "2024-07-23",
+		"y1p1": "Deuteronomy 18",
+		"y1p2": "Luke 12:1-12",
+		"y1p3": "Psalms 22:19-31",
+		"y1p4": "Proverbs 21:23-31",
+		"y2p1": "Isaiah 54-55",
+		"y2p2": "Philemon 3:10-21",
+		"prayer_passage": "Joshua 24:19"
+	},
+	{
+		"date": "2024-07-24",
+		"y1p1": "Deuteronomy 19",
+		"y1p2": "Luke 12:13-23",
+		"y1p3": "Psalms 23",
+		"y1p4": "Proverbs 22:1-7",
+		"y2p1": "Isaiah 56-57",
+		"y2p2": "Philemon 4:1-9",
+		"prayer_passage": "Luke 11:13"
+	},
+	{
+		"date": "2024-07-25",
+		"y1p1": "Deuteronomy 20",
+		"y1p2": "Luke 12:24-31",
+		"y1p3": "Psalms 24",
+		"y1p4": "Proverbs 22:8-15",
+		"y2p1": "Isaiah 58",
+		"y2p2": "Philemon 4:10-23",
+		"prayer_passage": "Ephesians 1:13"
+	},
+	{
+		"date": "2024-07-26",
+		"y1p1": "Deuteronomy 21",
+		"y1p2": "Luke 12:32-44",
+		"y1p3": "Psalms 25",
+		"y1p4": "Proverbs 22:16-21",
+		"y2p1": "Isaiah 59",
+		"y2p2": "Colossians 1:1-8",
+		"prayer_passage": " Jeremiah 14:8"
+	},
+	{
+		"date": "2024-07-27",
+		"y1p1": "Deuteronomy 22",
+		"y1p2": "Luke 12:45-59",
+		"y1p3": "Psalms 26",
+		"y1p4": "Proverbs 22:22-29",
+		"y2p1": "Isaiah 60-61",
+		"y2p2": "Colossians 1:9-20",
+		"prayer_passage": "Psalms 31:2"
+	},
+	{
+		"date": "2024-07-28",
+		"y1p1": "Deuteronomy 23",
+		"y1p2": "Luke 13:1-13",
+		"y1p3": "Psalms 27",
+		"y1p4": "Proverbs 23: 1-8",
+		"y2p1": "Isaiah 62-63",
+		"y2p2": "Colossians 1:21-29",
+		"prayer_passage": "Mark 5:7"
+	},
+	{
+		"date": "2024-07-29",
+		"y1p1": "Deuteronomy 24",
+		"y1p2": "Luke 13:14-22",
+		"y1p3": "Psalms 28",
+		"y1p4": "Proverbs 23:9-14",
+		"y2p1": "Isaiah 64-65",
+		"y2p2": "Colossians 2:1-12",
+		"prayer_passage": " Jeremiah 31:9"
+	},
+	{
+		"date": "2024-07-30",
+		"y1p1": "Deuteronomy 25",
+		"y1p2": "Luke 13:23-35",
+		"y1p3": "Psalms 29",
+		"y1p4": "Proverbs 23:15-22",
+		"y2p1": "Isaiah 66",
+		"y2p2": "Colossians 2:13-23",
+		"prayer_passage": "Malachi 1-2"
+	},
+	{
+		"date": "2024-07-31",
+		"y1p1": "Deuteronomy 26",
+		"y1p2": "Luke 14:1-11",
+		"y1p3": "Psalms 30",
+		"y1p4": "Proverbs 23:23-35",
+		"y2p1": " Jeremiah 1",
+		"y2p2": "Colossians 3:1-11",
+		"prayer_passage": "Revelation 1:8"
+	},
+	{
+		"date": "2024-08-01",
+		"y1p1": "Deuteronomy 27",
+		"y1p2": "Luke 14:12-24",
+		"y1p3": "Psalms 31:1-12",
+		"y1p4": "Proverbs 24: 1-8",
+		"y2p1": " Jeremiah 2",
+		"y2p2": "Colossians 3:12-25",
+		"prayer_passage": "Leviticus 11:44"
+	},
+	{
+		"date": "2024-08-02",
+		"y1p1": "Deuteronomy 28:1-35",
+		"y1p2": "Luke 14:25-35",
+		"y1p3": "Psalms 31:13-24",
+		"y1p4": "Proverbs 24:9-16",
+		"y2p1": " Jeremiah 3",
+		"y2p2": "Colossians 4:1-9",
+		"prayer_passage": " Jeremiah 3:12"
+	},
+	{
+		"date": "2024-08-03",
+		"y1p1": "Deuteronomy 28:36-68",
+		"y1p2": "Luke 15:1-10",
+		"y1p3": "Colossians 4:10-18",
+		"y1p4": "Proverbs 24:17-25",
+		"y2p1": " Jeremiah 4",
+		"y2p2": "Colossians 4:10-18",
+		"prayer_passage": "Isaiah 45:18"
+	},
+	{
+		"date": "2024-08-04",
+		"y1p1": "Deuteronomy 29",
+		"y1p2": "Luke 15:11-20",
+		"y1p3": "Psalms 33:1-11",
+		"y1p4": "Proverbs 24:26-34",
+		"y2p1": " Jeremiah 5",
+		"y2p2": "1 Thessalonians 1",
+		"prayer_passage": "Exodus 8:22"
+	},
+	{
+		"date": "2024-08-05",
+		"y1p1": "Deuteronomy 30",
+		"y1p2": "Luke 15:21-32",
+		"y1p3": "Psalms 33:12-22",
+		"y1p4": "Proverbs 25:1-7",
+		"y2p1": " Jeremiah 6",
+		"y2p2": "1 Thessalonians 2:1-9",
+		"prayer_passage": "Exodus 15:26"
+	},
+	{
+		"date": "2024-08-06",
+		"y1p1": "Deuteronomy 31",
+		"y1p2": "Luke 16:1-18",
+		"y1p3": "Psalms 34:1-11",
+		"y1p4": "Proverbs 25:8-14",
+		"y2p1": " Jeremiah 7",
+		"y2p2": "1 Thessalonians 2:10-20",
+		"prayer_passage": "Isaiah 48:17"
+	},
+	{
+		"date": "2024-08-07",
+		"y1p1": "Deuteronomy 32:1-25",
+		"y1p2": "Luke 16:19-31",
+		"y1p3": "Psalms 34:12-22",
+		"y1p4": "Proverbs 25:12-20",
+		"y2p1": " Jeremiah 8",
+		"y2p2": "1 Thessalonians 3",
+		"prayer_passage": "Isaiah 48:17"
+	},
+	{
+		"date": "2024-08-08",
+		"y1p1": "Deuteronomy 32:26-52",
+		"y1p2": "Luke 17:1-11",
+		"y1p3": "Psalms 35:1-13",
+		"y1p4": "Proverbs 25:21-28",
+		"y2p1": " Jeremiah 9",
+		"y2p2": "1 Thessalonians 4:1-9",
+		"prayer_passage": " Jeremiah 9:24"
+	},
+	{
+		"date": "2024-08-09",
+		"y1p1": "Deuteronomy 33",
+		"y1p2": "Luke 17:12-21",
+		"y1p3": "Psalms 35:14-28",
+		"y1p4": "Proverbs 26:1-7",
+		"y2p1": " Jeremiah 10",
+		"y2p2": "1 Thessalonians 4:10-18",
+		"prayer_passage": "Leviticus 22:32"
+	},
+	{
+		"date": "2024-08-10",
+		"y1p1": "Deuteronomy 34",
+		"y1p2": "Luke 17:22-37",
+		"y1p3": "Psalms 36",
+		"y1p4": "Proverbs 26:8-14",
+		"y2p1": " Jeremiah 11",
+		"y2p2": "1 Thessalonians 5:1-8",
+		"prayer_passage": "Isaiah 43:15"
+	},
+	{
+		"date": "2024-08-11",
+		"y1p1": "Joshua 1",
+		"y1p2": "Luke 18:1-8",
+		"y1p3": "Psalms 37:1-20",
+		"y1p4": "Proverbs 26: 15-21",
+		"y2p1": " Jeremiah 12-13",
+		"y2p2": "1 Thessalonians 5:9-17",
+		"prayer_passage": "Matthew 27:43"
+	},
+	{
+		"date": "2024-08-12",
+		"y1p1": "Joshua 2",
+		"y1p2": "Luke 18:9-17",
+		"y1p3": "Psalms 37:21-40",
+		"y1p4": "Proverbs 26:22-28",
+		"y2p1": " Jeremiah 14",
+		"y2p2": "1 Thessalonians 5:18-28",
+		"prayer_passage": "Genesis 15:1"
+	},
+	{
+		"date": "2024-08-13",
+		"y1p1": "Joshua 3",
+		"y1p2": "Luke 18:18-30",
+		"y1p3": "Psalms 38::1-11",
+		"y1p4": "Proverbs 27",
+		"y2p1": " Jeremiah 15",
+		"y2p2": "2 Thessalonians 1",
+		"prayer_passage": " Jeremiah 15:20"
+	},
+	{
+		"date": "2024-08-14",
+		"y1p1": "Joshua 4",
+		"y1p2": "Luke 18: 31-43",
+		"y1p3": "Psalms 38:12-22",
+		"y1p4": "Proverbs 27:8-13",
+		"y2p1": " Jeremiah 16",
+		"y2p2": "2 Thessalonians 2:1-7",
+		"prayer_passage": "Matthew 28:20"
+	},
+	{
+		"date": "2024-08-15",
+		"y1p1": "Joshua 5",
+		"y1p2": "Luke 19:1-10",
+		"y1p3": "Psalms 39",
+		"y1p4": "Proverbs 27:14-20",
+		"y2p1": " Jeremiah 17",
+		"y2p2": "2 Thessalonians 2:8-17",
+		"prayer_passage": "Isaiah 63:1"
+	},
+	{
+		"date": "2024-08-16",
+		"y1p1": "Joshua 6",
+		"y1p2": "Luke 19:11-27",
+		"y1p3": "Psalms 40",
+		"y1p4": "Proverbs 27:21-27",
+		"y2p1": " Jeremiah 18",
+		"y2p2": "2 Thessalonians 3:1-9",
+		"prayer_passage": "Matthew 1:21"
+	},
+	{
+		"date": "2024-08-17",
+		"y1p1": "Joshua 7",
+		"y1p2": "Luke 19:28-38",
+		"y1p3": "Psalms 41",
+		"y1p4": "Proverbs 28:1-7",
+		"y2p1": " Jeremiah 19-20",
+		"y2p2": "2 Thessalonians 3:10-18",
+		"prayer_passage": "Matthew 1:23"
+	},
+	{
+		"date": "2024-08-18",
+		"y1p1": "Joshua 8",
+		"y1p2": "Luke 19:39-48",
+		"y1p3": "Psalms 42",
+		"y1p4": "Proverbs 28:8-14",
+		"y2p1": " Jeremiah 21",
+		"y2p2": "1 Timothy 1:1-11",
+		"prayer_passage": "Exodus 17:15"
+	},
+	{
+		"date": "2024-08-19",
+		"y1p1": "Joshua 9",
+		"y1p2": "Luke 20:1-8",
+		"y1p3": "Psalms 43",
+		"y1p4": "Proverbs 28:15-21",
+		"y2p1": " Jeremiah 22",
+		"y2p2": "1 Timothy 1: 12-20",
+		"prayer_passage": "Psalms 23:1"
+	},
+	{
+		"date": "2024-08-20",
+		"y1p1": "Joshua 10",
+		"y1p2": "Luke 20:1-8",
+		"y1p3": "Psalms 44:1-14",
+		"y1p4": "Proverbs 28:22-28",
+		"y2p1": " Jeremiah 23",
+		"y2p2": "1Timothy 2",
+		"prayer_passage": "Isaiah 45:21"
+	},
+	{
+		"date": "2024-08-21",
+		"y1p1": "Joshua 11",
+		"y1p2": "Luke 20:27-38",
+		"y1p3": "Psalms 44:15-26",
+		"y1p4": "Proverbs 29:1-7",
+		"y2p1": " Jeremiah 24-25",
+		"y2p2": "1 Timothy 3:1-7",
+		"prayer_passage": "Acts 22:14"
+	},
+	{
+		"date": "2024-08-22",
+		"y1p1": "Joshua 12",
+		"y1p2": "Luke 20: 39-47",
+		"y1p3": "Psalms 45",
+		"y1p4": "Proverbs 29:8-13",
+		"y2p1": " Jeremiah 26",
+		"y2p2": "1 Timothy 3:8-16",
+		"prayer_passage": "Psalms 121:5"
+	},
+	{
+		"date": "2024-08-23",
+		"y1p1": "Joshua 13",
+		"y1p2": "Luke 21:1-9",
+		"y1p3": "Psalms 46",
+		"y1p4": "Proverbs 29:14-21",
+		"y2p1": " Jeremiah 27-28",
+		"y2p2": "1 Timothy 4:1-8",
+		"prayer_passage": "Psalms 24:10"
+	},
+	{
+		"date": "2024-08-24",
+		"y1p1": "Joshua 14",
+		"y1p2": "Luke 21:10-19",
+		"y1p3": "Psalms 47",
+		"y1p4": "Proverbs 29:22-27",
+		"y2p1": " Jeremiah 29",
+		"y2p2": "1 Timothy 4:9-16",
+		"prayer_passage": "John 1:29"
+	},
+	{
+		"date": "2024-08-25",
+		"y1p1": "Joshua 15",
+		"y1p2": "Luke 21:20-28",
+		"y1p3": "Psalms 48",
+		"y1p4": "Proverbs 30:1-9",
+		"y2p1": " Jeremiah 30",
+		"y2p2": "1 Timothy 5:1-13",
+		"prayer_passage": "Revelation 13:8"
+	},
+	{
+		"date": "2024-08-26",
+		"y1p1": "Joshua 16",
+		"y1p2": "Luke 21:29-38",
+		"y1p3": "Psalms 49",
+		"y1p4": "Proverbs 30:10-16",
+		"y2p1": " Jeremiah 31",
+		"y2p2": "1 Timothy 5:14-25",
+		"prayer_passage": "Psalms 27:1"
+	},
+	{
+		"date": "2024-08-27",
+		"y1p1": "Joshua 17",
+		"y1p2": "Luke 22:1-12",
+		"y1p3": "Psalms 50:1- 11",
+		"y1p4": "Proverbs 30: 17-23",
+		"y2p1": " Jeremiah 32",
+		"y2p2": "1 Timothy 6:1-10",
+		"prayer_passage": "Psalms 27:1"
+	},
+	{
+		"date": "2024-08-28",
+		"y1p1": "Joshua 18",
+		"y1p2": "Luke 22:13-24",
+		"y1p3": "Psalms 50:12-23",
+		"y1p4": "Proverbs 30: 24-33",
+		"y2p1": " Jeremiah 33",
+		"y2p2": "1 Timothy 6:11-21",
+		"prayer_passage": "Revelation 5:5"
+	},
+	{
+		"date": "2024-08-29",
+		"y1p1": "Joshua 19",
+		"y1p2": "Luke 22:25-37",
+		"y1p3": "Psalms 51",
+		"y1p4": "Proverbs 31:1-9",
+		"y2p1": " Jeremiah 34-35",
+		"y2p2": "1 Timothy 1:1-7",
+		"prayer_passage": "1 Peter 2:4"
+	},
+	{
+		"date": "2024-08-30",
+		"y1p1": "Joshua 20",
+		"y1p2": "Luke 22:38-53",
+		"y1p3": "Psalms 52",
+		"y1p4": "Proverbs 31:10-15",
+		"y2p1": " Jeremiah 36",
+		"y2p2": "2 Timothy 1:8-18",
+		"prayer_passage": "2 Peter 3:18"
+	},
+	{
+		"date": "2024-08-31",
+		"y1p1": "Joshua 21",
+		"y1p2": "Luke 22:54-62",
+		"y1p3": "Psalms 53",
+		"y1p4": "Proverbs 31: 16-22",
+		"y2p1": " Jeremiah 37-38",
+		"y2p2": "2 Timothy 2:1-13",
+		"prayer_passage": "Genesis 1:2"
+	},
+	{
+		"date": "2024-09-01",
+		"y1p1": "Joshua 22",
+		"y1p2": "Luke 22:63-71",
+		"y1p3": "Psalms 54",
+		"y1p4": "Proverbs 31:23-31",
+		"y2p1": " Jeremiah 39-40",
+		"y2p2": "2 Timothy 2:14-26",
+		"prayer_passage": "Genesis 2:4"
+	},
+	{
+		"date": "2024-09-02",
+		"y1p1": "Joshua 23",
+		"y1p2": "Luke 23:1-9",
+		"y1p3": "Psalms 55:1-11",
+		"y1p4": "Proverbs 1:1-9",
+		"y2p1": " Jeremiah 41-42",
+		"y2p2": "2 Timothy 3:1-9",
+		"prayer_passage": "Revelation 4:8"
+	},
+	{
+		"date": "2024-09-03",
+		"y1p1": "Joshua 24",
+		"y1p2": "Luke 23:10-16",
+		"y1p3": "Psalms 55:12-23",
+		"y1p4": "Proverbs 1:10-16",
+		"y2p1": " Jeremiah 43-44",
+		"y2p2": "2 Timothy 3:10-17",
+		"prayer_passage": "2 Samuel 5:10"
+	},
+	{
+		"date": "2024-09-04",
+		"y1p1": "Judges 1",
+		"y1p2": "Luke 23:20-32",
+		"y1p3": "Psalms 56",
+		"y1p4": "Proverbs 1:17-25",
+		"y2p1": " Jeremiah 45-46",
+		"y2p2": "2 Timothy 4:1-11",
+		"prayer_passage": "Revelation 19:6"
+	},
+	{
+		"date": "2024-09-05",
+		"y1p1": "Judges 2",
+		"y1p2": "Luke 23:33-43",
+		"y1p3": "Psalms 57",
+		"y1p4": "Proverbs 1:26-33",
+		"y2p1": " Jeremiah 47-48",
+		"y2p2": "2 Timothy 4:12-22",
+		"prayer_passage": "Romans 9:29"
+	},
+	{
+		"date": "2024-09-06",
+		"y1p1": "Judges 3",
+		"y1p2": "Luke 23:44-56",
+		"y1p3": "Psalms 58",
+		"y1p4": "Proverbs 2::1-5",
+		"y2p1": " Jeremiah 49",
+		"y2p2": "Titus 1",
+		"prayer_passage": "Joshua 18:3"
+	},
+	{
+		"date": "2024-09-07",
+		"y1p1": "Judges 4",
+		"y1p2": "Luke 24:1-9",
+		"y1p3": "Psalms 59",
+		"y1p4": "Proverbs 2:6-11",
+		"y2p1": " Jeremiah 50",
+		"y2p2": "Titus 2",
+		"prayer_passage": "Acts 10:36"
+	},
+	{
+		"date": "2024-09-08",
+		"y1p1": "Judges 5",
+		"y1p2": "Luke 24:10-17",
+		"y1p3": "Psalms 60-61",
+		"y1p4": "Proverbs 2:12-17",
+		"y2p1": " Jeremiah 51",
+		"y2p2": "Titus 3",
+		"prayer_passage": "Matthew 9: 38"
+	},
+	{
+		"date": "2024-09-09",
+		"y1p1": "Judges 6",
+		"y1p2": "Luke 24:18-26",
+		"y1p3": "Psalms 62",
+		"y1p4": "Proverbs 2:18-22",
+		"y2p1": "Jeremiah 52",
+		"y2p2": "Philemon 1:1-14",
+		"prayer_passage": "Judges 6:24"
+	},
+	{
+		"date": "2024-09-10",
+		"y1p1": "Judges 7",
+		"y1p2": "Luke 24:27-40",
+		"y1p3": "Psalms 63",
+		"y1p4": "Proverbs 3:1-8",
+		"y2p1": "Lamentations 1-2",
+		"y2p2": "Philemon 1: 15-25",
+		"prayer_passage": "Micah 4:13"
+	},
+	{
+		"date": "2024-09-11",
+		"y1p1": "Judges 8",
+		"y1p2": "Luke 24:41-53",
+		"y1p3": "Psalms 64",
+		"y1p4": "Proverbs 3:9-18",
+		"y2p1": "Lamentations 3:1-32",
+		"y2p2": "Hebrews 1",
+		"prayer_passage": "Psalms 8:9"
+	},
+	{
+		"date": "2024-09-12",
+		"y1p1": "Judges 9:1-27",
+		"y1p2": "John 1:1-9",
+		"y1p3": "Psalms 65",
+		"y1p4": "Proverbs 3:19-26",
+		"y2p1": "Lamentations 3:33-66",
+		"y2p2": "Hebrews 2:1-9",
+		"prayer_passage": "Ezekiel 7:9"
+	},
+	{
+		"date": "2024-09-13",
+		"y1p1": "Judges 9:28-57",
+		"y1p2": "John 1:10-20",
+		"y1p3": "Psalms 66:1-9",
+		"y1p4": "Proverbs 3:27-35",
+		"y2p1": "Lamentations 4-5",
+		"y2p2": "Hebrews 2:10-18",
+		"prayer_passage": "1 John 4:8"
+	},
+	{
+		"date": "2024-09-14",
+		"y1p1": "Judges 10",
+		"y1p2": "John 1:21-31",
+		"y1p3": "Psalms 66:10-20",
+		"y1p4": "Proverbs 4:1-6",
+		"y2p1": "Ezekiel 1",
+		"y2p2": "Hebrews 3:1-9",
+		"prayer_passage": "Hebrews 1:3"
+	},
+	{
+		"date": "2024-09-15",
+		"y1p1": "Judges 11",
+		"y1p2": "John 1:32-42",
+		"y1p3": "Psalms 67",
+		"y1p4": "Proverbs 4:7-13",
+		"y2p1": "Ezekiel 2-3",
+		"y2p2": "Hebrews 3:10-19",
+		"prayer_passage": "Hebrews 1:3"
+	},
+	{
+		"date": "2024-09-16",
+		"y1p1": "Judges 12",
+		"y1p2": "John 1:43-51",
+		"y1p3": "Psalms 68",
+		"y1p4": "Proverbs 4:14-19",
+		"y2p1": "Ezekiel 4-5",
+		"y2p2": "Hebrews 4: 1-8",
+		"prayer_passage": "Isaiah 53:3"
+	},
+	{
+		"date": "2024-09-17",
+		"y1p1": "Judges 13",
+		"y1p2": "John 2:1-11",
+		"y1p3": "Psalms 68:13-21",
+		"y1p4": "Proverbs 4:20-27",
+		"y2p1": "Ezekiel 6-7",
+		"y2p2": "Hebrews 4:9-16",
+		"prayer_passage": "Exodus 15:3"
+	},
+	{
+		"date": "2024-09-18",
+		"y1p1": "Judges 14",
+		"y1p2": "John 2:12-17",
+		"y1p3": "Psalms 68: 22-35",
+		"y1p4": "Proverbs 5:1-6",
+		"y2p1": "Ezekiel 8-9",
+		"y2p2": "Hebrews 5",
+		"prayer_passage": "John 13:13"
+	},
+	{
+		"date": "2024-09-19",
+		"y1p1": "Judges 15",
+		"y1p2": "John 2:18-25",
+		"y1p3": "Psalms 69:1-8",
+		"y1p4": "Proverbs 5:7-13",
+		"y2p1": "Ezekiel 10",
+		"y2p2": "Hebrews 6:1-10",
+		"prayer_passage": "1 Timothy 2:5"
+	},
+	{
+		"date": "2024-09-20",
+		"y1p1": "Judges 16",
+		"y1p2": "John 3:1-9",
+		"y1p3": "Psalms 69:9-16",
+		"y1p4": "Proverbs 5:14-17",
+		"y2p1": "Ezekiel 11",
+		"y2p2": "Hebrews 6:11-20",
+		"prayer_passage": "Hebrews 8:6"
+	},
+	{
+		"date": "2024-09-21",
+		"y1p1": "Judges 17",
+		"y1p2": "John 3:10-21",
+		"y1p3": "Psalms 69:17:24",
+		"y1p4": "Proverbs 5:18-23",
+		"y2p1": "Ezekiel 12",
+		"y2p2": "Hebrews 7: 1-8",
+		"prayer_passage": "Hebrews 9:15"
+	},
+	{
+		"date": "2024-09-22",
+		"y1p1": "Judges 18",
+		"y1p2": "John 3:22- 27",
+		"y1p3": "Psalms 69:25-36",
+		"y1p4": "Proverbs 6:1-11",
+		"y2p1": "Ezekiel 13",
+		"y2p2": "Hebrews 7:9-16",
+		"prayer_passage": "Isaiah 42:1"
+	},
+	{
+		"date": "2024-09-23",
+		"y1p1": "Judges 19",
+		"y1p2": "John 3:28-36",
+		"y1p3": "Psalms 70",
+		"y1p4": "Proverbs 6:12-19",
+		"y2p1": "Ezekiel 14-15",
+		"y2p2": "Hebrews 7:17-28",
+		"prayer_passage": "Hebrews 8:2"
+	},
+	{
+		"date": "2024-09-24",
+		"y1p1": "Judges 20:1-23",
+		"y1p2": "John 4:1-9",
+		"y1p3": "Psalms 71",
+		"y1p4": "Proverbs 6:20-26",
+		"y2p1": "Ezekiel 16",
+		"y2p2": "Hebrews 8",
+		"prayer_passage": "Hebrews 11:6"
+	},
+	{
+		"date": "2024-09-25",
+		"y1p1": "Judges 20:24-48",
+		"y1p2": "John 4:10-18",
+		"y1p3": "Psalms 71:12-24",
+		"y1p4": "Proverbs 6:27-35",
+		"y2p1": "Ezekiel 17",
+		"y2p2": "Hebrews 9:1-10",
+		"prayer_passage": "Psalms 78:56"
+	},
+	{
+		"date": "2024-09-26",
+		"y1p1": "Judges 21",
+		"y1p2": "John 4:19-27",
+		"y1p3": "Psalms 72",
+		"y1p4": "Proverbs 7:1-5",
+		"y2p1": "Ezekiel 18-19",
+		"y2p2": "Hebrews 9:11-18",
+		"prayer_passage": "Isaiah 26:7"
+	},
+	{
+		"date": "2024-09-27",
+		"y1p1": "Ruth 1-2",
+		"y1p2": "John 4:28-38",
+		"y1p3": "Psalms 73:1-14",
+		"y1p4": "Proverbs 7:6-16",
+		"y2p1": "Ezekiel 20",
+		"y2p2": "Hebrews 9:19-28",
+		"prayer_passage": "Matthew 12:18"
+	},
+	{
+		"date": "2024-09-28",
+		"y1p1": "Ruth 1-2",
+		"y1p2": "John 4:39-54",
+		"y1p3": "Psalms 73:15-28",
+		"y1p4": "Proverbs 7:17-27",
+		"y2p1": "Ezekiel 21",
+		"y2p2": "Hebrews 10:1-10",
+		"prayer_passage": "Matthew 3:17"
+	},
+	{
+		"date": "2024-09-29",
+		"y1p1": "1 Samuel 1",
+		"y1p2": "John 5:1-9",
+		"y1p3": "Psalms 74:1-12",
+		"y1p4": "Proverbs 8:1-9",
+		"y2p1": "Ezekiel 22",
+		"y2p2": "Hebrews 10:11-18",
+		"prayer_passage": "Psalms 43:4"
+	},
+	{
+		"date": "2024-09-30",
+		"y1p1": "1 Samuel 2",
+		"y1p2": "John 5:10-17",
+		"y1p3": "Psalms 74 :13-23",
+		"y1p4": "Proverbs 8:10-18",
+		"y2p1": "Ezekiel 23",
+		"y2p2": "Hebrews 10:19-27",
+		"prayer_passage": "Psalms 89:27"
+	},
+	{
+		"date": "2024-10-01",
+		"y1p1": "1 Samuel 3",
+		"y1p2": "John 5:18:-27",
+		"y1p3": "Psalms 75-76",
+		"y1p4": "Proverbs 8:19-31",
+		"y2p1": "Ezekiel 24",
+		"y2p2": "Hebrews 10:28-39",
+		"prayer_passage": "Psalms 3:3"
+	},
+	{
+		"date": "2024-10-02",
+		"y1p1": "1 Samuel 4",
+		"y1p2": "John 5:28-38",
+		"y1p3": "Psalms 77",
+		"y1p4": "Proverbs 8:32-36",
+		"y2p1": "Ezekiel 25-26",
+		"y2p2": "Hebrews 11:1-10",
+		"prayer_passage": "Psalms 32:7"
+	},
+	{
+		"date": "2024-10-03",
+		"y1p1": "1 Samuel 5",
+		"y1p2": "John 5:39-47",
+		"y1p3": "Psalms 78",
+		"y1p4": "Proverbs 9:1-5",
+		"y2p1": "Ezekiel 27",
+		"y2p2": "Hebrews 11:11-20",
+		"prayer_passage": "Hebrews 13:6"
+	},
+	{
+		"date": "2024-10-04",
+		"y1p1": "1 Samuel 6",
+		"y1p2": "John 6:1-10",
+		"y1p3": "Psalms 78:14-25",
+		"y1p4": "Proverbs 9:6-11",
+		"y2p1": "Ezekiel 28",
+		"y2p2": "Hebrews 11:21-30",
+		"prayer_passage": " Jeremiah 17:17"
+	},
+	{
+		"date": "2024-10-05",
+		"y1p1": "1 Samuel 7",
+		"y1p2": "John 6:11-21",
+		"y1p3": "Psalms 78:26-37",
+		"y1p4": "Proverbs 9:12 -18",
+		"y2p1": "Ezekiel 29",
+		"y2p2": "Hebrews 11:31-40",
+		"prayer_passage": "2 Samuel 22:29"
+	},
+	{
+		"date": "2024-10-06",
+		"y1p1": "1 Samuel 8",
+		"y1p2": "John 6:22-29",
+		"y1p3": "Psalms 78:38-51",
+		"y1p4": "Proverbs 10:1-8",
+		"y2p1": "Ezekiel 30",
+		"y2p2": "Hebrews 12:1-16",
+		"prayer_passage": "Psalms 73:26"
+	},
+	{
+		"date": "2024-10-07",
+		"y1p1": "1 Samuel 9",
+		"y1p2": "John 6:30-40",
+		"y1p3": "Psalms 78:52-61",
+		"y1p4": "Proverbs 10:9-16",
+		"y2p1": "Ezekiel 31",
+		"y2p2": "Hebrews 12:17-2o",
+		"prayer_passage": "Psalms 109:1"
+	},
+	{
+		"date": "2024-10-08",
+		"y1p1": "1 sam10",
+		"y1p2": "John 6:41-51",
+		"y1p3": "Psalms 78: 62:72",
+		"y1p4": "Proverbs 10:17-24",
+		"y2p1": "Ezekiel 32",
+		"y2p2": "Hebrews 13:1-12",
+		"prayer_passage": "Job 19:25"
+	},
+	{
+		"date": "2024-10-09",
+		"y1p1": "1 Samuel 11",
+		"y1p2": "John 6:52-59",
+		"y1p3": "Psalms 79",
+		"y1p4": "Proverbs 10:25-32",
+		"y2p1": "Ezekiel 33",
+		"y2p2": "Hebrews 13:13-25",
+		"prayer_passage": "Isaiah 12:2"
+	},
+	{
+		"date": "2024-10-10",
+		"y1p1": "1 Samuel 12",
+		"y1p2": "John 6:60-71",
+		"y1p3": "Psalms 80",
+		"y1p4": "Proverbs 11:1-7",
+		"y2p1": "Ezekiel 34:-35",
+		"y2p2": "James 1:1-8",
+		"prayer_passage": "Psalms 18:18"
+	},
+	{
+		"date": "2024-10-11",
+		"y1p1": "1 Samuel 13",
+		"y1p2": "John 7:1-8",
+		"y1p3": "Psalms 81",
+		"y1p4": "Proverbs 11:8-15",
+		"y2p1": "Ezekiel 36",
+		"y2p2": "James 1:9-16",
+		"prayer_passage": "Psalms 71:3"
+	},
+	{
+		"date": "2024-10-12",
+		"y1p1": "1 Samuel 14",
+		"y1p2": "John 7:9-16",
+		"y1p3": "Psalms 82-83",
+		"y1p4": "Proverbs 11:16 -26",
+		"y2p1": "Ezekiel 37",
+		"y2p2": "James 1:17-27",
+		"prayer_passage": "Psalms 71:5"
+	},
+	{
+		"date": "2024-10-13",
+		"y1p1": "1 Samuel 15",
+		"y1p2": "John 7:17-24",
+		"y1p3": "Psalms 84",
+		"y1p4": "Proverbs 11: 27-31",
+		"y2p1": "Ezekiel 38",
+		"y2p2": "James 2:1-13",
+		"prayer_passage": "Isaiah 22:23"
+	},
+	{
+		"date": "2024-10-14",
+		"y1p1": "1 Samuel 16",
+		"y1p2": "John 7:25-32",
+		"y1p3": "Psalms 85",
+		"y1p4": "Proverbs 12:1-7",
+		"y2p1": "Ezekiel 39",
+		"y2p2": "James 2:14-26",
+		"prayer_passage": "John 1:14"
+	},
+	{
+		"date": "2024-10-15",
+		"y1p1": "1 Samuel 17",
+		"y1p2": "John 7:33-44",
+		"y1p3": "Psalms 86-87",
+		"y1p4": "Proverbs 12:8-14",
+		"y2p1": "Ezekiel 40",
+		"y2p2": "James 3:1-9",
+		"prayer_passage": "Zechariah 14:9"
+	},
+	{
+		"date": "2024-10-16",
+		"y1p1": "1 Samuel 18",
+		"y1p2": "John 7: 45-53",
+		"y1p3": "Psalms 88",
+		"y1p4": "Proverbs 12:15-22",
+		"y2p1": "Ezekiel 41",
+		"y2p2": "James 3:10-18",
+		"prayer_passage": "Psalms 90: 1"
+	},
+	{
+		"date": "2024-10-17",
+		"y1p1": "1 Samuel 19",
+		"y1p2": "John 8:1-8",
+		"y1p3": "Psalms 89:1-20",
+		"y1p4": "Proverbs 12:23-28",
+		"y2p1": "Ezekiel 42",
+		"y2p2": "James 4 :1-8",
+		"prayer_passage": "Psalms 48:14"
+	},
+	{
+		"date": "2024-10-18",
+		"y1p1": "1 Samuel 20",
+		"y1p2": "John 8:9-13",
+		"y1p3": "Psalms 89:21-29",
+		"y1p4": "Proverbs 13:1-8",
+		"y2p1": "Ezekiel 43",
+		"y2p2": "James 4:9-17",
+		"prayer_passage": "Isaiah 33:22"
+	},
+	{
+		"date": "2024-10-19",
+		"y1p1": "1 Samuel 21",
+		"y1p2": "John 8: 14-22",
+		"y1p3": "Psalms 89: 30 -41",
+		"y1p4": "Proverbs 13:9-15",
+		"y2p1": "Ezekiel 44",
+		"y2p2": "James 5:1-10",
+		"prayer_passage": "Colossians 3:4"
+	},
+	{
+		"date": "2024-10-20",
+		"y1p1": "1 Samuel 22",
+		"y1p2": "John 8:23-30",
+		"y1p3": "Psalms 89:42-52",
+		"y1p4": "Proverbs 13: 16-25",
+		"y2p1": "Ezekiel 45",
+		"y2p2": "James 11-20",
+		"prayer_passage": "Ephesians 2:14"
+	},
+	{
+		"date": "2024-10-21",
+		"y1p1": "1 Samuel 23",
+		"y1p2": "John 8:31-38",
+		"y1p3": "Psalms 90",
+		"y1p4": "Proverbs 14:1-9",
+		"y2p1": "Ezekiel 46",
+		"y2p2": "1 Peter 1:1-12",
+		"prayer_passage": "Isaiah 64 :8"
+	},
+	{
+		"date": "2024-10-22",
+		"y1p1": "1 Samuel 24",
+		"y1p2": "John 8:39-51",
+		"y1p3": "Psalms 91",
+		"y1p4": "Proverbs 14:10-18",
+		"y2p1": "Ezekiel 47",
+		"y2p2": "1 Peter 1:13-25",
+		"prayer_passage": "Isaiah 63 :16"
+	},
+	{
+		"date": "2024-10-23",
+		"y1p1": "1 Samuel 25",
+		"y1p2": "John 8:52-59",
+		"y1p3": "Psalms 92",
+		"y1p4": "Proverbs 14: 19-27",
+		"y2p1": "Ezekiel 48",
+		"y2p2": "1 Peter 2:1-12",
+		"prayer_passage": "Isaiah 33:21"
+	},
+	{
+		"date": "2024-10-24",
+		"y1p1": "1 Samuel 26",
+		"y1p2": "John 9:1-9",
+		"y1p3": "Psalms 93",
+		"y1p4": "Proverbs 14:28-35",
+		"y2p1": "Daniel 1",
+		"y2p2": "1 Peter 2:13-25",
+		"prayer_passage": "Ezekiel 34:29"
+	},
+	{
+		"date": "2024-10-25",
+		"y1p1": "1 Samuel 27",
+		"y1p2": "John 9:10-19",
+		"y1p3": "Psalms 94: 1-10",
+		"y1p4": "Proverbs 15:1-8",
+		"y2p1": "Daniel 2",
+		"y2p2": "1 Peter 3:1-11",
+		"prayer_passage": "Psalms 16:5"
+	},
+	{
+		"date": "2024-10-26",
+		"y1p1": "1 Samuel 28",
+		"y1p2": "John 9:20-33",
+		"y1p3": "Psalms 94:11-23",
+		"y1p4": "Proverbs 15: 9-17",
+		"y2p1": "Daniel 3",
+		"y2p2": "1 Peter 3:12-22",
+		"prayer_passage": "Job 7:20"
+	},
+	{
+		"date": "2024-10-27",
+		"y1p1": "1 Samuel 29",
+		"y1p2": "John 9: 34-41",
+		"y1p3": "Psalms 95",
+		"y1p4": "Proverbs 15: 18-24",
+		"y2p1": "Daniel 4",
+		"y2p2": "1 Peter 4:1-9",
+		"prayer_passage": "Acts 1:4"
+	},
+	{
+		"date": "2024-10-28",
+		"y1p1": "1 Samuel 30",
+		"y1p2": "John 10: 1-10",
+		"y1p3": "Psalms 96",
+		"y1p4": "Proverbs 15: 25 -33",
+		"y2p1": "Daniel 5",
+		"y2p2": "1 Peter 4: 10-19",
+		"prayer_passage": "John 3:2"
+	},
+	{
+		"date": "2024-10-29",
+		"y1p1": "1 Samuel 31",
+		"y1p2": "John 10:11-20",
+		"y1p3": "Psalms 97",
+		"y1p4": "Proverbs 16:1-8",
+		"y2p1": "Daniel 6",
+		"y2p2": "1 Peter 5",
+		"prayer_passage": "Isaiah 25:4"
+	},
+	{
+		"date": "2024-10-30",
+		"y1p1": "2 Samuel 1",
+		"y1p2": "John 10:21- 30",
+		"y1p3": "Psalms 98",
+		"y1p4": "Proverbs 16: 9-17",
+		"y2p1": "Daniel 7",
+		"y2p2": "2 Peter 1:1-9",
+		"prayer_passage": "Isaiah 25:4"
+	},
+	{
+		"date": "2024-10-31",
+		"y1p1": "2 Samuel 2",
+		"y1p2": "John 10:31-42",
+		"y1p3": "Psalms 99",
+		"y1p4": "Proverbs 16: 18 -26",
+		"y2p1": "Daniel 8",
+		"y2p2": "2 Peter 1:10-21",
+		"prayer_passage": "John 17:25"
+	},
+	{
+		"date": "2024-11-01",
+		"y1p1": "2 Samuel 3",
+		"y1p2": "John 11:1-10",
+		"y1p3": "Psalms 100-101",
+		"y1p4": "Proverbs 16:27-33",
+		"y2p1": "Daniel 9",
+		"y2p2": "2 Peter 2:1-11",
+		"prayer_passage": "1 Peter 2:8"
+	},
+	{
+		"date": "2024-11-02",
+		"y1p1": "2 Samuel 4",
+		"y1p2": "John 11:11-19",
+		"y1p3": "Psalms 102:1-14",
+		"y1p4": "Proverbs 17:1-7",
+		"y2p1": "Daniel 10",
+		"y2p2": "2 Peter 2:12-22",
+		"prayer_passage": "Isaiah 11:1"
+	},
+	{
+		"date": "2024-11-03",
+		"y1p1": "2 Samuel 5",
+		"y1p2": "John 11:20-29",
+		"y1p3": "Psalms 102:15-28",
+		"y1p4": "Proverbs 17:8-14",
+		"y2p1": "Daniel 11:1-30",
+		"y2p2": "2 Peter 3:1-9",
+		"prayer_passage": "Isaiah 11:1."
+	},
+	{
+		"date": "2024-11-04",
+		"y1p1": "2 Samuel 6",
+		"y1p2": "John 11:30-39",
+		"y1p3": "Psalms 103:1-11",
+		"y1p4": "Proverbs 17:15-22",
+		"y2p1": "Daniel 11:31-45",
+		"y2p2": "2 Peter 3:10-18",
+		"prayer_passage": "Psalms 28:8"
+	},
+	{
+		"date": "2024-11-05",
+		"y1p1": "2 Samuel 7",
+		"y1p2": "John 11:40-48",
+		"y1p3": "Psalms 103:12-22",
+		"y1p4": "Proverbs 17:23-28",
+		"y2p1": "Daniel 12",
+		"y2p2": "1 John 1",
+		"prayer_passage": "1 Timothy 4:10"
+	},
+	{
+		"date": "2024-11-06",
+		"y1p1": "2 Samuel 8",
+		"y1p2": "John 11:49-57",
+		"y1p3": "Psalms 104:1-9",
+		"y1p4": "Proverbs 18:1-8",
+		"y2p1": "Hosea 1",
+		"y2p2": "1 John 2:1-10",
+		"prayer_passage": "1 John 4:14"
+	},
+	{
+		"date": "2024-11-07",
+		"y1p1": "2 Samuel 9",
+		"y1p2": "John 12:1-9",
+		"y1p3": "Psalms 104:10-23",
+		"y1p4": "Proverbs 18:9-16",
+		"y2p1": "Hosea 2",
+		"y2p2": "1 John 2:11-20",
+		"prayer_passage": "Hebrews 2:16"
+	},
+	{
+		"date": "2024-11-08",
+		"y1p1": "2 Samuel 10",
+		"y1p2": "John 12:10-19",
+		"y1p3": "Psalms 104:24-35",
+		"y1p4": "Proverbs 18:17-24",
+		"y2p1": "Hosea 3",
+		"y2p2": "1 John 2:21-29",
+		"prayer_passage": "Genesis 49:10"
+	},
+	{
+		"date": "2024-11-09",
+		"y1p1": "2 Samuel 11",
+		"y1p2": "John 12:20-29",
+		"y1p3": "Psalms 105:1-15",
+		"y1p4": "Proverbs 19:1-8.",
+		"y2p1": "Hosea 4",
+		"y2p2": "1 John 3:1-12",
+		"prayer_passage": "Mark 14:61"
+	},
+	{
+		"date": "2024-11-10",
+		"y1p1": "2 Samuel 12",
+		"y1p2": "John 12:30-38",
+		"y1p3": "Psalms 105:16-30",
+		"y1p4": "Proverbs 19:9-15",
+		"y2p1": "Hosea 5-6",
+		"y2p2": "1 John 3:13-24",
+		"prayer_passage": "Luke 1:32"
+	},
+	{
+		"date": "2024-11-11",
+		"y1p1": "2 Samuel 13",
+		"y1p2": "John 12:39-50",
+		"y1p3": "Psalms 105:31-45",
+		"y1p4": "Proverbs 19:16-22",
+		"y2p1": "Hosea 7",
+		"y2p2": "1 John 4:1-10",
+		"prayer_passage": "Matthew 16:16"
+	},
+	{
+		"date": "2024-11-12",
+		"y1p1": "2 Samuel 14",
+		"y1p2": "John 13:1-6",
+		"y1p3": "Psalms 106:1-15",
+		"y1p4": "Proverbs 19:23-29",
+		"y2p1": "Hosea 8",
+		"y2p2": "1 John 4:11-21",
+		"prayer_passage": "Hebrews 3:6"
+	},
+	{
+		"date": "2024-11-13",
+		"y1p1": "2 Samuel 15",
+		"y1p2": "John 13:7-17",
+		"y1p3": "Psalms 106:16-31",
+		"y1p4": "Proverbs 20:1-7",
+		"y2p1": "Hosea 9",
+		"y2p2": "1 John 5:1-10",
+		"prayer_passage": "Romans 8:9"
+	},
+	{
+		"date": "2024-11-14",
+		"y1p1": "2 Samuel 16",
+		"y1p2": "John 13:18-27",
+		"y1p3": "Psalms 106:32-48",
+		"y1p4": "Proverbs 20:8-15",
+		"y2p1": "Hosea 10",
+		"y2p2": "1 John 5:11-21",
+		"prayer_passage": "Romans 8:9"
+	},
+	{
+		"date": "2024-11-15",
+		"y1p1": "2 Samuel 17",
+		"y1p2": "John 13:28-38",
+		"y1p3": "Psalms 107:1-8",
+		"y1p4": "Proverbs 20:16-22",
+		"y2p1": "Hosea 11-12",
+		"y2p2": "2 John 1",
+		"prayer_passage": "1 Peter 4:14"
+	},
+	{
+		"date": "2024-11-16",
+		"y1p1": "2 Samuel 18",
+		"y1p2": "John 14:1-8",
+		"y1p3": "Psalms 107:9-21",
+		"y1p4": "Proverbs 20:23-30",
+		"y2p1": "Hosea 13",
+		"y2p2": "3 John 1",
+		"prayer_passage": "Hebrews 10:29"
+	},
+	{
+		"date": "2024-11-17",
+		"y1p1": "2 Samuel 19",
+		"y1p2": "John 14:9-22",
+		"y1p3": "Psalms 107:22-34",
+		"y1p4": "Proverbs 21:1-8",
+		"y2p1": "Hosea 14",
+		"y2p2": "Jude 1:1-13",
+		"prayer_passage": "Romans 1:4"
+	},
+	{
+		"date": "2024-11-18",
+		"y1p1": "2 Samuel 20",
+		"y1p2": "John 14:23-31",
+		"y1p3": "Psalms 107:35-43",
+		"y1p4": "Proverbs 21:9-16",
+		"y2p1": "Joel 1",
+		"y2p2": "Jude 1:14-25",
+		"prayer_passage": "Isaiah 11:2"
+	},
+	{
+		"date": "2024-11-19",
+		"y1p1": "2 Samuel 21",
+		"y1p2": "John 15:1-9",
+		"y1p3": "Psalms 108",
+		"y1p4": "Proverbs 21:17-22",
+		"y2p1": "Joel 2",
+		"y2p2": "Revelation 1:1-9",
+		"prayer_passage": "Isaiah 11:2"
+	},
+	{
+		"date": "2024-11-20",
+		"y1p1": "2 Samuel 22",
+		"y1p2": "John 15:10-17",
+		"y1p3": "Psalms 109:1-15",
+		"y1p4": "Proverbs 21:23-31",
+		"y2p1": "Joel 3",
+		"y2p2": "Revelation 1:10-20",
+		"prayer_passage": "Revelation 11:11"
+	},
+	{
+		"date": "2024-11-21",
+		"y1p1": "2 Samuel 23",
+		"y1p2": "John 15:18-27",
+		"y1p3": "Psalms 109:16-31",
+		"y1p4": "Proverbs 22:1-7",
+		"y2p1": "Amos 1",
+		"y2p2": "Revelation 2:1-7",
+		"prayer_passage": "2 Colossians 3:3"
+	},
+	{
+		"date": "2024-11-22",
+		"y1p1": "2 Samuel 24",
+		"y1p2": "John 16:1:11",
+		"y1p3": "Psalms 110",
+		"y1p4": "Proverbs 22:8:15",
+		"y2p1": "Amos 2",
+		"y2p2": "Revelation 2:8-17",
+		"prayer_passage": "John 16:13"
+	},
+	{
+		"date": "2024-11-23",
+		"y1p1": "1 Kings 1:1-26",
+		"y1p2": "John 16:12-22",
+		"y1p3": "Psalms 111",
+		"y1p4": "Proverbs 22:16-21",
+		"y2p1": "Amos 3",
+		"y2p2": "Revelation 2:18-29",
+		"prayer_passage": "Isaiah 61:1"
+	},
+	{
+		"date": "2024-11-24",
+		"y1p1": "1 Kings 1:27-53",
+		"y1p2": "John 16:23-33",
+		"y1p3": "Psalms 112-113",
+		"y1p4": "Proverbs 22:22-29",
+		"y2p1": "Amos 4",
+		"y2p2": "Revelation 3:1-13",
+		"prayer_passage": "Isaiah 28:16"
+	},
+	{
+		"date": "2024-11-25",
+		"y1p1": "1 Kings 2:1-23",
+		"y1p2": "John 17:1-8",
+		"y1p3": "Psalms 114",
+		"y1p4": "Proverbs 23:1-8",
+		"y2p1": "Amos 5",
+		"y2p2": "Revelation 3:14-22",
+		"prayer_passage": "Psalms 140:7"
+	},
+	{
+		"date": "2024-11-26",
+		"y1p1": "1 Kings 2:24-46",
+		"y1p2": "John 17:9-16",
+		"y1p3": "Psalms 115",
+		"y1p4": "Proverbs 23:9-14",
+		"y2p1": "Amos 6",
+		"y2p2": "Revelation 4",
+		"prayer_passage": "Psalms 89:8"
+	},
+	{
+		"date": "2024-11-27",
+		"y1p1": "1 Kings 3",
+		"y1p2": "John 17:17-26",
+		"y1p3": "Psalms 116-117",
+		"y1p4": "Proverbs 23:15-22",
+		"y2p1": "Amos 7",
+		"y2p2": "Revelation 5:1-7",
+		"prayer_passage": "Psalms 61:3"
+	},
+	{
+		"date": "2024-11-28",
+		"y1p1": "1 Kings 4",
+		"y1p2": "John 18:1-9",
+		"y1p3": "Psalms 118:1-5",
+		"y1p4": "Proverbs 23:23-35",
+		"y2p1": "Amos 8",
+		"y2p2": "Revelation 5:8-14",
+		"prayer_passage": "Psalms 84:11"
+	},
+	{
+		"date": "2024-11-29",
+		"y1p1": "1 Kings 5",
+		"y1p2": "John 18:10-19",
+		"y1p3": "Psalms 118:16-29",
+		"y1p4": "Proverbs 24:1-8",
+		"y2p1": "Amos 9",
+		"y2p2": "Revelation 6:1-8",
+		"prayer_passage": "Malachi 4:2"
+	},
+	{
+		"date": "2024-11-30",
+		"y1p1": "1 Kings 6",
+		"y1p2": "John 18:20-30",
+		"y1p3": "Psalms 119:1-16",
+		"y1p4": "Proverbs 24:9-16",
+		"y2p1": "Obadiah 1",
+		"y2p2": "Revelation 6:9-17",
+		"prayer_passage": "Deuteronomy 33:29"
+	},
+	{
+		"date": "2024-12-01",
+		"y1p1": "1 Kings 7:1-22",
+		"y1p2": "John 18:31-40",
+		"y1p3": "Psalms 119:17-32",
+		"y1p4": "Proverbs 24:17-25",
+		"y2p1": "Jonah 1",
+		"y2p2": "Revelation 7:1-8",
+		"prayer_passage": "Romans 1:20"
+	},
+	{
+		"date": "2024-12-02",
+		"y1p1": "1 Kings 7:23-51",
+		"y1p2": "John 19:1-9",
+		"y1p3": "Psalms 119:33-48",
+		"y1p4": "Proverbs 24:26-34",
+		"y2p1": "Jonah 2",
+		"y2p2": "Revelation 7:9-17",
+		"prayer_passage": "Acts 17:31"
+	},
+	{
+		"date": "2024-12-03",
+		"y1p1": "1 Kings 8:1-32",
+		"y1p2": "John 19:10-22",
+		"y1p3": "Psalms 119:49-64",
+		"y1p4": "Proverbs 25:1-27",
+		"y2p1": "Jonah 3",
+		"y2p2": "Revelation 8",
+		"prayer_passage": "Micah 2:13"
+	},
+	{
+		"date": "2024-12-04",
+		"y1p1": "1 Kings 33-66",
+		"y1p2": "John 19:23-31",
+		"y1p3": "Psalms 119:65-80",
+		"y1p4": "Proverbs 25:8-14",
+		"y2p1": "Jonah 4",
+		"y2p2": "Revelation 9:1-10",
+		"prayer_passage": "Romans 11:26"
+	},
+	{
+		"date": "2024-12-05",
+		"y1p1": "1 Kings 9",
+		"y1p2": "John 19:32-42",
+		"y1p3": "Psalms 81:96",
+		"y1p4": "Proverbs 25:15-20",
+		"y2p1": "Micah 1",
+		"y2p2": "Revelation 9:11-21",
+		"prayer_passage": "Ephesians 1:14"
+	},
+	{
+		"date": "2024-12-06",
+		"y1p1": "1 Kings 10",
+		"y1p2": "John 20:1-10",
+		"y1p3": "Psalms 119:97-112",
+		"y1p4": "Proverbs 25:21-28",
+		"y2p1": "Micah 2",
+		"y2p2": "Revelation 10",
+		"prayer_passage": "Hebrews 9:14"
+	},
+	{
+		"date": "2024-12-07",
+		"y1p1": "1 Kings 11:1-22",
+		"y1p2": "John 20:11-20",
+		"y1p3": "Psalms 119:113-128",
+		"y1p4": "Proverbs 26:1-7",
+		"y2p1": "Micah 3-4",
+		"y2p2": "Revelation 11:1-10",
+		"prayer_passage": "Deuteronomy 28:58"
+	},
+	{
+		"date": "2024-12-08",
+		"y1p1": "1 Kings 11:23-43",
+		"y1p2": "John 20:21-31",
+		"y1p3": "Psalms 119:129-144",
+		"y1p4": "Proverbs 26:8-14",
+		"y2p1": "Micah 5",
+		"y2p2": "Revelation 11:11-19",
+		"prayer_passage": "Daniel 9:4"
+	},
+	{
+		"date": "2024-12-09",
+		"y1p1": "1 Kings 12",
+		"y1p2": "John 21:1-8",
+		"y1p3": "Psalms 119:145-160",
+		"y1p4": "Proverbs 26:15-21",
+		"y2p1": "Micah 6",
+		"y2p2": "Revelation 12:1-8",
+		"prayer_passage": "Proverbs 26:10"
+	},
+	{
+		"date": "2024-12-10",
+		"y1p1": "1 Kings 13",
+		"y1p2": "John 21:9-17",
+		"y1p3": "Psalms 119:161-176",
+		"y1p4": "Proverbs 26:22-28",
+		"y2p1": "Micah 7",
+		"y2p2": "Revelation 12:9-17",
+		"prayer_passage": " Jeremiah 32:18"
+	},
+	{
+		"date": "2024-12-11",
+		"y1p1": "1 Kings 14",
+		"y1p2": "John 21:18-25",
+		"y1p3": "Psalms 120-121",
+		"y1p4": "Proverbs 27:1-7",
+		"y2p1": "Nahum 1",
+		"y2p2": "Revelation 13:1-10",
+		"prayer_passage": "Nehemiah 9:32"
+	},
+	{
+		"date": "2024-12-12",
+		"y1p1": "1 Kings 15",
+		"y1p2": "Acts 1:1-12",
+		"y1p3": "Psalms 122-123",
+		"y1p4": "Proverbs 27:8-13",
+		"y2p1": "Nahum 2",
+		"y2p2": "Revelation 13:11-18",
+		"prayer_passage": "Acts 4:11"
+	},
+	{
+		"date": "2024-12-13",
+		"y1p1": "1 Kings 16",
+		"y1p2": "Acts 1:13-26",
+		"y1p3": "Psalms 124-125",
+		"y1p4": "Proverbs 27:14-20",
+		"y2p1": "Nahum 3",
+		"y2p2": "Revelation 14:1-10",
+		"prayer_passage": "Isaiah 57:15"
+	},
+	{
+		"date": "2024-12-14",
+		"y1p1": "1 Kings 17",
+		"y1p2": "Acts 2:1-11",
+		"y1p3": "Psalms 126-127",
+		"y1p4": "Proverbs 27:21-27",
+		"y2p1": "Habakkuk 1",
+		"y2p2": "Revelation 14:11-20",
+		"prayer_passage": "Acts 3:14"
+	},
+	{
+		"date": "2024-12-15",
+		"y1p1": "1 Kings 18:1-21",
+		"y1p2": "Acts 2:12-21",
+		"y1p3": "Psalms 128-129",
+		"y1p4": "Proverbs 28:1-7",
+		"y2p1": "Habakkuk 2",
+		"y2p2": "Revelation 15",
+		"prayer_passage": "Isaiah 1:4"
+	},
+	{
+		"date": "2024-12-16",
+		"y1p1": "1 Kings 18:22-46",
+		"y1p2": "Acts 2:22-33",
+		"y1p3": "Psalms 130-131",
+		"y1p4": "Proverbs 28:8-14",
+		"y2p1": "Habakkuk 3",
+		"y2p2": "Revelation 16:1-11",
+		"prayer_passage": " Jeremiah 50:7"
+	},
+	{
+		"date": "2024-12-17",
+		"y1p1": "1 Kings 19",
+		"y1p2": "Acts 2:34-47",
+		"y1p3": "Psalms 132-133",
+		"y1p4": "Proverbs 28:15-21",
+		"y2p1": "Zephaniah 1",
+		"y2p2": "Revelation 16:12-21",
+		"prayer_passage": "Isaiah 49:7"
+	},
+	{
+		"date": "2024-12-18",
+		"y1p1": "1 Kings 20",
+		"y1p2": "Acts 3:1-13",
+		"y1p3": "Psalms 134-135",
+		"y1p4": "Proverbs 28:22-28",
+		"y2p1": "Zephaniah 2-3",
+		"y2p2": "Revelation 17:1-9",
+		"prayer_passage": "2 Timothy 4:8"
+	},
+	{
+		"date": "2024-12-19",
+		"y1p1": "1 Kings 21",
+		"y1p2": "Acts 3:14-26",
+		"y1p3": "Psalms 136",
+		"y1p4": "Proverbs 29:1-7",
+		"y2p1": "Haggai 1-2",
+		"y2p2": "Revelation 17:10-18",
+		"prayer_passage": "Hebrews 8:1"
+	},
+	{
+		"date": "2024-12-20",
+		"y1p1": "1 Kings 22:1-25",
+		"y1p2": "Acts 4:1-10",
+		"y1p3": "Psalms 137-138",
+		"y1p4": "Proverbs 29:8-13",
+		"y2p1": "Zechariah 1",
+		"y2p2": "Revelation 18:1-13",
+		"prayer_passage": "Numbers 24:17"
+	},
+	{
+		"date": "2024-12-21",
+		"y1p1": "1 Kings 22:26-53",
+		"y1p2": "Acts 4:11-19",
+		"y1p3": "Psalms 139:1-13",
+		"y1p4": "Proverbs 29:14-21",
+		"y2p1": "Zechariah 2-3",
+		"y2p2": "Revelation 18:14-24",
+		"prayer_passage": "Daniel 9:25"
+	},
+	{
+		"date": "2024-12-22",
+		"y1p1": "2 Kings 1",
+		"y1p2": "Acts 4:20-28",
+		"y1p3": "Psalms 139:14-24",
+		"y1p4": "Proverbs 29:22-27",
+		"y2p1": "Zechariah 4-5",
+		"y2p2": "Revelation 19:1-10",
+		"prayer_passage": "Daniel 9:24"
+	},
+	{
+		"date": "2024-12-23",
+		"y1p1": "2 Kings 2",
+		"y1p2": "Acts 4:29-37",
+		"y1p3": "Psalms 140",
+		"y1p4": "Proverbs 30:1-9",
+		"y2p1": "Zechariah 6-7",
+		"y2p2": "Revelation 19:11-21",
+		"prayer_passage": "Jude 1:4"
+	},
+	{
+		"date": "2024-12-24",
+		"y1p1": "2 Kings 3",
+		"y1p2": "Acts 5:1-16",
+		"y1p3": "Psalms 141-142",
+		"y1p4": "Proverbs 30:10-16",
+		"y2p1": "Zechariah 8",
+		"y2p2": "Revelation 20:1-6",
+		"prayer_passage": "John 17:3"
+	},
+	{
+		"date": "2024-12-25",
+		"y1p1": "Isaiah 9:1-7",
+		"y1p2": "Matthew 2:1-12",
+		"y1p3": "Psalms 148",
+		"y1p4": "Proverbs 15:9-17",
+		"y2p1": "Micah 5",
+		"y2p2": "Luke 2:1-20",
+		"prayer_passage": "John 7:40"
+	},
+	{
+		"date": "2024-12-26",
+		"y1p1": "2 Kings 4:1-21",
+		"y1p2": "Acts 5:17-32",
+		"y1p3": "Psalms 143",
+		"y1p4": "Proverbs 30:17-23",
+		"y2p1": "Zechariah 9:10",
+		"y2p2": "Revelation 20:7-15",
+		"prayer_passage": "Romans 1:23"
+	},
+	{
+		"date": "2024-12-27",
+		"y1p1": "2 Kings 4:22-44",
+		"y1p2": "Acts 5:33-42",
+		"y1p3": "Psalms 144",
+		"y1p4": "Proverbs 30:24-33",
+		"y2p1": "Zechariah 11",
+		"y2p2": "Revelation 21:1-8",
+		"prayer_passage": "Isaiah 37:16"
+	},
+	{
+		"date": "2024-12-28",
+		"y1p1": "2 Kings 5",
+		"y1p2": "Acts 6",
+		"y1p3": "Psalms 145",
+		"y1p4": "Proverbs 31:1-9",
+		"y2p1": "Zechariah 12-13",
+		"y2p2": "Revelation 21:9-18",
+		"prayer_passage": "Daniel 2:28"
+	},
+	{
+		"date": "2024-12-29",
+		"y1p1": "2 Kings 6",
+		"y1p2": "Acts 7:1-10",
+		"y1p3": "Psalms 146-147",
+		"y1p4": "Proverbs 31:10-15",
+		"y2p1": "Zechariah 14",
+		"y2p2": "Revelation 21:19-27",
+		"prayer_passage": "Romans 8:15"
+	},
+	{
+		"date": "2024-12-30",
+		"y1p1": "2 Kings 7",
+		"y1p2": "Acts 7:11-19",
+		"y1p3": "Psalms 148",
+		"y1p4": "Proverbs 31:16-22",
+		"y2p1": "Malachi 1-2",
+		"y2p2": "Revelation 22:1-10",
+		"prayer_passage": "Isaiah 63:16"
+	},
+	{
+		"date": "2024-12-31",
+		"y1p1": "2 Kings 8",
+		"y1p2": "Acts 7:20-29",
+		"y1p3": "Psalms 149-150",
+		"y1p4": "Proverbs 31:23-31",
+		"y2p1": "Malachi 3-4",
+		"y2p2": "Revelation 22:11-21",
+		"prayer_passage": "1 Corinthians 15:45"
+	}
 ]
