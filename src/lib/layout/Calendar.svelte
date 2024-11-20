@@ -116,7 +116,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 1em;
+		margin-bottom: 24px;
 	}
 
 	.days-of-week {

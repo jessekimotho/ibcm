@@ -153,7 +153,7 @@
 		flex: 1;
 		flex-direction: column;
 		gap: 32px;
-		max-width: 400px;
+		max-width: 380px;
 	}
 	.glass {
 		background: #0f0f0fad;
@@ -170,7 +170,7 @@
 	.readings {
 		display: flex;
 		flex-direction: column;
-		gap: 32px;
+		gap: 56px;
 		margin-top: 32px;
 	}
 
@@ -185,16 +185,15 @@
 
 	.passages {
 		display: flex;
-		flex-wrap: wrap;
-		gap: 12px 12px;
+		flex-direction: column;
 	}
 
 	.passage {
-		padding: 16px;
-		background: #ffffff1a;
-		border-radius: 16px;
+		padding: 16px 0px;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
 		color: white;
 		transition: all 200ms;
+		text-align: left;
 	}
 
 	.passage:hover {
@@ -214,14 +213,20 @@
 	textarea {
 		color: white;
 		resize: none;
+		flex: 1;
 	}
 	::placeholder {
 		color: rgba(255, 255, 255, 0.5);
 	}
 	.go-back {
+		padding: 16px;
+		background: #ffffff1a;
+		border-radius: 16px;
+		color: white;
+		transition: all 200ms;
 		position: absolute;
 		right: 24px;
-		top: 24px;
+		top: 20px;
 	}
 
 	.wrapper-back {
@@ -229,5 +234,9 @@
 		padding-bottom: 12px;
 		/* align-items: center;
     justify-content: space-between; */
+	}
+
+	.journal {
+		min-height: 65%;
 	}
 </style>

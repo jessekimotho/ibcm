@@ -50,7 +50,7 @@
 
 <style>
 	ol {
-		padding-left: 12px;
+		padding-left: 24px;
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
@@ -58,5 +58,10 @@
 	li {
 		padding-left: 16px;
 		line-height: 1.4;
+	}
+	h3 {
+		padding-top: 8px;
+		padding-bottom: 8px;
+		font-size: 16px;
 	}
 </style>
