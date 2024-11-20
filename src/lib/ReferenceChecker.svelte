@@ -34,7 +34,7 @@
 </script>
 
 <div>
-	<p>Classification: {classification}</p>
+	<!-- <p>Classification: {classification}</p> -->
 	{#if errorMessage}
 		<p class="error">{errorMessage}</p>
 	{/if}
@@ -47,3 +47,16 @@
 		</ol>
 	{/each}
 </div>
+
+<style>
+	ol {
+		padding-left: 12px;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+	li {
+		padding-left: 16px;
+		line-height: 1.4;
+	}
+</style>

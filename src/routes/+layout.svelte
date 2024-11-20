@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import '../app.css';
+	import { fade } from 'svelte/transition';
 	import Calendar from '../lib/layout/Calendar.svelte';
 	import db from '$lib/js/db.js';
 	import importBooks from '$lib/js/initDatabase';
@@ -22,11 +23,11 @@
 	});
 </script>
 
-<div class="page-structure">
+<div class="page-structure" transition:fade>
 	<div class="navbar">
-		<div class="calendar"><Calendar /></div>
+		<Calendar />
 
-		<div class="button-group">
+		<div class="button-group" transition:fade>
 			<a class="button-complex" href="/pray">
 				<div class="button-title">Pray</div>
 				<div class="subtext">You haven't prayed today</div>

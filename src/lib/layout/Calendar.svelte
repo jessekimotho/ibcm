@@ -1,11 +1,10 @@
 <script>
-	import { writable } from 'svelte/store';
 	import { selectedDate } from '$lib/js/store.js';
 	import { onMount } from 'svelte';
 
 	let today = new Date();
-	let currentMonth = writable(today.getMonth());
-	let currentYear = writable(today.getFullYear());
+	let currentMonth = today.getMonth();
+	let currentYear = today.getFullYear();
 
 	const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
@@ -26,57 +25,83 @@
 		return days;
 	}
 
+	const months = [
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December'
+	];
+
+	// Helper to format the date
+	function formatDate(dateString) {
+		if (!dateString) return `${currentMonth + 1}/${currentYear}`;
+		const [year, month, day] = dateString.split('-').map(Number);
+		return `${day} ${months[month - 1]} ${year}`;
+	}
+
 	function changeMonth(change) {
-		currentMonth.update((month) => {
-			let newMonth = month + change;
-			if (newMonth < 0) {
-				currentYear.update((year) => year - 1);
-				return 11;
-			}
-			if (newMonth > 11) {
-				currentYear.update((year) => year + 1);
-				return 0;
-			}
-			return newMonth;
-		});
+		currentMonth += change;
+		if (currentMonth < 0) {
+			currentYear -= 1;
+			currentMonth = 11;
+		} else if (currentMonth > 11) {
+			currentYear += 1;
+			currentMonth = 0;
+		}
 	}
 
 	async function logDate(day) {
-		const year = $currentYear;
-		const month = $currentMonth + 1; // Months are zero-indexed
+		const year = currentYear;
+		const month = currentMonth + 1; // Months are zero-indexed
 		const date_full = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
 		$selectedDate = date_full;
 		console.log($selectedDate);
 	}
 
-	onMount(async () => {
-		//set date to current day using formatdate function
+	onMount(() => {
 		$selectedDate = today.toISOString().split('T')[0];
-		console.log($selectedDate);
 	});
 </script>
 
-<div class="calendar-container">
-	<div class="calendar-header">
-		<button on:click={() => changeMonth(-1)}>←</button>
-		<div>
-			{$currentMonth + 1}/{$currentYear}
-		</div>
-		<button on:click={() => changeMonth(1)}>→</button>
-	</div>
-
-	<div class="days-of-week">
-		{#each daysOfWeek as day}
-			<div>{day}</div>
-		{/each}
-	</div>
-
-	<div class="days">
-		{#each getDaysInMonth($currentMonth, $currentYear) as day}
-			<div class="day {day === null ? 'empty' : ''}" on:click={() => day && logDate(day)}>
-				{day}
+<div class="calendar" transition:fade>
+	<div class="calendar-container">
+		<div class="calendar-header">
+			<button on:click={() => changeMonth(-1)}>←</button>
+			<div>
+				{formatDate($selectedDate)}
 			</div>
-		{/each}
+			<button on:click={() => changeMonth(1)}>→</button>
+		</div>
+
+		<div class="days-of-week">
+			{#each daysOfWeek as day}
+				<div>{day}</div>
+			{/each}
+		</div>
+
+		<div class="days">
+			{#each getDaysInMonth(currentMonth, currentYear) as day}
+				<div
+					class="day {day === null
+						? 'empty'
+						: ''} {`${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}` ===
+					$selectedDate
+						? 'active'
+						: ''}"
+					on:click={() => day && logDate(day)}
+				>
+					{day}
+				</div>
+			{/each}
+		</div>
 	</div>
 </div>
 
@@ -133,5 +158,13 @@
 	}
 	button {
 		color: white;
+	}
+	.active {
+		background-color: #ffa5008a !important;
+		box-shadow: 0px 0px 15px #ffa5008a;
+	}
+	.active:hover {
+		background-color: #ffa6009f !important;
+		box-shadow: 0px 0px 30px #ffa6009f;
 	}
 </style>

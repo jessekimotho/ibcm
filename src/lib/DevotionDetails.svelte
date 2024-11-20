@@ -6,7 +6,7 @@
 	import DailyPlanner from './DailyPlanner.svelte'; // Adjust the path as necessary
 
 	let date;
-	$: date = $selectedDate;
+	date = $selectedDate;
 
 	let devotionDetails = null;
 	let error = null;

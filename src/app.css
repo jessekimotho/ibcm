@@ -367,6 +367,7 @@ BODY {
     backdrop-filter: blur(50px);
     padding: 12px;
     border-radius: 12px;
+    flex:1
 }
 
 .button-title {
