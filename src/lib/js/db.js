@@ -5,6 +5,7 @@ const db = new Dexie('BibleDatabase');
 
 // Define the database schema
 db.version(1).stores({
+    app_settings: '++id',
     books: 'bookName',  // Set 'bookName' as the primary key.
     chapters: '[bookName+chapterNumber], bookName, chapterNumber', // Ensure both 'bookName' and 'chapterNumber' are indexed, plus a compound index.
     verses: '[bookName+chapterNumber+verseNumber], bookName, chapterNumber, verseNumber', // Compound index plus individual indexes.

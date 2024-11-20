@@ -1,5 +1,7 @@
 <script>
 	import { writable } from 'svelte/store';
+	import { selectedDate } from '$lib/js/store.js';
+	import { onMount } from 'svelte';
 
 	let today = new Date();
 	let currentMonth = writable(today.getMonth());
@@ -38,6 +40,20 @@
 			return newMonth;
 		});
 	}
+
+	async function logDate(day) {
+		const year = $currentYear;
+		const month = $currentMonth + 1; // Months are zero-indexed
+		const date_full = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+		$selectedDate = date_full;
+		console.log($selectedDate);
+	}
+
+	onMount(async () => {
+		//set date to current day using formatdate function
+		$selectedDate = today.toISOString().split('T')[0];
+		console.log($selectedDate);
+	});
 </script>
 
 <div class="calendar-container">
@@ -57,7 +73,7 @@
 
 	<div class="days">
 		{#each getDaysInMonth($currentMonth, $currentYear) as day}
-			<div class="day {day === null ? 'empty' : ''}">
+			<div class="day {day === null ? 'empty' : ''}" on:click={() => day && logDate(day)}>
 				{day}
 			</div>
 		{/each}
@@ -92,7 +108,16 @@
 	}
 
 	.day {
-		padding: 10px;
+		width: 36px;
+		height: 36px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border: 1px solid transparent;
+		transition: all 200ms;
+		border-radius: 12px;
+		cursor: pointer;
 		text-align: center;
 		border: 1px solid transparent;
 		transition: all 200ms;

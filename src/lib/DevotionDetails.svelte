@@ -2,9 +2,11 @@
 	import { onMount } from 'svelte';
 	import db from '$lib/js/db.js';
 	import ReferenceChecker from '$lib/ReferenceChecker.svelte';
-	import { selectedPassage } from '$lib/js/store.js';
+	import { selectedPassage, selectedDate } from '$lib/js/store.js';
 	import DailyPlanner from './DailyPlanner.svelte'; // Adjust the path as necessary
-	export let date;
+
+	let date;
+	$: date = $selectedDate;
 
 	let devotionDetails = null;
 	let error = null;
@@ -49,7 +51,6 @@
 		devotionDetails.intention && saveField('intention', devotionDetails.intention);
 	}
 </script>
-
 
 Devotional Details
 {#if error}

@@ -1,9 +1,5 @@
 <script>
-	import BibleImport from '$lib/BibleImport.svelte';
-	import DevotionImport from '$lib/DevotionImport.svelte';
-	import Devotion from '$lib/Devotion.svelte';
+	import DevotionDetails from '$lib/DevotionDetails.svelte';
 </script>
 
-<BibleImport />
-<DevotionImport />
-<Devotion />
+<DevotionDetails />

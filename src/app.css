@@ -305,7 +305,7 @@ BODY {
     flex: 1;
     flex-direction: column;
     margin:0;
-    background: url(/images/cave.jpg);
+    background: url(/images/trench.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -313,10 +313,10 @@ BODY {
 .page-structure {
     display: flex;
     flex: 1;
-    background: #00000085;
-    padding:24px;
-    gap:48px;
-    box-shadow: inset 0px 0px 100px 20px black;
+    background: #00000030;
+    padding:32px;
+    gap:32px;
+    /* box-shadow: inset 0px 0px 100px 20px black; */
 }
 
 
@@ -324,20 +324,19 @@ BODY {
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
-    width: 360px;
+    width: 330px;
     color: white;
     gap:36px;
 }
 
 .window {
-    border-radius: 16px;
 
-    padding: 32px;
     display: flex;
-
     flex: 1;
     color: white;
     justify-content: center;
+
+    flex-direction: column;
 }
 
 .homepage {
@@ -357,12 +356,14 @@ BODY {
     gap: 8px;
     padding:24px 12px;
     border-bottom: 1px solid #ffffff20;
+    text-decoration: none;
+    color: white;
 }
 
 .button-group {
     display: flex;
     flex-direction: column;
-    background: #00000078;
+    background: #0f0f0fad;
     backdrop-filter: blur(50px);
     padding: 12px;
     border-radius: 12px;
@@ -376,7 +377,7 @@ BODY {
 .calendar {
     display: flex;
     padding: 24px;
-    background: #0000002e;
+    background: #0f0f0fad;
     border-radius: 12px;
     backdrop-filter: blur(40px);
 }
