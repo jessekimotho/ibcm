@@ -138,12 +138,12 @@
 		display: flex;
 		flex: 1;
 		width: 100%;
+		height: 100%;
 		gap: 32px;
 	}
 
 	.left-col {
 		flex-direction: column;
-		height: calc(100vh - 64px);
 		overflow: auto;
 		flex: 1;
 	}

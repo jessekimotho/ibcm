@@ -310,14 +310,6 @@ BODY {
     background-position: center;
 }
 
-.page-structure {
-    display: flex;
-    flex: 1;
-    background: #00000030;
-    padding:32px;
-    gap:32px;
-    /* box-shadow: inset 0px 0px 100px 20px black; */
-}
 
 
 .navbar {

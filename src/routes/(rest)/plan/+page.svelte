@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import db from '$lib/js/db.js';
-	import { selectedPassage, selectedDate } from '$lib/js/store.js';
+	import { selectedDate } from '$lib/js/store.js';
 
 	let date;
 	let loaded = false;
@@ -32,7 +32,13 @@
 
 	$: date, loadPlannerEntries();
 
-	let hours = Array.from({ length: 10 }, (_, i) => `${8 + i}am`); // Adjust according to your needs
+	let hours = Array.from({ length: 10 }, (_, i) => {
+		const hour = 8 + i;
+		const period = hour >= 12 ? 'pm' : 'am';
+		const displayHour = hour > 12 ? hour - 12 : hour;
+		return `${displayHour}${period}`;
+	});
+
 	let hourEntries = [];
 
 	onMount(() => {
@@ -68,12 +74,12 @@
 		display: flex;
 		flex: 1;
 		width: 100%;
+		height: 100%;
 		gap: 32px;
 	}
 
 	.left-col {
 		flex-direction: column;
-		height: calc(100vh - 64px);
 		overflow: auto;
 		flex: 1;
 	}
@@ -118,5 +124,3 @@
 		gap: 4px;
 	}
 </style>
-
-

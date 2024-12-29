@@ -23,40 +23,69 @@
 	});
 </script>
 
-<div class="page-structure" transition:fade>
-	<div class="navbar">
-		<Calendar />
+<div class="app-wrap">
+	<div class="dimension-controls">
+		<div class="page-structure" transition:fade>
+			<div class="navbar">
+				<Calendar />
 
-		<div class="button-group" transition:fade>
-			<a class="button-complex" href="/pray">
-				<div class="button-title">Pray</div>
-				<div class="subtext">You haven't prayed today</div>
-			</a>
-			<a class="button-complex" href="/plan">
-				<div class="button-title">Planner</div>
-				<div class="subtext">You have no daily tasks coming up today</div>
-			</a>
-			<a class="button-complex" href="/readings">
-				<div class="button-title">Readings</div>
-				<div class="subtext">0/4 complete</div>
-			</a>
-			<a class="button-complex" href="/goals">
-				<div class="button-title">Goals</div>
-				<div class="subtext">You have 4 weekly goals lined up today</div>
-			</a>
-			<a class="button-complex" href="/donate">
-				<div class="button-title">Donate</div>
-				<div class="subtext">Please Donate</div>
-			</a>
+				<div class="button-group" transition:fade>
+					<a class="button-complex" href="/pray">
+						<div class="button-title">Pray</div>
+						<div class="subtext">You haven't prayed today</div>
+					</a>
+					<a class="button-complex" href="/plan">
+						<div class="button-title">Planner</div>
+						<div class="subtext">You have no daily tasks coming up today</div>
+					</a>
+					<a class="button-complex" href="/readings">
+						<div class="button-title">Readings</div>
+						<div class="subtext">0/4 complete</div>
+					</a>
+					<a class="button-complex" href="/goals">
+						<div class="button-title">Goals</div>
+						<div class="subtext">You have 4 weekly goals lined up today</div>
+					</a>
+					<a class="button-complex" href="/donate">
+						<div class="button-title">Donate</div>
+						<div class="subtext">Please Donate</div>
+					</a>
+				</div>
+			</div>
+			<div class="window">
+				<slot />
+			</div>
 		</div>
-	</div>
-	<div class="window">
-		<slot />
 	</div>
 </div>
 
 <style>
+	.app-wrap {
+		background: #00000030;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+	}
+
+	.page-structure {
+		max-width: 1500px;
+		height: 100%;
+		margin: auto;
+		display: flex;
+		flex: 1;
+		padding: 32px;
+		gap: 32px;
+	}
+
 	.subtext {
 		display: none;
+	}
+	.dimension-controls {
+		display: flex;
+		height: 100%;
+		width: 100%;
+		max-height: 1000px;
 	}
 </style>
