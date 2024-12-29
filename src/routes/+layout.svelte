@@ -44,9 +44,19 @@
 				<div class="button-title">Goals</div>
 				<div class="subtext">You have 4 weekly goals lined up today</div>
 			</a>
+			<a class="button-complex" href="/donate">
+				<div class="button-title">Donate</div>
+				<div class="subtext">Please Donate</div>
+			</a>
 		</div>
 	</div>
 	<div class="window">
 		<slot />
 	</div>
 </div>
+
+<style>
+	.subtext {
+		display: none;
+	}
+</style>

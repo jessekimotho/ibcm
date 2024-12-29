@@ -330,12 +330,10 @@ BODY {
 }
 
 .window {
-
     display: flex;
     flex: 1;
     color: white;
     justify-content: center;
-
     flex-direction: column;
 }
 
@@ -354,10 +352,11 @@ BODY {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding:24px 12px;
     border-bottom: 1px solid #ffffff20;
     text-decoration: none;
     color: white;
+    flex: 1;
+    justify-content: center;
 }
 
 .button-group {
@@ -365,7 +364,7 @@ BODY {
     flex-direction: column;
     background: #0f0f0fad;
     backdrop-filter: blur(50px);
-    padding: 12px;
+    padding: 0px 12px;
     border-radius: 12px;
     flex:1
 }
