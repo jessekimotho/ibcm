@@ -30,6 +30,11 @@
 				<Calendar />
 
 				<div class="button-group" transition:fade>
+					<a class="button-complex" href="/resources">
+						<div class="button-title">Resources</div>
+						<div class="subtext">Devotional Resources</div>
+					</a>
+
 					<a class="button-complex" href="/pray">
 						<div class="button-title">Pray</div>
 						<div class="subtext">You haven't prayed today</div>
@@ -48,7 +53,7 @@
 					</a>
 					<a class="button-complex" href="/donate">
 						<div class="button-title">Donate</div>
-						<div class="subtext">Please Donate</div>
+						<div class="subtext">Dobnation Section</div>
 					</a>
 				</div>
 			</div>

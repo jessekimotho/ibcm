@@ -12,7 +12,24 @@
 		dateAnswered: null,
 		isAnswered: false
 	};
-	let categories = ['Adoration', 'Confession', 'Thanksgiving', 'Supplication'];
+	let categories = [
+		'Praise',
+		'Repent',
+		'Ask',
+		'Yield',
+		'Worship and Praise',
+		'Waiting on the Lord',
+		'Confession',
+		'Spiritual Warfare',
+		'Claiming Promises',
+		'Intercession',
+		'Petitions',
+		'Thanksgiving',
+		'Scripture Reading',
+		'Meditation',
+		'Listening - Yielding',
+		'Songs of Praise'
+	];
 
 	async function loadPrayers() {
 		prayerRequests = await db.prayers.toArray();
@@ -48,6 +65,34 @@
 		loadPrayers();
 		loaded = true;
 	});
+
+	let dialog; // Reference to the <dialog> element
+	let video;
+
+	// Function to open the dialog as a modal
+	function openDialog() {
+		dialog.showModal();
+		if (video) {
+			// Attempt to play the video
+			video.play().catch((error) => {
+				console.error('Error playing video:', error);
+			});
+		}
+	}
+
+	// Function to close the dialog and reset the video
+	function closeDialog() {
+		dialog.close();
+		if (video) {
+			video.pause(); // Pause the video
+			video.currentTime = 0; // Reset playback to the beginning
+		}
+	}
+
+	// Listen for the dialog's close event
+	function handleDialogClose() {
+		closeDialog();
+	}
 </script>
 
 {#if loaded}
@@ -86,20 +131,56 @@
 			<div class="new-pray right-w glass" transition:fade>
 				<div class="titling">New Prayer Request</div>
 				<div class="request-content">
-					<textarea
-						bind:value={newPrayer.request}
-						class="prayer-request-text"
-						placeholder="Enter prayer request"
-					></textarea>
 					<select bind:value={newPrayer.category}>
 						<option value="" disabled selected>Select Category</option>
 						{#each categories as category}
 							<option value={category}>{category}</option>
 						{/each}
 					</select>
+					<textarea
+						bind:value={newPrayer.request}
+						class="prayer-request-text"
+						placeholder="Enter prayer request"
+					></textarea>
+
 					<button on:click={addPrayer} class="add-prayer">Add Prayer</button>
 				</div>
 			</div>
+			<button on:click={openDialog} class="add-prayer help-button">Need Help?</button>
+
+			<dialog bind:this={dialog} on:close={handleDialogClose}>
+				<video bind:this={video} src="/videos/prayerjournal.mp4" controls></video>
+				<form method="dialog">
+					<button type="button" class="close-button" on:click={closeDialog} autofocus
+						><svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							width="20"
+							height="20"
+							fill="currentColor"
+						>
+							<line
+								x1="4"
+								y1="4"
+								x2="20"
+								y2="20"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+							/>
+							<line
+								x1="20"
+								y1="4"
+								x2="4"
+								y2="20"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+							/>
+						</svg>
+					</button>
+				</form>
+			</dialog>
 		</div>
 	</div>
 {/if}
@@ -145,6 +226,7 @@
 		flex-direction: column;
 		gap: 32px;
 		max-width: 380px;
+		position: relative;
 	}
 
 	select {
@@ -172,6 +254,9 @@
 	.prayer-request-text {
 		min-height: 80px;
 		color: white;
+		border: 1px solid #ffffff3e;
+		border-radius: 8px;
+		padding: 12px;
 	}
 	.request-content {
 		display: flex;
@@ -201,5 +286,35 @@
 	}
 	.prayer-dates {
 		opacity: 0.6;
+	}
+	.help-button {
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		box-shadow: 5px 5px 20px 10px #0000003d;
+		background: #9a6418 !important;
+	}
+
+	dialog {
+		padding: 0;
+		background: transparent;
+		border: none;
+	}
+	.close-button {
+		position: absolute;
+		background: black;
+		top: 10px;
+		right: 10px;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		border-radius: 50px;
+		justify-content: center;
+		align-items: center;
+		color: white;
+	}
+
+	::backdrop {
+		background: rgba(0, 0, 0, 0.4);
 	}
 </style>
