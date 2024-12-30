@@ -32,28 +32,24 @@
 				<div class="button-group" transition:fade>
 					<a class="button-complex" href="/">
 						<div class="button-title">Home</div>
-						<div class="subtext">You have 4 weekly goals lined up today</div>
 					</a>
 
 					<a class="button-complex" href="/pray">
 						<div class="button-title">Prayer Requests</div>
-						<div class="subtext">You haven't prayed today</div>
+					</a>
+
+					<a class="button-complex" href="/readings">
+						<div class="button-title">Bible Readings</div>
 					</a>
 					<a class="button-complex" href="/plan">
 						<div class="button-title">Daily Planner</div>
-						<div class="subtext">You have no daily tasks coming up today</div>
 					</a>
-					<a class="button-complex" href="/readings">
-						<div class="button-title">Bible Readings</div>
-						<div class="subtext">0/4 complete</div>
-					</a>
-					<a class="button-complex" href="/resources">
+					<!-- <a class="button-complex" href="/resources">
 						<div class="button-title">Resources</div>
 						<div class="subtext">Devotional Resources</div>
-					</a>
+					</a> -->
 					<a class="button-complex" href="/donate">
 						<div class="button-title">Donate</div>
-						<div class="subtext">Dobnation Section</div>
 					</a>
 				</div>
 			</div>

@@ -71,8 +71,9 @@
 		background-position: center;
 		background-size: cover;
 		width: 100%;
-		height: 400px;
+		min-height: 400px;
 		border-radius: 12px;
+		flex: 1;
 	}
 
 	.message {
@@ -86,6 +87,12 @@
 		color: white;
 		background: #ffa5007a;
 		border-radius: 8px;
+	}
+	.readings-selector {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		flex: 1;
 	}
 
 	.donate-section {

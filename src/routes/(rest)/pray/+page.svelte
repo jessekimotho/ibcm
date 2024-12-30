@@ -128,7 +128,7 @@
 	.titling {
 		font-size: 18px;
 		font-weight: 600;
-		margin-bottom: 24px;
+		margin-bottom: 28px;
 	}
 	.wraps {
 		display: flex;
@@ -149,8 +149,11 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding: 16px 0px;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		padding: 16px;
+		/* border: 1px solid rgba(255, 255, 255, 0.2); */
+		border-radius: 12px;
+		margin-bottom: 20px;
+		background: #ffffff17;
 	}
 
 	.left-col {
@@ -172,15 +175,16 @@
 		width: 100%;
 		margin: 0px;
 		color: white;
-		padding: 10px 12px;
+		padding: 12px;
 		border-radius: 8px;
-		border: 1px solid #ffffff3e;
+		background: #ffffff14;
 	}
 
 	.new-pray {
 		display: flex;
 		flex-direction: column;
 		color: white;
+		padding-bottom: 36px;
 	}
 
 	.add-prayer {
@@ -188,12 +192,13 @@
 		color: white;
 		padding: 12px;
 		border-radius: 8px;
+		margin-top: 8px;
 	}
 
 	.prayer-request-text {
 		min-height: 80px;
 		color: white;
-		border: 1px solid #ffffff3e;
+		background: #ffffff14;
 		border-radius: 8px;
 		padding: 12px;
 	}

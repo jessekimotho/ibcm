@@ -50,7 +50,7 @@
 	<div class="wraps">
 		<div class="left-col glass" transition:fade>
 			<div class="readings-selector">
-				<div class="titling">Planner</div>
+				<div class="titling">Daily Planner</div>
 				<div class="entries">
 					{#each hourEntries as hourEntry (hourEntry.hour)}
 						<div class="hour-entry">
@@ -70,6 +70,11 @@
 {/if}
 
 <style>
+	.readings-selector {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
 	.wraps {
 		display: flex;
 		flex: 1;
@@ -111,10 +116,11 @@
 	.entries {
 		display: flex;
 		flex-wrap: wrap;
+		flex: 1;
 	}
 
 	.hour-entry {
-		min-width: 400px;
+		min-width: 360px;
 		min-height: 100px;
 		flex: 1;
 		padding-top: 16px;
