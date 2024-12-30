@@ -13,8 +13,8 @@
 	<div class="wraps">
 		<div class="left-col glass" transition:fade>
 			<div class="readings-selector">
-				<div class="titling">Donate</div>
 				<div class="college-students"></div>
+				<div class="titling">Donate</div>
 				<div class="message">
 					This app was created as a tool to help the students of IBCM develop and grow in their
 					practice of personal devotions with meaningful Bible reading and prayer. Your donation
@@ -60,7 +60,7 @@
 	.titling {
 		font-size: 18px;
 		font-weight: 600;
-		margin-bottom: 24px;
+		margin-top: 32px;
 	}
 	::placeholder {
 		color: rgba(255, 255, 255, 0.5);
@@ -76,7 +76,7 @@
 	}
 
 	.message {
-		padding: 32px 0px;
+		padding: 24px 0px;
 		max-width: 400px;
 	}
 

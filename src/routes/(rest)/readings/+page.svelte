@@ -4,6 +4,7 @@
 	import db from '$lib/js/db.js';
 	import { selectedPassage, selectedDate } from '$lib/js/store.js';
 	import ReferenceChecker from '$lib/ReferenceChecker.svelte';
+	import DialogVideo from '../../../lib/layout/DialogVideo.svelte';
 
 	let date;
 	$: date = $selectedDate;
@@ -129,6 +130,7 @@
 					placeholder="determine to do today..."
 				></textarea>
 			</div>
+			<DialogVideo videoUrl="biblereading" />
 		</div>
 	</div>
 {/if}
@@ -152,7 +154,7 @@
 		display: flex;
 		flex: 1;
 		flex-direction: column;
-		gap: 32px;
+		gap: 24px;
 		max-width: 380px;
 	}
 	.glass {
@@ -237,6 +239,6 @@
 	}
 
 	.journal {
-		min-height: 65%;
+		min-height: 350px;
 	}
 </style>

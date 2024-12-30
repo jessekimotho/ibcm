@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import db from '$lib/js/db.js';
 	import { fade } from 'svelte/transition';
+	import DialogVideo from '$lib/layout/DialogVideo.svelte';
 
 	let loaded;
 	let prayerRequests = [];
@@ -65,34 +66,6 @@
 		loadPrayers();
 		loaded = true;
 	});
-
-	let dialog; // Reference to the <dialog> element
-	let video;
-
-	// Function to open the dialog as a modal
-	function openDialog() {
-		dialog.showModal();
-		if (video) {
-			// Attempt to play the video
-			video.play().catch((error) => {
-				console.error('Error playing video:', error);
-			});
-		}
-	}
-
-	// Function to close the dialog and reset the video
-	function closeDialog() {
-		dialog.close();
-		if (video) {
-			video.pause(); // Pause the video
-			video.currentTime = 0; // Reset playback to the beginning
-		}
-	}
-
-	// Listen for the dialog's close event
-	function handleDialogClose() {
-		closeDialog();
-	}
 </script>
 
 {#if loaded}
@@ -146,41 +119,7 @@
 					<button on:click={addPrayer} class="add-prayer">Add Prayer</button>
 				</div>
 			</div>
-			<button on:click={openDialog} class="add-prayer help-button">Need Help?</button>
-
-			<dialog bind:this={dialog} on:close={handleDialogClose}>
-				<video bind:this={video} src="/videos/prayerjournal.mp4" controls></video>
-				<form method="dialog">
-					<button type="button" class="close-button" on:click={closeDialog} autofocus
-						><svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							width="20"
-							height="20"
-							fill="currentColor"
-						>
-							<line
-								x1="4"
-								y1="4"
-								x2="20"
-								y2="20"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-							/>
-							<line
-								x1="20"
-								y1="4"
-								x2="4"
-								y2="20"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-							/>
-						</svg>
-					</button>
-				</form>
-			</dialog>
+			<DialogVideo videoUrl="prayerjournal" />
 		</div>
 	</div>
 {/if}
@@ -224,7 +163,7 @@
 		display: flex;
 		flex: 1;
 		flex-direction: column;
-		gap: 32px;
+		gap: 24px;
 		max-width: 380px;
 		position: relative;
 	}
@@ -286,35 +225,5 @@
 	}
 	.prayer-dates {
 		opacity: 0.6;
-	}
-	.help-button {
-		position: absolute;
-		bottom: 0px;
-		right: 0px;
-		box-shadow: 5px 5px 20px 10px #0000003d;
-		background: #9a6418 !important;
-	}
-
-	dialog {
-		padding: 0;
-		background: transparent;
-		border: none;
-	}
-	.close-button {
-		position: absolute;
-		background: black;
-		top: 10px;
-		right: 10px;
-		width: 40px;
-		height: 40px;
-		display: flex;
-		border-radius: 50px;
-		justify-content: center;
-		align-items: center;
-		color: white;
-	}
-
-	::backdrop {
-		background: rgba(0, 0, 0, 0.4);
 	}
 </style>
