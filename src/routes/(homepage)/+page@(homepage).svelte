@@ -32,7 +32,7 @@
 
 							<div class="message">
 								Thank you for downloading the IBCM devotional app! Here's a quick word from IBCM
-								Head, Dr Brent Halstead.
+								Head, Pastor Brent Halstead.
 							</div>
 
 							<DialogVideo videoUrl="introduction">

@@ -76,28 +76,32 @@
 				<div class="titling">Prayer Requests</div>
 
 				<div class="prayers-list">
-					{#each prayerRequests as prayer (prayer.id)}
-						<div class="prayer-entry">
-							<div class="prayer-details">
-								<span class="category">{prayer.category}</span>
-								<p class="actual-request">{prayer.request}</p>
-								<div class="prayer-dates">
-									<small>Created: {new Date(prayer.dateCreated).toLocaleDateString()}</small>
-									{#if prayer.isAnswered}
-										<small>Answered: {new Date(prayer.dateAnswered).toLocaleDateString()}</small>
+					{#if prayerRequests.length > 0}
+						{#each prayerRequests as prayer (prayer.id)}
+							<div class="prayer-entry">
+								<div class="prayer-details">
+									<span class="category">{prayer.category}</span>
+									<p class="actual-request">{prayer.request}</p>
+									<div class="prayer-dates">
+										<small>Created: {new Date(prayer.dateCreated).toLocaleDateString()}</small>
+										{#if prayer.isAnswered}
+											<small>Answered: {new Date(prayer.dateAnswered).toLocaleDateString()}</small>
+										{/if}
+									</div>
+								</div>
+								<div class="prayer-actions">
+									{#if !prayer.isAnswered}
+										<button class="action" on:click={() => markAsAnswered(prayer)}
+											>Mark as Answered</button
+										>
 									{/if}
+									<button class="action" on:click={() => deletePrayer(prayer.id)}>Delete</button>
 								</div>
 							</div>
-							<div class="prayer-actions">
-								{#if !prayer.isAnswered}
-									<button class="action" on:click={() => markAsAnswered(prayer)}
-										>Mark as Answered</button
-									>
-								{/if}
-								<button class="action" on:click={() => deletePrayer(prayer.id)}>Delete</button>
-							</div>
-						</div>
-					{/each}
+						{/each}
+					{:else}
+						<p>You have no prayer requests yet</p>
+					{/if}
 				</div>
 			</div>
 		</div>
