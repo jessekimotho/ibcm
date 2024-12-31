@@ -106,7 +106,7 @@
 				<div class="titling">New Prayer Request</div>
 				<div class="request-content">
 					<select bind:value={newPrayer.category}>
-						<option value="" disabled selected>Select Category</option>
+						<option value="" disabled selected>Click here to select Prayer Forms</option>
 						{#each categories as category}
 							<option value={category}>{category}</option>
 						{/each}

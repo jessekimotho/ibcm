@@ -23,7 +23,11 @@
 				</div>
 
 				<div class="donate-section">
-					<a class="button-donate" href="https://www.continuetogive.com/4923881" target="_blank">
+					<a
+						class="button-donate"
+						href=" https://www.continuetogive.com/4923881/donation_prompt"
+						target="_blank"
+					>
 						Make a Donation
 					</a>
 				</div>
