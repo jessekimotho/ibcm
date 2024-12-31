@@ -33,7 +33,7 @@
 	}
 </script>
 
-<div>
+<div class="bible-reference">
 	<!-- <p>Classification: {classification}</p> -->
 	{#if errorMessage}
 		<p class="error">{errorMessage}</p>
@@ -49,6 +49,13 @@
 </div>
 
 <style>
+	.bible-reference {
+		overflow: auto;
+		display: flex;
+		flex-direction: column;
+		padding: 32px;
+		padding-top: 12px;
+	}
 	ol {
 		padding-left: 24px;
 		display: flex;
@@ -60,8 +67,7 @@
 		line-height: 1.4;
 	}
 	h3 {
-		padding-top: 8px;
-		padding-bottom: 8px;
 		font-size: 16px;
+		text-align: center;
 	}
 </style>

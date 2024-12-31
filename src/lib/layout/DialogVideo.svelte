@@ -31,12 +31,11 @@
 	}
 </script>
 
-<button on:click={openDialog} class="help-button" transition:fade>
-	Need Help?
-	<div class="description">Click here to get more information</div>
+<button on:click={openDialog} class="transparent">
+	<slot name="trigger"></slot>
 </button>
 
-<dialog bind:this={dialog} on:close={handleDialogClose}>
+<dialog bind:this={dialog} on:close={handleDialogClose} transition:fade>
 	<video bind:this={video} src="/videos/{videoUrl}.mp4" controls></video>
 	<form method="dialog">
 		<button type="button" class="close-button" on:click={closeDialog} autofocus
@@ -71,32 +70,9 @@
 </dialog>
 
 <style>
-	.help-button {
-		box-shadow: 5px 5px 20px 10px #0000003d;
-		color: white;
-		padding: 18px 12px;
-		border-radius: 8px;
-		background: #0f0f0fad;
-		backdrop-filter: blur(50px);
-		border-radius: 16px;
-		transition: all 300ms;
+	.transparent {
+		padding: 0;
 	}
-
-	.description {
-		color: #ffca67;
-		margin-top: 2px;
-		margin-bottom: 4px;
-		font-size: 14px;
-		text-decoration: underline;
-		transition: all 300ms;
-	}
-	.help-button:hover {
-		background: #1f1503ba;
-	}
-	.help-button:hover .description {
-		color: #f6cf86;
-	}
-
 	dialog {
 		padding: 0;
 		background: transparent;

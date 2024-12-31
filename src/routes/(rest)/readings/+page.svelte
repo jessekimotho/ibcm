@@ -4,7 +4,8 @@
 	import db from '$lib/js/db.js';
 	import { selectedPassage, selectedDate } from '$lib/js/store.js';
 	import ReferenceChecker from '$lib/ReferenceChecker.svelte';
-	import DialogVideo from '../../../lib/layout/DialogVideo.svelte';
+	import DialogVideo from '$lib/layout/DialogVideo.svelte';
+	import HelpButton from '$lib/layout/HelpButton.svelte';
 
 	let date;
 	$: date = $selectedDate;
@@ -60,12 +61,28 @@
 		<div class="left-col glass" transition:fade>
 			{#if !buttonClicked}
 				<div class="readings-selector">
-					<div class="titling">Readings</div>
+					<div class="titling">Bible Readings</div>
 					<div class="readings">
 						<div class="year-readings">
 							<div class="year-title">Year 1</div>
 							<div class="passages">
-								{#each ['y1p1', 'y1p2', 'y1p3', 'y1p4'] as passage}
+								{#each ['y1p1', 'y1p2'] as passage}
+									<button
+										class="passage"
+										on:click={() => {
+											selectedPassage.set(devotionDetails[passage]);
+											buttonClicked = true;
+										}}
+									>
+										{devotionDetails[passage]}
+									</button>
+								{/each}
+							</div>
+						</div>
+						<div class="year-readings">
+							<div class="year-title">Psalms & Proverbs</div>
+							<div class="passages">
+								{#each ['y1p3', 'y1p4'] as passage}
 									<button
 										class="passage"
 										on:click={() => {
@@ -102,7 +119,7 @@
 						{$selectedPassage}
 					</div>
 					<button
-						class="passage go-back"
+						class="go-back"
 						on:click={() => {
 							buttonClicked = false;
 						}}>Go Back</button
@@ -130,12 +147,17 @@
 					placeholder="determine to do today..."
 				></textarea>
 			</div>
-			<DialogVideo videoUrl="biblereading" />
+			<DialogVideo videoUrl="biblereading">
+				<HelpButton slot="trigger" />
+			</DialogVideo>
 		</div>
 	</div>
 {/if}
 
 <style>
+	.readings-selector {
+		padding: 32px;
+	}
 	.wraps {
 		display: flex;
 		flex: 1;
@@ -148,6 +170,8 @@
 		flex-direction: column;
 		overflow: auto;
 		flex: 1;
+		display: flex;
+		padding: 0 !important;
 	}
 
 	.right-col {
@@ -172,7 +196,7 @@
 	.readings {
 		display: flex;
 		flex-direction: column;
-		gap: 56px;
+		gap: 24px;
 		margin-top: 32px;
 	}
 
@@ -183,6 +207,9 @@
 	.year-readings {
 		display: flex;
 		flex-direction: column;
+		padding: 20px;
+		background: #ffffff15;
+		border-radius: 12px;
 	}
 
 	.passages {
@@ -200,6 +227,10 @@
 
 	.passage:hover {
 		background: rgba(255, 255, 255, 0.15);
+		padding: 16px 12px;
+		margin-left: -12px;
+		width: calc(100% + 24px);
+		border-radius: 4px;
 	}
 
 	.year-title {
@@ -221,21 +252,21 @@
 		color: rgba(255, 255, 255, 0.5);
 	}
 	.go-back {
-		padding: 16px;
+		padding: 12px 16px;
 		background: #ffffff1a;
 		border-radius: 16px;
 		color: white;
 		transition: all 200ms;
-		position: absolute;
-		right: 24px;
-		top: 20px;
 	}
 
 	.wrapper-back {
 		display: flex;
-		padding-bottom: 12px;
-		/* align-items: center;
-    justify-content: space-between; */
+		padding: 18px 32px;
+		height: 84px;
+		min-height: 84px;
+		border-bottom: 1px solid #ffffff3b;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	.journal {
