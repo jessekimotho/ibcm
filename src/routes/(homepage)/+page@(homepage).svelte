@@ -54,7 +54,7 @@
 							</div>
 
 							<div class="buttons">
-								<DialogVideo videoUrl="introduction">
+								<DialogVideo videoUrl="gettingstarted">
 									<div class="button-wrap" slot="trigger">
 										<button class="button-donate"> Watch Video</button>
 									</div>
