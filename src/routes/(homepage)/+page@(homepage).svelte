@@ -59,7 +59,7 @@
 										<button class="button-donate"> Watch Video</button>
 									</div>
 								</DialogVideo>
-								<button class="button-resources">Read Pamphlet</button>
+								<a class="button-resources" href="/info/journal">View Guide</a>
 							</div>
 						</div>
 						<div class="teaser started-back"></div>
@@ -80,7 +80,7 @@
 										<button class="button-donate"> Watch Video</button>
 									</div>
 								</DialogVideo>
-								<button class="button-resources">Read Pamphlet</button>
+								<a class="button-resources" href="/info/word">View Guide</a>
 							</div>
 						</div>
 						<div class="teaser word-back"></div>
@@ -101,7 +101,7 @@
 										<button class="button-donate"> Watch Video</button>
 									</div>
 								</DialogVideo>
-								<button class="button-resources">Read Pamphlet</button>
+								<a class="button-resources" href="/info/prayer">View Guide</a>
 							</div>
 						</div>
 						<div class="teaser pray-back"></div>
@@ -179,6 +179,7 @@
 		padding-bottom: 24px;
 		line-height: 1.3;
 		margin-bottom: auto;
+		margin-top: auto;
 	}
 	.buttons {
 		margin-top: auto;
@@ -202,6 +203,7 @@
 		/* border: 1px solid rgba(255, 255, 255, 0.4); */
 		border-radius: 8px;
 		flex: 1;
+		text-align: center;
 	}
 
 	.button-wrap {
@@ -225,7 +227,7 @@
 
 	.teaser {
 		width: 100%;
-		height: 140px;
+		height: 180px;
 		background-size: cover;
 		background-position: center;
 	}
