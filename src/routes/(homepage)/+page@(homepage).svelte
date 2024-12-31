@@ -230,16 +230,16 @@
 	}
 
 	.intro-back {
-		background-image: url(images/halstead.png);
+		background-image: url(/images/halstead.png);
 	}
 	.started-back {
-		background-image: url(images/phone.jpg);
+		background-image: url(/images/phone.jpg);
 	}
 	.word-back {
-		background-image: url(images/devotional.jpg);
+		background-image: url(/images/devotional.jpg);
 	}
 	.pray-back {
-		background-image: url(images/pray.jpg);
+		background-image: url(/images/pray.jpg);
 	}
 	.message-section {
 		display: flex;
