@@ -25,40 +25,87 @@
 					</div>
 				</div>
 
-				<div class="sectional">
-					<div class="message-section">
-						<div class="titling">Watch the Introduction Video</div>
+				<div class="sectional-wrap">
+					<div class="sectional">
+						<div class="message-section">
+							<div class="titling">Watch the Introduction Video</div>
 
-						<div class="message">
-							We are so glad you downloaded the IBCM devotional app. We've prepared a series of
-							videos to help you get started on using the app
-						</div>
-
-						<DialogVideo videoUrl="introduction">
-							<div class="button-wrap" slot="trigger">
-								<button class="button-donate"> Click here to watch the Video </button>
+							<div class="message">
+								Thank you for downloading the IBCM devotional app! Here's a quick word from IBCM
+								Head, Dr Brent Halstead.
 							</div>
-						</DialogVideo>
-					</div>
-					<div class="teaser intro-back"></div>
-				</div>
 
-				<div class="sectional">
-					<div class="message-section">
-						<div class="titling">How to use the Devotional</div>
-
-						<div class="message">
-							We have some insights on how you can best make use of the devotional journal. Get
-							started with some tips from Dr. Halstead
+							<DialogVideo videoUrl="introduction">
+								<div class="button-wrap" slot="trigger">
+									<button class="button-donate"> Watch Video </button>
+								</div>
+							</DialogVideo>
 						</div>
-
-						<DialogVideo videoUrl="introduction">
-							<div class="button-wrap" slot="trigger">
-								<button class="button-donate"> Click here to watch the Video </button>
-							</div>
-						</DialogVideo>
+						<div class="teaser intro-back"></div>
 					</div>
-					<div class="teaser started-back"></div>
+
+					<div class="sectional">
+						<div class="message-section">
+							<div class="titling">How to use the Journal</div>
+
+							<div class="message">
+								Discover practical tips for making the most of your devotional journal. Dr. Halstead
+								shares valuable insights to help you get started.
+							</div>
+
+							<div class="buttons">
+								<DialogVideo videoUrl="introduction">
+									<div class="button-wrap" slot="trigger">
+										<button class="button-donate"> Watch Video</button>
+									</div>
+								</DialogVideo>
+								<button class="button-resources">Read Pamphlet</button>
+							</div>
+						</div>
+						<div class="teaser started-back"></div>
+					</div>
+
+					<div class="sectional">
+						<div class="message-section">
+							<div class="titling">Meeting God in his Word</div>
+
+							<div class="message">
+								Get tips for daily Bible reading, journaling, and creating "I will" statements to
+								apply God’s Word to your life.
+							</div>
+
+							<div class="buttons">
+								<DialogVideo videoUrl="biblereading">
+									<div class="button-wrap" slot="trigger">
+										<button class="button-donate"> Watch Video</button>
+									</div>
+								</DialogVideo>
+								<button class="button-resources">Read Pamphlet</button>
+							</div>
+						</div>
+						<div class="teaser word-back"></div>
+					</div>
+
+					<div class="sectional">
+						<div class="message-section">
+							<div class="titling">Meeting God in Prayer</div>
+
+							<div class="message">
+								Learn how to make meaningful prayer requests and follow helpful formats and guides
+								for effective, heartfelt prayer.
+							</div>
+
+							<div class="buttons">
+								<DialogVideo videoUrl="prayerjournal">
+									<div class="button-wrap" slot="trigger">
+										<button class="button-donate"> Watch Video</button>
+									</div>
+								</DialogVideo>
+								<button class="button-resources">Read Pamphlet</button>
+							</div>
+						</div>
+						<div class="teaser pray-back"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -130,7 +177,12 @@
 	.message {
 		padding-top: 12px;
 		padding-bottom: 24px;
-		max-width: 400px;
+		/* max-width: 400px; */
+	}
+	.buttons {
+		margin-top: auto;
+		display: flex;
+		gap: 16px;
 	}
 
 	.button-donate {
@@ -139,6 +191,16 @@
 		color: white;
 		background: #ffa5007a;
 		border-radius: 8px;
+	}
+
+	.button-resources {
+		padding: 12px 20px;
+		text-decoration: none;
+		color: white;
+		background: rgba(255, 255, 255, 0.15);
+		/* border: 1px solid rgba(255, 255, 255, 0.4); */
+		border-radius: 8px;
+		flex: 1;
 	}
 
 	.button-wrap {
@@ -150,25 +212,34 @@
 	}
 
 	.sectional {
-		margin-top: 32px;
 		border-radius: 12px;
 		display: flex;
 		background: #ffffff17;
 		display: flex;
 		overflow: hidden;
+		flex: 1;
+		min-width: 320px;
+		flex-direction: column-reverse;
 	}
 
 	.teaser {
-		flex: 1;
+		width: 100%;
+		height: 140px;
 		background-size: cover;
 		background-position: center;
 	}
 
 	.intro-back {
-		background-image: url(images/devotional.jpg);
+		background-image: url(images/halstead.png);
 	}
 	.started-back {
 		background-image: url(images/phone.jpg);
+	}
+	.word-back {
+		background-image: url(images/devotional.jpg);
+	}
+	.pray-back {
+		background-image: url(images/pray.jpg);
 	}
 	.message-section {
 		display: flex;
@@ -177,7 +248,8 @@
 		padding-top: 32px;
 		padding-bottom: 32px;
 		padding-right: 32px;
-		max-width: 400px;
+		flex: 1;
+		/* max-width: 400px; */
 	}
 	.owner {
 		font-size: 12px;
@@ -186,5 +258,20 @@
 
 	.subtitile {
 		font-size: 16px;
+	}
+
+	.sectional-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 32px;
+	}
+
+	.readings-selector {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+	.message {
+		line-height: 1.3;
 	}
 </style>
