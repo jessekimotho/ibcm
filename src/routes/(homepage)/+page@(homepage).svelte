@@ -247,7 +247,7 @@
 		flex-direction: column;
 		padding: 24px;
 		padding-top: 32px;
-		padding-bottom: 32px;
+		padding-bottom: 28px;
 		padding-right: 32px;
 		flex: 1;
 		/* max-width: 400px; */
