@@ -177,7 +177,8 @@
 	.message {
 		padding-top: 12px;
 		padding-bottom: 24px;
-		/* max-width: 400px; */
+		line-height: 1.3;
+		margin-bottom: auto;
 	}
 	.buttons {
 		margin-top: auto;
@@ -270,8 +271,5 @@
 		display: flex;
 		flex-direction: column;
 		gap: 24px;
-	}
-	.message {
-		line-height: 1.3;
 	}
 </style>
