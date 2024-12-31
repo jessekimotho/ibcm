@@ -146,6 +146,16 @@
 					bind:value={devotionDetails.intention}
 					placeholder="determine to do today..."
 				></textarea>
+				<div class="informational">
+					From your Bible reading, record in what specific way God spoke to you - Write an “I Will”
+					statement of obedience.
+					<ol>
+						<li>If it involves a decision – make it!</li>
+						<li>If it involves an action – plan it!</li>
+						<li>If it requires further study – do it!</li>
+						<li>If it leads to prayer – pray!</li>
+					</ol>
+				</div>
 			</div>
 			<DialogVideo videoUrl="biblereading">
 				<HelpButton slot="trigger" />

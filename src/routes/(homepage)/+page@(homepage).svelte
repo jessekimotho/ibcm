@@ -49,8 +49,8 @@
 							<div class="titling">How to use the Journal</div>
 
 							<div class="message">
-								Discover practical tips for making the most of your devotional journal. Dr. Halstead
-								shares valuable insights to help you get started.
+								Discover practical tips for making the most of your devotional journal. Pastor.
+								Halstead shares valuable insights to help you get started.
 							</div>
 
 							<div class="buttons">
