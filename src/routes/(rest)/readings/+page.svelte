@@ -234,7 +234,13 @@
 		transition: all 200ms;
 		text-align: left;
 	}
+	.i-am-statement {
+		padding-bottom: 16px;
+	}
 
+	ol {
+		padding-left: 16px;
+	}
 	.passage:hover {
 		background: rgba(255, 255, 255, 0.15);
 		padding: 16px 12px;
