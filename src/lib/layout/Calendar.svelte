@@ -1,6 +1,7 @@
 <script>
 	import { selectedDate } from '$lib/js/store.js';
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
 	let today = new Date();
 	let currentMonth = today.getMonth();
@@ -40,9 +41,8 @@
 		'December'
 	];
 
-	// Helper to format the date
 	function formatDate(dateString) {
-		if (!dateString) return `${currentMonth + 1}/${currentYear}`;
+		if (!dateString) return `${months[currentMonth]} ${currentYear}`;
 		const [year, month, day] = dateString.split('-').map(Number);
 		return `${day} ${months[month - 1]} ${year}`;
 	}
@@ -59,15 +59,17 @@
 	}
 
 	async function logDate(day) {
-		const year = currentYear;
 		const month = currentMonth + 1; // Months are zero-indexed
-		const date_full = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-		$selectedDate = date_full;
+		const year = currentYear;
+		$selectedDate = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
 		console.log($selectedDate);
 	}
 
 	onMount(() => {
-		$selectedDate = today.toISOString().split('T')[0];
+		const todayYear = today.getFullYear();
+		const todayMonth = String(today.getMonth() + 1).padStart(2, '0');
+		const todayDay = String(today.getDate()).padStart(2, '0');
+		$selectedDate = `${todayYear}-${todayMonth}-${todayDay}`;
 	});
 </script>
 
@@ -106,6 +108,7 @@
 </div>
 
 <style>
+	/* Same styles as before */
 	.calendar-container {
 		text-align: center;
 		color: white;
@@ -138,11 +141,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		text-align: center;
-		border: 1px solid transparent;
-		transition: all 200ms;
-		border-radius: 12px;
-		cursor: pointer;
 		text-align: center;
 		border: 1px solid transparent;
 		transition: all 200ms;

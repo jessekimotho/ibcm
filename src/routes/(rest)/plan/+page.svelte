@@ -5,12 +5,30 @@
 	import { selectedDate } from '$lib/js/store.js';
 
 	let date;
+	let day, month, year;
 	let loaded = false;
-	$: date = $selectedDate;
 
+	$: date = $selectedDate;
+	$: [day, month, year] = date.split('-').map(Number);
+
+	// Predefined hours for the planner
+	let hours = Array.from({ length: 10 }, (_, i) => {
+		const hour = 8 + i;
+		const period = hour >= 12 ? 'pm' : 'am';
+		const displayHour = hour > 12 ? hour - 12 : hour;
+		return `${displayHour}${period}`;
+	});
+
+	let hourEntries = [];
+
+	// Load planner entries from the database
 	async function loadPlannerEntries() {
 		try {
-			const entries = await db.planner_entries.where({ date }).toArray();
+			const entries = await db.planner_entries
+				.where('[day+month+year]')
+				.equals([day, month, year])
+				.toArray();
+
 			hourEntries = hours.map((hour) => {
 				const found = entries.find((e) => e.hour === hour);
 				return found || { hour, event: '', id: undefined };
@@ -20,26 +38,25 @@
 		}
 	}
 
+	// Save or update an entry in the database
 	async function saveEntry(hourEntry) {
-		await db.planner_entries.put({
-			id: hourEntry.id,
-			date,
-			hour: hourEntry.hour,
-			event: hourEntry.event
-		});
-		loadPlannerEntries();
+		try {
+			await db.planner_entries.put({
+				id: hourEntry.id, // Use existing ID if it exists
+				day,
+				month,
+				year,
+				hour: hourEntry.hour,
+				event: hourEntry.event
+			});
+			loadPlannerEntries(); // Reload entries after saving
+		} catch (error) {
+			console.error('Error saving planner entry:', error);
+		}
 	}
 
+	// React to date changes and reload entries
 	$: date, loadPlannerEntries();
-
-	let hours = Array.from({ length: 10 }, (_, i) => {
-		const hour = 8 + i;
-		const period = hour >= 12 ? 'pm' : 'am';
-		const displayHour = hour > 12 ? hour - 12 : hour;
-		return `${displayHour}${period}`;
-	});
-
-	let hourEntries = [];
 
 	onMount(() => {
 		loaded = true;
@@ -59,7 +76,7 @@
 								type="text"
 								placeholder={`${hourEntry.hour} event`}
 								bind:value={hourEntry.event}
-								on:blur={() => saveEntry(hourEntry)}
+								on:input={() => saveEntry(hourEntry)}
 							/>
 						</div>
 					{/each}

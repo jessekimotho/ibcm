@@ -7,26 +7,49 @@
 	import DialogVideo from '$lib/layout/DialogVideo.svelte';
 	import HelpButton from '$lib/layout/HelpButton.svelte';
 
-	let date;
-	$: date = $selectedDate;
-
-	let devotionDetails = null;
+	let devotionDetails;
 	let error = null;
+	let buttonClicked = false;
 
 	async function loadDevotion() {
 		try {
-			let details = await db.daily_entries.where('date').equals(date).first();
-			if (!details) {
-				devotionDetails = {
-					date,
-					journal_entry: '',
-					intention: '',
-					revised_memory_verse: false,
-					used_prayer_journal: false
-				};
-			} else {
-				devotionDetails = { ...details };
+			const [year, month, day] = $selectedDate.split('-').map(Number); // Extract day, month, year
+
+			console.log('This is the day' + [day]);
+			console.log('This is the month' + [month]);
+
+			// Fetch data from `daily_references` table
+			const referenceDetails = await db.daily_references
+				.where('[day+month]')
+				.equals([day, month])
+				.first();
+
+			// Fetch data from `daily_entries` table
+			const entryDetails = await db.daily_entries
+				.where('[day+month+year]')
+				.equals([day, month, year])
+				.first();
+
+			if (!referenceDetails) {
+				console.warn('No reference details found for this date');
 			}
+
+			if (!entryDetails) {
+				console.warn('No entry details found for this date');
+			}
+
+			// Merge details from both tables
+			devotionDetails = {
+				day,
+				month,
+				year,
+				...referenceDetails,
+				...entryDetails,
+				journal_entry: entryDetails?.journal_entry || '',
+				intention: entryDetails?.intention || '',
+				revised_memory_verse: entryDetails?.revised_memory_verse || false,
+				used_prayer_journal: entryDetails?.used_prayer_journal || false
+			};
 		} catch (err) {
 			console.error('Failed to load devotion details:', err);
 			error = err.message || 'Failed to load data';
@@ -35,7 +58,21 @@
 
 	async function saveField(field, value) {
 		try {
-			await db.daily_entries.update(devotionDetails.id, { [field]: value });
+			if (!devotionDetails) {
+				throw new Error('Devotion details are not loaded');
+			}
+
+			if (devotionDetails.id) {
+				await db.daily_entries.update(devotionDetails.id, { [field]: value });
+			} else {
+				const id = await db.daily_entries.add({
+					day: devotionDetails.day,
+					month: devotionDetails.month,
+					year: devotionDetails.year,
+					[field]: value
+				});
+				devotionDetails.id = id;
+			}
 			console.log(`${field} saved`);
 		} catch (err) {
 			console.error(`Failed to update ${field}:`, err);
@@ -43,17 +80,19 @@
 		}
 	}
 
+	function selectPassage(passage) {
+		selectedPassage.set(passage);
+		buttonClicked = true;
+	}
+
+	$: if ($selectedDate) {
+		devotionDetails = null; // Reset to indicate loading state
+		loadDevotion();
+	}
+
 	onMount(() => {
 		loadDevotion();
 	});
-
-	$: date, loadDevotion(); // Load devotion when date changes
-	$: if (devotionDetails) {
-		devotionDetails.journal_entry && saveField('journal_entry', devotionDetails.journal_entry);
-		devotionDetails.intention && saveField('intention', devotionDetails.intention);
-	}
-
-	let buttonClicked = false;
 </script>
 
 {#if devotionDetails}
@@ -63,67 +102,27 @@
 				<div class="readings-selector">
 					<div class="titling">Bible Readings</div>
 					<div class="readings">
-						<div class="year-readings">
-							<div class="year-title">Year 1</div>
-							<div class="passages">
-								{#each ['y1p1', 'y1p2'] as passage}
-									<button
-										class="passage"
-										on:click={() => {
-											selectedPassage.set(devotionDetails[passage]);
-											buttonClicked = true;
-										}}
-									>
-										{devotionDetails[passage]}
-									</button>
-								{/each}
+						{#each [{ title: 'Year 1', passages: ['y1p1', 'y1p2'] }, { title: 'Psalms & Proverbs', passages: ['y1p3', 'y1p4'] }, { title: 'Year 2', passages: ['y2p1', 'y2p2'] }] as { title, passages }}
+							<div class="year-readings">
+								<div class="year-title">{title}</div>
+								<div class="passages">
+									{#each passages as passage}
+										<button
+											class="passage"
+											on:click={() => selectPassage(devotionDetails[passage])}
+										>
+											{devotionDetails[passage] || '—'}
+										</button>
+									{/each}
+								</div>
 							</div>
-						</div>
-						<div class="year-readings">
-							<div class="year-title">Psalms & Proverbs</div>
-							<div class="passages">
-								{#each ['y1p3', 'y1p4'] as passage}
-									<button
-										class="passage"
-										on:click={() => {
-											selectedPassage.set(devotionDetails[passage]);
-											buttonClicked = true;
-										}}
-									>
-										{devotionDetails[passage]}
-									</button>
-								{/each}
-							</div>
-						</div>
-						<div class="year-readings">
-							<div class="year-title">Year 2</div>
-							<div class="passages">
-								{#each ['y2p1', 'y2p2'] as passage}
-									<button
-										class="passage"
-										on:click={() => {
-											selectedPassage.set(devotionDetails[passage]);
-											buttonClicked = true;
-										}}
-									>
-										{devotionDetails[passage]}
-									</button>
-								{/each}
-							</div>
-						</div>
+						{/each}
 					</div>
 				</div>
 			{:else}
 				<div class="wrapper-back">
-					<div class="titling">
-						{$selectedPassage}
-					</div>
-					<button
-						class="go-back"
-						on:click={() => {
-							buttonClicked = false;
-						}}>Go Back</button
-					>
+					<div class="titling">{$selectedPassage || 'No Passage Selected'}</div>
+					<button class="go-back" on:click={() => (buttonClicked = false)}>Go Back</button>
 				</div>
 				<ReferenceChecker />
 			{/if}
@@ -132,11 +131,11 @@
 		<div class="right-col">
 			<div class="journal right-w glass" transition:fade>
 				<div class="titling">Journal</div>
-
 				<textarea
 					id="journal"
 					bind:value={devotionDetails.journal_entry}
 					placeholder="Write your thoughts on today's reading..."
+					on:input={() => saveField('journal_entry', devotionDetails.journal_entry)}
 				></textarea>
 			</div>
 			<div class="i-am-statement right-w glass" transition:fade>
@@ -144,7 +143,8 @@
 				<textarea
 					id="intention"
 					bind:value={devotionDetails.intention}
-					placeholder="determine to do today..."
+					placeholder="Determine to do today..."
+					on:input={() => saveField('intention', devotionDetails?.intention || '')}
 				></textarea>
 				<div class="informational">
 					From your Bible reading, record in what specific way God spoke to you - Write an “I Will”
