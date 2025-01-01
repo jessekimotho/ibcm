@@ -13,7 +13,6 @@
 		}
 	}
 
-	// Separate async function to handle the fetch operation
 	async function processPassage(passage) {
 		try {
 			const result = await classifyAndFetch(passage);
@@ -23,12 +22,13 @@
 				chaptersOutput = [];
 			} else {
 				errorMessage = '';
-				chaptersOutput = result.chaptersOutput;
+				chaptersOutput = Array.isArray(result.chaptersOutput) ? result.chaptersOutput : [];
 				classification = result.classification;
 			}
 		} catch (error) {
 			console.error('Error in classifyAndFetch:', error);
 			errorMessage = 'An error occurred while fetching data.';
+			chaptersOutput = []; // Fallback to an empty array
 		}
 	}
 </script>
@@ -38,14 +38,18 @@
 	{#if errorMessage}
 		<p class="error">{errorMessage}</p>
 	{/if}
-	{#each chaptersOutput as chapter}
-		<h3>Chapter {chapter.chapterNumber}</h3>
-		<ol start={chapter.verses[0]?.verseNumber}>
-			{#each chapter.verses as verse}
-				<li>{verse.text}</li>
-			{/each}
-		</ol>
-	{/each}
+	{#if Array.isArray(chaptersOutput) && chaptersOutput.length > 0}
+		{#each chaptersOutput as chapter}
+			<h3>Chapter {chapter.chapterNumber}</h3>
+			<ol start={chapter.verses[0]?.verseNumber}>
+				{#each chapter.verses as verse}
+					<li>{verse.text}</li>
+				{/each}
+			</ol>
+		{/each}
+	{:else}
+		<p>No chapters available.</p>
+	{/if}
 </div>
 
 <style>

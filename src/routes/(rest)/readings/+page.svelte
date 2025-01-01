@@ -102,40 +102,38 @@
 {#if loaded}
 	<div class="wraps">
 		<div class="left-col glass" transition:fade>
-			{#key $selectedDate}
-				{#if devotionDetails}
-					{#if buttonClicked !== 'true'}
-						<div class="readings-selector">
-							<div class="titling">Bible Readings</div>
-							<div class="readings">
-								{#each [{ title: 'Year 1', passages: ['y1p1', 'y1p2'] }, { title: 'Psalms & Proverbs', passages: ['y1p3', 'y1p4'] }, { title: 'Year 2', passages: ['y2p1', 'y2p2'] }] as { title, passages }}
-									<div class="year-readings">
-										<div class="year-title">{title}</div>
-										<div class="passages">
-											{#each passages as passage}
-												<button
-													class="passage"
-													on:click={() => selectPassage(devotionDetails[passage])}
-												>
-													{devotionDetails[passage] || '—'}
-												</button>
-											{/each}
-										</div>
+			{#if devotionDetails}
+				{#if buttonClicked !== 'true'}
+					<div class="readings-selector">
+						<div class="titling">Bible Readings</div>
+						<div class="readings">
+							{#each [{ title: 'Year 1', passages: ['y1p1', 'y1p2'] }, { title: 'Psalms & Proverbs', passages: ['y1p3', 'y1p4'] }, { title: 'Year 2', passages: ['y2p1', 'y2p2'] }] as { title, passages }}
+								<div class="year-readings">
+									<div class="year-title">{title}</div>
+									<div class="passages">
+										{#each passages as passage}
+											<button
+												class="passage"
+												on:click={() => selectPassage(devotionDetails[passage])}
+											>
+												{devotionDetails[passage] || '—'}
+											</button>
+										{/each}
 									</div>
-								{/each}
-							</div>
+								</div>
+							{/each}
 						</div>
-					{:else if buttonClicked === 'true'}
-						<div class="wrapper-back">
-							<div class="titling">
-								{$selectedPassage || 'No Passage Selected'}
-							</div>
-							<button class="go-back" on:click={() => (buttonClicked = 'false')}> Go Back </button>
+					</div>
+				{:else if buttonClicked === 'true'}
+					<div class="wrapper-back">
+						<div class="titling">
+							{$selectedPassage || 'No Passage Selected'}
 						</div>
-						<ReferenceChecker />
-					{/if}
+						<button class="go-back" on:click={() => (buttonClicked = 'false')}> Go Back </button>
+					</div>
+					<ReferenceChecker />
 				{/if}
-			{/key}
+			{/if}
 		</div>
 
 		<div class="right-col">

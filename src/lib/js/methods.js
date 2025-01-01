@@ -78,18 +78,24 @@ export async function fetchChapterRange(bookName, startChapter, endChapter) {
         .where('[bookName+chapterNumber]')
         .between([bookName, startChapter], [bookName, endChapter], true, true)
         .toArray();
+    
+
 
     if (chapters.length === 0) {
         return { errorMessage: `No chapters found from ${startChapter} to ${endChapter} in ${bookName}`, chaptersOutput: [] };
     }
 
     return {
-        chaptersOutput: chapters.map(chapter => ({
+    chaptersOutput: await Promise.all(
+        chapters.map(async chapter => ({
             chapterNumber: chapter.chapterNumber,
-            verses: chapter.verses // Assuming you fetch verses in a separate query
-        })),
-        classification: 'Chapter Range'
-    };
+            verses: await db.verses
+                .where({ bookName, chapterNumber: chapter.chapterNumber })
+                .toArray()
+        }))
+    ),
+    classification: 'Chapter Range'
+};
 }
 
 export async function fetchCrossChapterRange(bookName, startChapter, startVerse, endChapter, endVerse) {
@@ -154,7 +160,7 @@ export function capitalizeInput(input) {
 const regex = /^(\d*\s*\w+[\w\s]*?)\s+(\d+)(:\d+)?(-(\d+)(:\d+)?)?$/;
     
 
-export function classifyAndFetch(reference) {
+export async function classifyAndFetch(reference) {
     const trimmedInput = reference.trim();
 
     const match = trimmedInput.match(regex);
@@ -173,16 +179,16 @@ export function classifyAndFetch(reference) {
     // Capitalize each word for consistency in database queries
     const formattedBookName = bookName.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
 
-    // Determine what type of data to fetch based on the parsed input
-    if (match[6]) { // Cross-chapter verse range
-        return fetchCrossChapterRange(formattedBookName, startChapter, startVerse, endChapter, endVerse);
-    } else if (match[3] && match[4]) { // Single chapter verse range
-        return fetchVerseRange(formattedBookName, startChapter, startVerse, endVerse);
-    } else if (match[3]) { // Single verse
-        return fetchSingleVerse(formattedBookName, startChapter, startVerse);
-    } else if (match[4]) { // Chapter range
-        return fetchChapterRange(formattedBookName, startChapter, endChapter);
-    } else { // Single chapter
-        return fetchSingleChapter(formattedBookName, startChapter);
+     // Handle the various fetch scenarios
+    if (match[6]) {
+        return await fetchCrossChapterRange(formattedBookName, startChapter, startVerse, endChapter, endVerse);
+    } else if (match[3] && match[4]) {
+        return await fetchVerseRange(formattedBookName, startChapter, startVerse, endVerse);
+    } else if (match[3]) {
+        return await fetchSingleVerse(formattedBookName, startChapter, startVerse);
+    } else if (match[4]) {
+        return await fetchChapterRange(formattedBookName, startChapter, endChapter);
+    } else {
+        return await fetchSingleChapter(formattedBookName, startChapter);
     }
 }
