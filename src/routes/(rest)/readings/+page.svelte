@@ -9,9 +9,10 @@
 
 	let devotionDetails;
 	let error = null;
-	let buttonClicked = false;
+	let buttonClicked = 'false';
 
 	async function loadDevotion() {
+		buttonClicked = 'false';
 		try {
 			const [year, month, day] = $selectedDate.split('-').map(Number); // Extract day, month, year
 
@@ -82,11 +83,12 @@
 
 	function selectPassage(passage) {
 		selectedPassage.set(passage);
-		buttonClicked = true;
+		buttonClicked = 'true';
 	}
 
 	$: if ($selectedDate) {
 		devotionDetails = null; // Reset to indicate loading state
+		buttonClicked = 'false'; // Reset buttonClicked state
 		loadDevotion();
 	}
 
@@ -95,74 +97,83 @@
 	});
 </script>
 
-{#if devotionDetails}
-	<div class="wraps">
-		<div class="left-col glass" transition:fade>
-			{#if !buttonClicked}
-				<div class="readings-selector">
-					<div class="titling">Bible Readings</div>
-					<div class="readings">
-						{#each [{ title: 'Year 1', passages: ['y1p1', 'y1p2'] }, { title: 'Psalms & Proverbs', passages: ['y1p3', 'y1p4'] }, { title: 'Year 2', passages: ['y2p1', 'y2p2'] }] as { title, passages }}
-							<div class="year-readings">
-								<div class="year-title">{title}</div>
-								<div class="passages">
-									{#each passages as passage}
-										<button
-											class="passage"
-											on:click={() => selectPassage(devotionDetails[passage])}
-										>
-											{devotionDetails[passage] || '—'}
-										</button>
-									{/each}
+<div class="wraps">
+	<div class="left-col glass" transition:fade>
+		{#key $selectedDate}
+			{#if devotionDetails}
+				{#if buttonClicked !== 'true'}
+					<div class="readings-selector">
+						<div class="titling">Bible Readings</div>
+						<div class="readings">
+							{#each [{ title: 'Year 1', passages: ['y1p1', 'y1p2'] }, { title: 'Psalms & Proverbs', passages: ['y1p3', 'y1p4'] }, { title: 'Year 2', passages: ['y2p1', 'y2p2'] }] as { title, passages }}
+								<div class="year-readings">
+									<div class="year-title">{title}</div>
+									<div class="passages">
+										{#each passages as passage}
+											<button
+												class="passage"
+												on:click={() => selectPassage(devotionDetails[passage])}
+											>
+												{devotionDetails[passage] || '—'}
+											</button>
+										{/each}
+									</div>
 								</div>
-							</div>
-						{/each}
+							{/each}
+						</div>
 					</div>
-				</div>
-			{:else}
-				<div class="wrapper-back">
-					<div class="titling">{$selectedPassage || 'No Passage Selected'}</div>
-					<button class="go-back" on:click={() => (buttonClicked = false)}>Go Back</button>
-				</div>
-				<ReferenceChecker />
+				{:else if buttonClicked === 'true'}
+					<div class="wrapper-back">
+						<div class="titling">
+							{$selectedPassage || 'No Passage Selected'}
+						</div>
+						<button class="go-back" on:click={() => (buttonClicked = 'false')}> Go Back </button>
+					</div>
+					<ReferenceChecker />
+				{/if}
 			{/if}
-		</div>
+		{/key}
+	</div>
 
-		<div class="right-col">
-			<div class="journal right-w glass" transition:fade>
-				<div class="titling">Journal</div>
+	<div class="right-col">
+		<div class="journal right-w glass" transition:fade>
+			<div class="titling">Journal</div>
+			{#if devotionDetails}
 				<textarea
 					id="journal"
 					bind:value={devotionDetails.journal_entry}
 					placeholder="Write your thoughts on today's reading..."
 					on:input={() => saveField('journal_entry', devotionDetails.journal_entry)}
 				></textarea>
-			</div>
-			<div class="i-am-statement right-w glass" transition:fade>
-				<div class="titling">I will</div>
+			{/if}
+		</div>
+
+		<div class="i-am-statement right-w glass" transition:fade>
+			<div class="titling">I will</div>
+			{#if devotionDetails}
 				<textarea
 					id="intention"
 					bind:value={devotionDetails.intention}
 					placeholder="Determine to do today..."
-					on:input={() => saveField('intention', devotionDetails?.intention || '')}
+					on:input={() => saveField('intention', devotionDetails.intention)}
 				></textarea>
-				<div class="informational">
-					From your Bible reading, record in what specific way God spoke to you - Write an “I Will”
-					statement of obedience.
-					<ol>
-						<li>If it involves a decision – make it!</li>
-						<li>If it involves an action – plan it!</li>
-						<li>If it requires further study – do it!</li>
-						<li>If it leads to prayer – pray!</li>
-					</ol>
-				</div>
+			{/if}
+			<div class="informational">
+				From your Bible reading, record in what specific way God spoke to you - Write an “I Will”
+				statement of obedience.
+				<ol>
+					<li>If it involves a decision – make it!</li>
+					<li>If it involves an action – plan it!</li>
+					<li>If it requires further study – do it!</li>
+					<li>If it leads to prayer – pray!</li>
+				</ol>
 			</div>
-			<DialogVideo videoUrl="biblereading">
-				<HelpButton slot="trigger" />
-			</DialogVideo>
 		</div>
+		<DialogVideo videoUrl="biblereading">
+			<HelpButton slot="trigger" />
+		</DialogVideo>
 	</div>
-{/if}
+</div>
 
 <style>
 	.readings-selector {
