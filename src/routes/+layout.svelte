@@ -124,6 +124,7 @@
 
 	.page-structure {
 		max-width: 1500px;
+		min-width: 1400px;
 		height: 100%;
 		margin: auto;
 		display: flex;
