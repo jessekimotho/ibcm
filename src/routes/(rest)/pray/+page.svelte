@@ -4,9 +4,11 @@
 	import { fade } from 'svelte/transition';
 	import DialogVideo from '$lib/layout/DialogVideo.svelte';
 	import HelpButton from '$lib/layout/HelpButton.svelte';
+	import Request from '$lib/layout/Request.svelte';
 
 	let loaded;
 	let prayerRequests = [];
+	let filteredRequests = [];
 	let newPrayer = {
 		category: '',
 		request: '',
@@ -14,7 +16,9 @@
 		dateAnswered: null,
 		isAnswered: false
 	};
+	let selectedCategory = 'All'; // New variable to track selected category
 	let categories = [
+		'All', // Add "All" to the category list
 		'Praise',
 		'Repent',
 		'Ask',
@@ -32,9 +36,25 @@
 		'Listening - Yielding',
 		'Songs of Praise'
 	];
+	let categoryCount = {}; // New object to store counts for each category
 
 	async function loadPrayers() {
 		prayerRequests = await db.prayers.toArray();
+		// Calculate category counts
+		categoryCount = categories.reduce((counts, category) => {
+			counts[category] = prayerRequests.filter((prayer) => prayer.category === category).length;
+			return counts;
+		}, {});
+		applyFilter();
+	}
+
+	function applyFilter() {
+		// Filter based on the selected category
+		if (selectedCategory === 'All') {
+			filteredRequests = prayerRequests;
+		} else {
+			filteredRequests = prayerRequests.filter((prayer) => prayer.category === selectedCategory);
+		}
 	}
 
 	async function addPrayer() {
@@ -51,17 +71,8 @@
 		}
 	}
 
-	async function markAsAnswered(prayer) {
-		prayer.isAnswered = true;
-		prayer.dateAnswered = new Date().toISOString();
-		await db.prayers.put(prayer);
-		loadPrayers();
-	}
-
-	async function deletePrayer(prayerId) {
-		await db.prayers.delete(prayerId);
-		loadPrayers();
-	}
+	// Watch for changes in `selectedCategory`
+	$: selectedCategory, applyFilter();
 
 	onMount(() => {
 		loadPrayers();
@@ -73,46 +84,41 @@
 	<div class="wraps">
 		<div class="left-col glass" transition:fade>
 			<div class="prayer-page">
-				<div class="titling">Prayer Requests</div>
+				<div class="titles">
+					<div class="titling">Prayer Requests</div>
+					<div class="filter">
+						<select id="category-filter" bind:value={selectedCategory}>
+							{#each categories as category}
+								<option value={category}>
+									{category} ({categoryCount[category] || 0})
+								</option>
+							{/each}
+						</select>
+					</div>
+				</div>
 
 				<div class="prayers-list">
-					{#if prayerRequests.length > 0}
-						{#each prayerRequests as prayer (prayer.id)}
-							<div class="prayer-entry">
-								<div class="prayer-details">
-									<span class="category">{prayer.category}</span>
-									<p class="actual-request">{prayer.request}</p>
-									<div class="prayer-dates">
-										<small>Created: {new Date(prayer.dateCreated).toLocaleDateString()}</small>
-										{#if prayer.isAnswered}
-											<small>Answered: {new Date(prayer.dateAnswered).toLocaleDateString()}</small>
-										{/if}
-									</div>
-								</div>
-								<div class="prayer-actions">
-									{#if !prayer.isAnswered}
-										<button class="action" on:click={() => markAsAnswered(prayer)}
-											>Mark as Answered</button
-										>
-									{/if}
-									<button class="action" on:click={() => deletePrayer(prayer.id)}>Delete</button>
-								</div>
-							</div>
+					{#if filteredRequests.length > 0}
+						{#each filteredRequests as prayer (prayer.id)}
+							<Request {prayer} />
 						{/each}
 					{:else}
-						<p>You have no prayer requests yet</p>
+						<p>No prayer requests found for the selected category</p>
 					{/if}
 				</div>
 			</div>
 		</div>
 		<div class="right-col">
 			<div class="new-pray right-w glass" transition:fade>
-				<div class="titling">New Prayer Request</div>
+				<div class="titling new-titling">New Prayer Request</div>
 				<div class="request-content">
 					<select bind:value={newPrayer.category}>
 						<option value="" disabled selected>Click here to select Prayer Forms</option>
-						{#each categories as category}
-							<option value={category}>{category}</option>
+						{#each categories.slice(1) as category}
+							<!-- Exclude "All" -->
+							<option value={category}>
+								{category} ({categoryCount[category] || 0})
+							</option>
 						{/each}
 					</select>
 					<textarea
@@ -132,10 +138,27 @@
 {/if}
 
 <style>
+	.new-titling {
+		margin-bottom: 24px;
+	}
+	.filter select {
+		width: auto;
+		color: white;
+		padding: 8px;
+		border-radius: 8px;
+		background: #ffffff14;
+	}
 	.titling {
 		font-size: 18px;
 		font-weight: 600;
-		margin-bottom: 28px;
+	}
+	.titles {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 48px;
+		margin-bottom: 24px;
 	}
 	.wraps {
 		display: flex;
@@ -151,18 +174,6 @@
 		border-radius: 16px;
 		padding: 32px;
 	}
-
-	.prayers-list .prayer-entry {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		padding: 16px;
-		/* border: 1px solid rgba(255, 255, 255, 0.2); */
-		border-radius: 12px;
-		margin-bottom: 20px;
-		background: #ffffff17;
-	}
-
 	.left-col {
 		flex-direction: column;
 		overflow: auto;
@@ -213,56 +224,5 @@
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
-	}
-	.actual-request {
-		margin-top: 8px;
-		margin-bottom: 6px;
-	}
-
-	.category {
-		font-size: 13px;
-		font-weight: 600;
-	}
-
-	.action {
-		color: white;
-		background: #ffa5003b !important;
-		padding: 6px 12px;
-		border-radius: 8px;
-	}
-	.prayer-actions {
-		display: flex;
-		gap: 8px;
-		margin-top: 12px;
-	}
-	.prayer-dates {
-		opacity: 0.6;
-	}
-
-	.help-button {
-		box-shadow: 5px 5px 20px 10px #0000003d;
-		color: white;
-		padding: 18px 12px;
-		border-radius: 8px;
-		background: #0f0f0fad;
-		backdrop-filter: blur(50px);
-		border-radius: 16px;
-		transition: all 300ms;
-		width: 100%;
-	}
-
-	.description {
-		color: #ffca67;
-		margin-top: 2px;
-		margin-bottom: 4px;
-		font-size: 14px;
-		text-decoration: underline;
-		transition: all 300ms;
-	}
-	.help-button:hover {
-		background: #1f1503ba;
-	}
-	.help-button:hover .description {
-		color: #f6cf86;
 	}
 </style>
