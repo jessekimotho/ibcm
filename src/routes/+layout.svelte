@@ -41,6 +41,9 @@
 		// Regex for Proverbs 4-20-27 (missing colon between chapter and verse)
 		const proverbsPattern = /([A-Za-z]+) (\d+)-(\d+)-(\d+)/;
 
+		// Generalized regex for other mixed separator typos
+		const typoPattern = /([A-Za-z]+)[:\-]?(\d+)([:\-])(\d+)([:\-])(\d+)/;
+
 		try {
 			// Fetch all entries from the `daily_references` table
 			const entries = await db.daily_references.toArray();
@@ -67,6 +70,16 @@
 							entry[field] = entry[field].replace(
 								proverbsPattern,
 								(match, book, chapter, verse, range) => {
+									return `${book} ${chapter}:${verse}-${range}`;
+								}
+							);
+						}
+
+						// Generalized fix for other mixed separator cases
+						if (typoPattern.test(entry[field])) {
+							entry[field] = entry[field].replace(
+								typoPattern,
+								(match, book, chapter, sep1, verse, sep2, range) => {
 									return `${book} ${chapter}:${verse}-${range}`;
 								}
 							);
