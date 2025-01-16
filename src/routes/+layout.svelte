@@ -10,6 +10,7 @@
 	let initMessage = 'Please wait...';
 
 	onMount(async () => {
+		fixBibleReferences();
 		const devotion = await db.app_settings.get('devotion');
 
 		if (!devotion || !devotion.value) {
@@ -29,6 +30,70 @@
 			return false; // Indicates the field already had a value
 		}
 	});
+
+	// Assuming you have already initialized your Dexie database instance as `db`
+	async function fixBibleReferences() {
+		const fieldsToCheck = ['y1p1', 'y1p2', 'y1p3', 'y1p4', 'y2p1', 'y2p2', 'prayer_passage'];
+
+		// Regex for Acts:10-38-48 (colons mixed with hyphens)
+		const actsPattern = /([A-Za-z]+):(\d+)-(\d+)-(\d+)/;
+
+		// Regex for Proverbs 4-20-27 (missing colon between chapter and verse)
+		const proverbsPattern = /([A-Za-z]+) (\d+)-(\d+)-(\d+)/;
+
+		try {
+			// Fetch all entries from the `daily_references` table
+			const entries = await db.daily_references.toArray();
+
+			for (const entry of entries) {
+				let updated = false;
+
+				for (const field of fieldsToCheck) {
+					if (entry[field]) {
+						let original = entry[field];
+
+						// Check and fix Acts:10-38-48 cases
+						if (actsPattern.test(entry[field])) {
+							entry[field] = entry[field].replace(
+								actsPattern,
+								(match, book, chapter, verse, range) => {
+									return `${book} ${chapter}:${verse}-${range}`;
+								}
+							);
+						}
+
+						// Check and fix Proverbs 4-20-27 cases
+						if (proverbsPattern.test(entry[field])) {
+							entry[field] = entry[field].replace(
+								proverbsPattern,
+								(match, book, chapter, verse, range) => {
+									return `${book} ${chapter}:${verse}-${range}`;
+								}
+							);
+						}
+
+						// Log the changes if any fixes were made
+						if (original !== entry[field]) {
+							console.log(
+								`Correcting: ${original} -> ${entry[field]} in entry with key ${entry.day}-${entry.month}`
+							);
+							updated = true;
+						}
+					}
+				}
+
+				if (updated) {
+					// Update the entry in the database
+					await db.daily_references.put(entry);
+					console.log(`Updated entry:`, entry);
+				}
+			}
+
+			console.log('Bible references correction completed.');
+		} catch (error) {
+			console.error('Error updating Bible references:', error);
+		}
+	}
 
 	let state = 'not initialized';
 </script>
