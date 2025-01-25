@@ -10,9 +10,8 @@
 	let initMessage = 'Please wait...';
 
 	onMount(async () => {
-		fixBibleReferences();
+		await importDevotion();
 		const devotion = await db.app_settings.get('devotion');
-
 		if (!devotion || !devotion.value) {
 			state = 'first-time';
 			await db.app_settings.put({ id: 'devotion', value: 'initialized' });
