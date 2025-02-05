@@ -24,6 +24,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"dexie": "^4.0.4"
+		"dexie": "^4.0.4",
+		"svelte-dnd-action": "^0.9.57"
 	}
 }

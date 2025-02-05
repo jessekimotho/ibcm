@@ -38,10 +38,8 @@
 		// Update the prayer object with the new details
 		prayer.request = updatedRequest;
 		prayer.category = updatedCategory;
-
 		// Save the updated prayer to the Dexie database
 		await db.prayers.put(prayer);
-
 		// Exit editing mode
 		isEditing = false;
 	}
@@ -52,9 +50,15 @@
 		await db.prayers.put(prayer);
 	}
 
+	async function markAsUnanswered() {
+		prayer.isAnswered = false;
+		prayer.dateAnswered = null;
+		await db.prayers.put(prayer);
+	}
+
 	async function deletePrayer() {
 		await db.prayers.delete(prayer.id);
-		isDeleted = true; // Mark this component for destruction
+		isDeleted = true; // Mark this component for removal
 	}
 </script>
 
@@ -84,11 +88,13 @@
 				<button class="action save" on:click={saveChanges}>Save</button>
 				<button class="action cancel" on:click={() => (isEditing = false)}>Cancel</button>
 			{:else}
-				{#if !prayer.isAnswered}
-					<button class="action" on:click={() => markAsAnswered(prayer)}>Mark as Answered</button>
+				{#if prayer.isAnswered}
+					<button class="action" on:click={markAsUnanswered}>Mark as Unanswered</button>
+				{:else}
+					<button class="action" on:click={markAsAnswered}>Mark as Answered</button>
 				{/if}
 				<button class="action edit" on:click={() => (isEditing = true)}>Edit</button>
-				<button class="action delete" on:click={() => deletePrayer(prayer.id)}>Delete</button>
+				<button class="action delete" on:click={deletePrayer}>Delete</button>
 			{/if}
 		</div>
 	</div>
@@ -104,35 +110,12 @@
 		color: white;
 	}
 
-	.action {
-		color: white;
-		background: #ffa5003b !important;
-		padding: 6px 12px;
-		border-radius: 8px;
-	}
-
-	.save {
-		background: #00b894;
-	}
-
-	.cancel {
-		background: #d63031;
-	}
-
-	.edit-request,
-	select {
-		margin-top: 8px;
-		margin-bottom: 6px;
-	}
-
 	.prayer-entry {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		padding: 16px;
-		/* border: 1px solid rgba(255, 255, 255, 0.2); */
 		border-radius: 12px;
-		margin-bottom: 20px;
 		background: #ffffff17;
 	}
 	.actual-request {
@@ -145,34 +128,34 @@
 		font-weight: 600;
 	}
 
-	.action {
-		color: white;
-		background: #ffa5003b !important;
-		padding: 6px 12px;
-		border-radius: 8px;
-	}
 	.prayer-actions {
 		display: flex;
 		gap: 8px;
 		margin-top: 12px;
 	}
+
 	.prayer-dates {
 		opacity: 0.6;
 	}
 
-	.prayer-entry {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		padding: 16px;
-		/* border: 1px solid rgba(255, 255, 255, 0.2); */
-		border-radius: 12px;
-		margin-bottom: 20px;
-		background: #ffffff17;
+	button.action {
+		color: white;
+		background: #ffa5003b;
+		padding: 6px 12px;
+		border-radius: 8px;
+		border: none;
+		cursor: pointer;
 	}
+	.save {
+		background: #00b894;
+	}
+	.cancel {
+		background: #d63031;
+	}
+
 	select {
 		width: 100%;
-		margin: 0px;
+		margin: 0;
 		color: white;
 		padding: 12px;
 		border-radius: 8px;

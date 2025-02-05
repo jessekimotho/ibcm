@@ -306,7 +306,7 @@ BODY {
     flex-direction: column;
     margin:0;
     background: url(/images/trench.jpg);
-    background-size: cover;
+    background-size: auto;
     background-position: center;
 }
 

@@ -17,7 +17,7 @@ db.version(1).stores({
     daily_entries: '++id, [day+month+year], userId, day, month, year, journal_entry, intention, revised_memory_verse, used_prayer_journal',
 
     planner_entries: '++id, [day+month+year], hour, event',
-    prayers: '++id, category, request, dateCreated, dateAnswered, isAnswered'
+    prayers: '++id, category, request, dateCreated, dateAnswered, isAnswered, order'
 });
 
 export default db;
