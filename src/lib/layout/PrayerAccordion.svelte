@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { dndzone } from 'svelte-dnd-action';
 	import db from '$lib/js/db.js';
 	import Request from '$lib/layout/Request.svelte';
 
@@ -65,6 +66,22 @@
 		loadPrayers();
 	});
 
+	// Handle drag-and-drop reordering within each subcategory.
+	async function handleDnd({ detail }, subCategory) {
+		// detail.items is the new order; update the local grouping.
+		const newItems = detail.items;
+
+		// Update the "order" field for each prayer based on its index.
+		await Promise.all(
+			newItems.map((prayer, index) => {
+				prayer.order = index;
+				return db.prayers.put(prayer);
+			})
+		);
+		// Update the groupedPrayers with the new order.
+		groupedPrayers[subCategory] = newItems;
+	}
+
 	// Add a new prayer for the given subcategory.
 	async function addNewPrayer(sub) {
 		if (newPrayerText[sub] && newPrayerText[sub].trim().length > 0) {
@@ -114,14 +131,7 @@
 								{sub} ({groupedPrayers[sub] ? groupedPrayers[sub].length : 0})
 							</div>
 							{#if openSub[sub]}
-								<div
-									class="accordion-content prayer-list"
-									use:dndzone={{
-										items: groupedPrayers[sub] || [],
-										flipDurationMs: 300,
-										dragHandle: '.drag-handle' // Optional: require drag handle
-									}}
-								>
+								<div class="accordion-content prayer-list">
 									{#if groupedPrayers[sub] && groupedPrayers[sub].length > 0}
 										{#each groupedPrayers[sub] as prayer (prayer.id)}
 											<!-- Include a drag handle inside each Request if needed -->
