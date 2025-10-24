@@ -24,55 +24,6 @@
 					God.
 				</p>
 
-				<h2>Agenda and Notes with Appointment Calendar</h2>
-				<p>
-					The most common feature of any diary is the appointment calendar used for recording and
-					remembering meetings and appointments. The Bible says, “Let all things be done decently
-					and in order.” (I Cor. 14:40) Believers should use their time wisely and for the Lord. As
-					you make your plans for the day, pray and yield your activities to Him and ask for
-					guidance and wisdom in planning your day. Additional suggestions can be found on the
-					Listening-Yielding Helps page (228).
-				</p>
-
-				<h2>Weekly Memory Verse</h2>
-				<p>
-					Memorizing verses is an exercise that contributes to the spiritual discipline of
-					meditating on God’s Word. We cannot think on God’s Word if it is not memorized. Take time
-					each day to read the memory verse five times. By the end of the week, you should have it
-					memorized. Another suggestion is to write out the verse once every day. This will aid you
-					in hiding God’s Word in your heart. (Psalm 119:11) A notice is included above the Bible
-					reading schedule to remind you to review the memory verse each day. The theme for the
-					memory verses is abiding in the presence of God.
-				</p>
-
-				<h2>Accountability and Communication</h2>
-				<p>
-					One of the important principles for victorious living is accountability. Accountability
-					means that you place yourself under authority and allow others to confront and correct you
-					if you are not doing what you ought to do. The Bible says, “Submitting yourselves one to
-					another in the fear of God.” (Ephesians 5:21) As believers, your first accountability is
-					to your local church. This feature in the devotional journal reminds you to communicate
-					with your pastor about any needs or help you need in your ministry and to inform him if
-					you are unable to perform your ministry because of circumstantial conflicts. Another form
-					of accountability is to a prayer partner. Believers should agree to voluntarily submit one
-					to another to encourage and challenge each other to consistent devotional habits and to
-					faithfully pray for one another. Find someone to be your personal, daily prayer and
-					accountability partner.
-				</p>
-
-				<h2>Weekly Outreach Reminder</h2>
-				<p>
-					Jesus said, “Ye are the salt of the earth:” and “Ye are the light of the world.” (Matthew
-					5:13-14) These statements mean that believers should influence and impact the world with
-					Gospel truth. You ought to be looking for opportunities to share your faith every day and
-					in every situation. This feature in the devotional journal is intended to remind you to
-					look for opportunities to spread the Gospel through giving out Gospel tracts and talking
-					to others about salvation. You are also reminded to influence other believers by
-					communicating how to live in obedience to the Scriptures through teaching discipleship
-					lessons. Accept the challenge of the weekly outreach reminder to be salt and light in your
-					community.
-				</p>
-
 				<h2>Bible Reading Schedule</h2>
 				<p>
 					The Bible reading schedule in this journal offers six different passages of Scripture to
@@ -101,25 +52,16 @@
 					and surrender to God each day.
 				</p>
 
-				<h2>Focus on God</h2>
-				<p>
-					The Focus on God section of the devotional journal presents a name or attribute of God
-					that you can meditate upon as you begin your prayer time by praising Him for that
-					characteristic. By meditating and focusing on God, you take the focus off of self and
-					prepare your heart and attitude for meeting with God.
-				</p>
-
 				<h2>Develop your own Prayer List</h2>
 				<p>
-					The instruction in the section “Meeting God through Prayer” (pages 8-9) will help you to
-					begin to develop your prayer list. Space is provided for writing a prayer list on pages
-					10-11. As you grow in your prayer life, your prayer list will also grow. Purchase a
-					notebook and divide it into sections for the different forms of prayer and add your
-					requests. As your prayer life continues to grow, you may want to add additional forms of
-					prayer found in the section “The Hour that Changes the World” (pages 12-13). By using a
-					prayer list, you will find that you will pray longer, your will pray more consistently,
-					and you will remember important requests for which to pray that otherwise you may forget.
-					Your prayer list is the place to record your requests and personal meetings with God.
+					The instruction in the section “PRAY” will help you to begin to develop your prayer list.
+					As you grow in your prayer life, your prayer list will also grow. Purchase a notebook and
+					divide it into sections for the different forms of prayer and add your requests. As your
+					prayer life continues to grow, you may want to add additional forms of prayer found in the
+					section “The Hour that Changes the World”. By using a prayer list, you will find that you
+					will pray longer, your will pray more consistently, and you will remember important
+					requests for which to pray that otherwise you may forget. Your prayer list is the place to
+					record your requests and personal meetings with God.
 				</p>
 
 				<p>

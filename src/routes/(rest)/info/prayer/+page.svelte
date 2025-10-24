@@ -21,11 +21,13 @@
 				<p>
 					Prayer is an important aspect of one’s devotional life. Someone has defined prayer as
 					talking with God. Though prayer includes making requests to God, there are other ways to
-					talk with God. The acrostic PRAY presents four forms of talking with God that we should
-					include in our prayers.
+					talk with God. The acrostic <strong>PRAY</strong> presents four forms of talking with God that
+					we should include in our prayers.
 				</p>
 
-				<h2>P - Praise</h2>
+				<h2 class="hour-title">PRAY</h2>
+
+				<h3>P - Praise</h3>
 				<p>
 					<strong>What is it?</strong>
 					<br />
@@ -84,7 +86,7 @@
 						totally honest and transparent. Be specific! Know the list of specific sins in the Bible
 						and judge yourself in the light of them. Do not plead ignorance as an excuse. Do not let
 						past sins that have been confessed surface in your mind. The devil will use this to keep
-						you in an attitude of defeat. There is no condemnation to them that are in Christ Jesus
+						you in an attitude of defeat. There फस no condemnation to them that are in Christ Jesus
 						(Romans 8:1).
 					</li>
 					<li>
@@ -150,16 +152,147 @@
 					<li>If you sin, quickly confess it and put the Lord back on the throne of your life.</li>
 				</ol>
 
-				
 				<div class="readings-selector">
-					<div class="hour mt-8"></div>
+					<h2 class="hour-title">The Hour That Changes the World</h2>
+
+					<p>
+						As you grow in your meeting and walk with God, you may find other forms of prayer and
+						worship that add meaning and enjoyment to your devotional life.
+					</p>
+
+					<p>
+						In his book, <strong>The Hour that Changes the World</strong>,
+						<strong>Dick Eastman</strong> suggests dividing an hour into 12 periods of 5 minutes each.
+						Each period is used for a different form of prayer, encouraging a varied and deep communion
+						with the holy, almighty God. Praying through the different forms of prayer using this plan
+						can be a very meaningful and enjoyable hour—the Hour that Changes the World.
+					</p>
+
+					<div class="hour-img"></div>
 				</div>
+
+				<ol class="hour-list">
+					<li>
+						<strong>Worship and Praise</strong> (5 minutes) Express adoration and devotion to God for
+						who He is. Remember the meaning of His names and attributes and praise Him for His character.
+						The daily “Focus of God” section of the devotional journal will be helpful.
+					</li>
+					<li>
+						<strong>Waiting on the Lord</strong> (5 minutes) Surrender and yield to God (often wordless
+						worship) as you look to commune with God. Reflect upon your relationship with God in light
+						of His names and attributes, and submit yourself to God asking Him to guide your thoughts
+						as you pray.
+					</li>
+					<li>
+						<strong>Confession of Sin</strong> (5 minutes) Admit your sinfulness to God and receive forgiveness
+						and cleansing. Confess all known sin and ask God to reveal any sin that would hinder your
+						fellowship with God; thus allowing entrance into His presence—the Throne of Grace.
+					</li>
+					<li>
+						<strong>Spiritual Warfare</strong> (5 minutes) Be especially wary and alert for the possible
+						onslaughts and attacks of the devil. Ask the Holy Spirit to show you the strongholds and
+						strategies of the evil one. Stand on His authority as you pray.
+					</li>
+					<li>
+						<strong>Claiming Promises</strong> (5 minutes) Pray according to God's Word and purposes.
+						Recall the promises in Scripture that God has brought to your heart and mind. Claim these
+						promises by faith as your authority from God for answered prayer.
+					</li>
+					<li>
+						<strong>Intercession</strong> (5 minutes) Pray for others concentrating on their needs and
+						distress, standing in the gap for someone else. When you intercede, you stand at God's side,
+						and you work with Him for the salvation or benefit of someone else.
+					</li>
+					<li>
+						<strong>Petitions</strong> (5 minutes) Ask God to provide for my needs. To bring my own distress,
+						emotions, crisis situations, needs and desires before God. I come to God in total dependence
+						and humility as His servant and child.
+					</li>
+					<li>
+						<strong>Thanksgiving</strong> (5 minutes) Acknowledge your appreciation to the Lord for His
+						care and protection and for who He is. Thank the Lord for working in answer to your prayers.
+					</li>
+					<li>
+						<strong>Scripture Reading</strong> (5 minutes) Read passages of the Bible looking for God
+						to speak to you personally and specifically in the text. Do not rush through your reading.
+						Seek to identify God’s dealings and interaction with the other characters in the text. See
+						God’s glory!
+					</li>
+					<li>
+						<strong>Meditation</strong> (5 minutes) Reflect upon or think about your scripture reading
+						more closely and to evaluate it spiritually. Meditate on what it means for your daily life.
+					</li>
+					<li>
+						<strong>Listening—Yielding</strong> (5 minutes) Ask God to show you steps of obedience to
+						take in response to scripture reading, meditation, and other promptings from your prayer
+						time. Yield your body to actively obey the Holy Spirit in these areas. Make an “I will” commitment.
+					</li>
+					<li>
+						<strong>Songs of Praise</strong> (5 minutes) End your hour with God by praising Him with
+						song. This could be a hymn of adoration, a song of consecration, a prayerful hymn, or spiritual
+						song. This is your final spiritual act of placing God on the throne of your life for today!
+					</li>
+				</ol>
+
+				<p>
+					Begin this system of prayer, by following the schedule of 5-minute forms until you feel
+					comfortable and understand each form. Then you may adjust the schedule of the forms to
+					create your own personal approach to meeting with God. As you learn to commune with God
+					through practicing these forms of prayer, I trust you will find your prayer time more
+					meaningful and enjoyable. More helps for the different forms of prayer can be found on the
+					pages facing each monthly calendar.
+				</p>
+
+				<p class="attribution">
+					Dick Eastman, <strong>The Hour that Changes the World</strong>. Used by permission.
+				</p>
 			</main>
 		</div>
 	</div>
 {/if}
 
 <style>
+	/* ------------------------------------- */
+	/* NEW: Hour List Styling for Readability */
+	/* ------------------------------------- */
+	.hour-list {
+		list-style-type: decimal; /* Ensures numbered list */
+		padding-left: 20px;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	.hour-list > li {
+		margin-bottom: 12px;
+		padding-left: 5px;
+		line-height: 1.5;
+	}
+	.hour-list strong {
+		/* Makes the first phrase bold without markdown */
+		font-weight: bold;
+	}
+	.diagram-note {
+		font-style: italic;
+		margin-top: 16px;
+		margin-bottom: 0;
+	}
+	.hour-title {
+		color: #fcc45d; /* Highlight the new section title */
+		font-size: 24px;
+		margin-bottom: 0;
+	}
+	.mt-8 {
+		margin-top: 32px;
+	}
+	.attribution {
+		margin-top: 40px;
+		font-size: 0.9em;
+		opacity: 0.7;
+		font-style: italic;
+	}
+
+	/* ------------------------------------- */
+	/* EXISTING STYLES */
+	/* ------------------------------------- */
 	.college-students {
 		background: url(/images/pray.jpg);
 		background-position: center;
@@ -170,7 +303,7 @@
 		flex: 1;
 	}
 
-	.hour {
+	.hour-img {
 		background: url(/images/hour.png);
 		background-color: white;
 		background-position: center;
@@ -178,6 +311,7 @@
 		background-repeat: no-repeat;
 		width: 100%;
 		min-height: 400px;
+		margin-bottom: 8px;
 		border-radius: 12px;
 		flex: 1;
 	}
@@ -229,15 +363,18 @@
 	}
 	p {
 		margin-top: 4px;
+		margin-bottom: 0;
 	}
 	ol > li {
 		margin-bottom: 8px;
 	}
 
-	strong {
+	li {
+		margin-bottom: 12px !important;
+	}
+	h3 {
+		padding-top: 32px;
 		font-size: 16px;
-		padding-top: 12px;
-		display: flex;
-		margin-bottom: -12px;
+		margin-bottom: 24px;
 	}
 </style>
