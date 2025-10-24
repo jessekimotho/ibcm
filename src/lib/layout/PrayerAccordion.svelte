@@ -29,33 +29,34 @@
 		}
 	];
 
-	// Object to store prayer requests grouped by subcategory
+	// FIX: Reverting to traditional Svelte reactivity (let keyword)
 	let groupedPrayers = {};
-
-	// Track open states for main groups and subcategories
 	let openMain = {};
 	let openSub = {};
-
-	// Track whether we are adding a new prayer for a given subcategory
 	let addingNew = {};
-	// Hold temporary new prayer text for each subcategory
 	let newPrayerText = {};
 
 	// Load prayers from the database and group them by subcategory, sorted by order.
 	async function loadPrayers() {
 		const prayerRequests = await db.prayers.toArray();
+		const newGroupedPrayers = {};
 		mainGroups.forEach((group) => {
 			group.subcategories.forEach((sub) => {
-				groupedPrayers[sub] = prayerRequests
+				newGroupedPrayers[sub] = prayerRequests
 					.filter((prayer) => prayer.category === sub)
 					.sort((a, b) => (a.order || 0) - (b.order || 0));
 			});
 		});
+		// FIX: Reassign the variable to trigger reactivity
+		groupedPrayers = newGroupedPrayers;
 	}
 
 	onMount(() => {
 		// Initialize accordion open states (all closed by default)
 		mainGroups.forEach((group) => (openMain[group.label] = false));
+		// FIX: Reassigning objects to ensure initial reactivity is setup
+		openMain = openMain;
+
 		mainGroups
 			.flatMap((group) => group.subcategories)
 			.forEach((sub) => {
@@ -63,30 +64,75 @@
 				addingNew[sub] = false;
 				newPrayerText[sub] = '';
 			});
+
+		openSub = openSub;
+		addingNew = addingNew;
+		newPrayerText = newPrayerText;
+
 		loadPrayers();
 	});
 
 	// Handle drag-and-drop reordering within each subcategory.
 	async function handleDnd({ detail }, subCategory) {
-		// detail.items is the new order; update the local grouping.
 		const newItems = detail.items;
 
-		// Update the "order" field for each prayer based on its index.
 		await Promise.all(
 			newItems.map((prayer, index) => {
 				prayer.order = index;
 				return db.prayers.put(prayer);
 			})
 		);
-		// Update the groupedPrayers with the new order.
+
+		// FIX: Reassign the specific array within the object to trigger reactivity
 		groupedPrayers[subCategory] = newItems;
+		groupedPrayers = groupedPrayers; // Necessary if you want the array assignment to work reliably on the object
+	}
+
+	/**
+	 * Handles manual movement (up/down arrows) of a prayer request.
+	 */
+	async function handleMove(event, subCategory) {
+		const { id, direction } = event.detail;
+		const items = groupedPrayers[subCategory];
+		const oldIndex = items.findIndex((p) => p.id === id);
+
+		if (oldIndex === -1) return;
+
+		let newIndex = oldIndex;
+		if (direction === 'up') {
+			newIndex = Math.max(0, oldIndex - 1);
+		} else if (direction === 'down') {
+			newIndex = Math.min(items.length - 1, oldIndex + 1);
+		}
+
+		if (oldIndex === newIndex) {
+			return;
+		}
+
+		// 1. Swap the elements in the local array
+		// Use a temporary array to ensure we don't modify the state directly before the swap
+		const tempItems = [...items];
+		const [movedItem] = tempItems.splice(oldIndex, 1);
+		tempItems.splice(newIndex, 0, movedItem);
+
+		// 2. Update the 'order' field for *all* items in the subcategory
+		const updates = tempItems.map((prayer, index) => {
+			prayer.order = index;
+			return db.prayers.put(prayer);
+		});
+
+		// 3. Commit the order changes to the database
+		await Promise.all(updates);
+
+		// 4. FIX: Reassign the array and the main object for UI update
+		groupedPrayers[subCategory] = tempItems;
+		groupedPrayers = groupedPrayers;
 	}
 
 	// Add a new prayer for the given subcategory.
 	async function addNewPrayer(sub) {
 		if (newPrayerText[sub] && newPrayerText[sub].trim().length > 0) {
 			const currentPrayers = groupedPrayers[sub] || [];
-			// Set order to last order + 1 (or 0 if empty)
 			const newOrder =
 				currentPrayers.length > 0 ? Math.max(...currentPrayers.map((p) => p.order || 0)) + 1 : 0;
 			let newPrayer = {
@@ -99,49 +145,67 @@
 			};
 			const id = await db.prayers.add(newPrayer);
 			newPrayer.id = id;
+
+			// FIX: Reassign the array and the main object for UI update
 			groupedPrayers[sub] = [...currentPrayers, newPrayer];
+			groupedPrayers = groupedPrayers;
+
 			newPrayerText[sub] = '';
+			newPrayerText = newPrayerText; // Reassign to clear input
 			addingNew[sub] = false;
+			addingNew = addingNew; // Reassign to hide form
 		}
 	}
 
 	function cancelAdd(sub) {
 		newPrayerText[sub] = '';
+		newPrayerText = newPrayerText; // Reassign to clear input
 		addingNew[sub] = false;
+		addingNew = addingNew; // Reassign to hide form
 	}
 </script>
 
 <main>
 	{#each mainGroups as group}
 		<div class="accordion main">
-			<div
-				class="accordion-header main-header"
-				on:click={() => (openMain[group.label] = !openMain[group.label])}
-			>
-				{group.label}
+			<div class="accordion-header main-header">
+				<button
+					on:click={() => ((openMain[group.label] = !openMain[group.label]), (openMain = openMain))}
+					aria-expanded={openMain[group.label]}
+					aria-controls="{group.label}-content"
+				>
+					{group.label}
+				</button>
 			</div>
 			{#if openMain[group.label]}
-				<div class="accordion-content">
+				<div class="accordion-content" id="{group.label}-content">
 					{#each group.subcategories as sub}
 						<div class="accordion sub">
-							<div
-								class="accordion-header sub-header"
-								on:click={() => (openSub[sub] = !openSub[sub])}
-							>
-								{sub} ({groupedPrayers[sub] ? groupedPrayers[sub].length : 0})
+							<div class="accordion-header sub-header">
+								<button
+									on:click={() => ((openSub[sub] = !openSub[sub]), (openSub = openSub))}
+									aria-expanded={openSub[sub]}
+									aria-controls="{sub}-content"
+								>
+									{sub} ({groupedPrayers[sub] ? groupedPrayers[sub].length : 0})
+								</button>
 							</div>
 							{#if openSub[sub]}
-								<div class="accordion-content prayer-list">
+								<div
+									class="accordion-content prayer-list"
+									id="{sub}-content"
+									use:dndzone={{ items: groupedPrayers[sub], flipDurationMs: 150, type: sub }}
+									on:consider={(e) => handleDnd(e, sub)}
+									on:finalize={(e) => handleDnd(e, sub)}
+								>
 									{#if groupedPrayers[sub] && groupedPrayers[sub].length > 0}
 										{#each groupedPrayers[sub] as prayer (prayer.id)}
-											<!-- Include a drag handle inside each Request if needed -->
-											<Request {prayer} />
+											<Request {prayer} on:move={(e) => handleMove(e, sub)} />
 										{/each}
 									{:else}
 										<div class="empty">No prayer requests in this category.</div>
 									{/if}
 
-									<!-- "Add New" button or inline add form -->
 									{#if addingNew[sub]}
 										<div class="new-prayer">
 											<textarea
@@ -158,6 +222,7 @@
 											class="add-new-btn"
 											on:click={() => {
 												addingNew[sub] = true;
+												addingNew = addingNew; // Reassign to show form
 												newPrayerText[sub] = '';
 											}}
 										>
@@ -176,16 +241,31 @@
 
 <style>
 	/* Main accordion styling */
+	main {
+		color: white;
+	}
 	.accordion.main {
 		margin: 16px 0;
 		border-radius: 8px;
 	}
+
 	.main-header {
 		background-color: #444;
 		color: #fff;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+	.main-header button {
+		background-color: transparent;
+		color: #fff;
 		padding: 16px;
 		cursor: pointer;
+		border: none;
+		width: 100%;
+		text-align: left;
+		font-size: inherit;
 	}
+
 	.accordion-content {
 		padding: 8px 16px;
 		background-color: #222;
@@ -196,12 +276,25 @@
 		border: 1px solid #666;
 		border-radius: 6px;
 	}
+
 	.sub-header {
 		background-color: #555;
 		color: #fff;
+		border-radius: 6px;
+		overflow: hidden;
+	}
+	.sub-header button {
+		background-color: transparent;
+		color: #fff;
 		padding: 12px;
 		cursor: pointer;
+		border: none;
+		width: 100%;
+		text-align: left;
+		font-size: inherit;
 	}
+
+	/* The container that holds the Request components and has dndzone applied */
 	.prayer-list {
 		padding: 8px;
 		background-color: #333;
