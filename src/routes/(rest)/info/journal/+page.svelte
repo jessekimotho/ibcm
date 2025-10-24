@@ -63,11 +63,6 @@
 					requests for which to pray that otherwise you may forget. Your prayer list is the place to
 					record your requests and personal meetings with God.
 				</p>
-
-				<p>
-					Additional helps and suggestions are found on the following pages. Also, on the pages
-					opposite the monthly calendar pages; other helps for the forms of prayer are included.
-				</p>
 			</main>
 		</div>
 	</div>
