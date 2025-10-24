@@ -137,6 +137,14 @@
 		</div>
 
 		<div class="right-col">
+			<DialogVideo videoUrl="biblereading">
+				<div class="help-button flex flex-col gap-2" slot="trigger" transition:fade>
+					<span class="need-help-title mb-4">Need Help?</span>
+					<a class="view-guide-button" href="/info/word"> Click here to view guide </a>
+					<button class="view-guide-button"> Click here to watch the introduction video </button>
+				</div>
+			</DialogVideo>
+
 			<div class="journal right-w glass" transition:fade>
 				<div class="titling">Journal</div>
 				{#if devotionDetails}
@@ -170,9 +178,6 @@
 					</ol>
 				</div>
 			</div>
-			<DialogVideo videoUrl="biblereading">
-				<HelpButton slot="trigger" />
-			</DialogVideo>
 		</div>
 	</div>
 {/if}
@@ -298,7 +303,53 @@
 		align-items: center;
 	}
 
-	.journal {
+	/* .journal {
 		min-height: 350px;
+	} */
+	.help-button {
+		box-shadow: 5px 5px 20px 10px #0000003d;
+		color: white;
+		padding: 18px 12px;
+		border-radius: 8px;
+		display: flex;
+		gap: 4px;
+		flex-direction: column;
+		background: #0f0f0fad;
+		backdrop-filter: blur(50px);
+		border-radius: 16px;
+		transition: all 300ms;
+		width: 100%;
+		padding: 20px;
+	}
+
+	.description {
+		color: #ffca67;
+		margin-top: 2px;
+		margin-bottom: 4px;
+		font-size: 14px;
+		text-decoration: underline;
+		transition: all 300ms;
+	}
+	.help-button:hover {
+		background: #1f1503ba;
+	}
+	.help-button:hover .description {
+		color: #f6cf86;
+	}
+	.view-guide-button {
+		color: white;
+		background: #ffa5003b;
+		padding: 8px 12px;
+		border-radius: 8px;
+		border: none;
+		cursor: pointer;
+		flex-shrink: 0;
+		margin-top: 4px;
+		text-decoration: none;
+	}
+	.need-help-title {
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 8px;
 	}
 </style>
