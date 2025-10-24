@@ -148,11 +148,11 @@
 						</a>
 
 						<a class="button-complex" href="/pray">
-							<div class="button-title">Prayer Requests</div>
+							<div class="button-title">Prayer Journals</div>
 						</a>
 
 						<a class="button-complex" href="/readings">
-							<div class="button-title">Bible Readings</div>
+							<div class="button-title">Bible Reading Journal</div>
 						</a>
 						<!-- <a class="button-complex" href="/plan">
 							<div class="button-title">Daily Planner</div>
