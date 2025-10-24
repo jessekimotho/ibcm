@@ -154,9 +154,9 @@
 						<a class="button-complex" href="/readings">
 							<div class="button-title">Bible Readings</div>
 						</a>
-						<a class="button-complex" href="/plan">
+						<!-- <a class="button-complex" href="/plan">
 							<div class="button-title">Daily Planner</div>
-						</a>
+						</a> -->
 						<!-- <a class="button-complex" href="/resources">
 						<div class="button-title">Resources</div>
 						<div class="subtext">Devotional Resources</div>
