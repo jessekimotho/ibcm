@@ -149,6 +149,11 @@
 					</li>
 					<li>If you sin, quickly confess it and put the Lord back on the throne of your life.</li>
 				</ol>
+
+				
+				<div class="readings-selector">
+					<div class="hour mt-8"></div>
+				</div>
 			</main>
 		</div>
 	</div>
@@ -159,6 +164,18 @@
 		background: url(/images/pray.jpg);
 		background-position: center;
 		background-size: cover;
+		width: 100%;
+		min-height: 400px;
+		border-radius: 12px;
+		flex: 1;
+	}
+
+	.hour {
+		background: url(/images/hour.png);
+		background-color: white;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
 		width: 100%;
 		min-height: 400px;
 		border-radius: 12px;
