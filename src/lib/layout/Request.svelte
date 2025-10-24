@@ -1,11 +1,14 @@
 <script>
 	import db from '$lib/js/db.js';
 	import { slide } from 'svelte/transition';
-	import { onMount, createEventDispatcher } from 'svelte'; // Import createEventDispatcher
+	import { onMount, createEventDispatcher } from 'svelte';
 
 	export let prayer;
 
-	const dispatch = createEventDispatcher(); // Initialize dispatcher
+	const dispatch = createEventDispatcher();
+	// Define the target category constants
+	const THANKSGIVING_CATEGORY = 'Thanksgiving';
+	const UNANSWERED_CATEGORY = 'Ask';
 
 	let loaded = false;
 	let isDeleted = false;
@@ -37,41 +40,49 @@
 	];
 
 	async function saveChanges() {
-		// Update the prayer object with the new details
 		prayer.request = updatedRequest;
 		prayer.category = updatedCategory;
-		// Save the updated prayer to the Dexie database
 		await db.prayers.put(prayer);
-		// Exit editing mode
 		isEditing = false;
 	}
 
 	async function markAsAnswered() {
+		const oldCategory = prayer.category;
 		prayer.isAnswered = true;
 		prayer.dateAnswered = new Date().toISOString();
+
+		dispatch('answered', {
+			id: prayer.id,
+			oldCategory: oldCategory,
+			newCategory: THANKSGIVING_CATEGORY
+		});
+
 		await db.prayers.put(prayer);
 	}
 
 	async function markAsUnanswered() {
+		const oldCategory = prayer.category;
 		prayer.isAnswered = false;
 		prayer.dateAnswered = null;
+
+		dispatch('unanswered', {
+			id: prayer.id,
+			oldCategory: oldCategory,
+			newCategory: UNANSWERED_CATEGORY
+		});
+
 		await db.prayers.put(prayer);
 	}
 
 	async function deletePrayer() {
 		await db.prayers.delete(prayer.id);
-		isDeleted = true; // Mark this component for removal
+		isDeleted = true;
 	}
 
-	/**
-	 * Dispatches a custom 'move' event to the parent component.
-	 * The parent will handle the actual array swap and database update.
-	 * @param {'up' | 'down'} direction - The intended direction of movement.
-	 */
 	function move(direction) {
 		dispatch('move', {
 			id: prayer.id,
-			direction: direction // 'up' or 'down'
+			direction: direction
 		});
 	}
 </script>
@@ -88,6 +99,9 @@
 				<textarea bind:value={updatedRequest} class="edit-request"></textarea>
 			{:else}
 				<span class="category">{prayer.category}</span>
+				{#if prayer.isAnswered}
+					<span class="answered-tag">Answered Prayer</span>
+				{/if}
 				<p class="actual-request">{prayer.request}</p>
 			{/if}
 			<div class="prayer-dates">
@@ -107,11 +121,10 @@
 					<button class="arrow-action" on:click={() => move('down')} title="Move Down">▼</button>
 				</div>
 
-				{#if prayer.isAnswered}
-					<button class="action" on:click={markAsUnanswered}>Mark as Unanswered</button>
-				{:else}
+				{#if !prayer.isAnswered}
 					<button class="action" on:click={markAsAnswered}>Mark as Answered</button>
 				{/if}
+
 				<button class="action edit" on:click={() => (isEditing = true)}>Edit</button>
 				<button class="action delete" on:click={deletePrayer}>Delete</button>
 			{/if}
@@ -137,27 +150,58 @@
 		border-radius: 12px;
 		background: #ffffff17;
 	}
+
+	.prayer-details {
+		/* Use flex to align category and tag on the same line if needed */
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-bottom: 8px; /* Push the dates down */
+	}
+
 	.actual-request {
-		margin-top: 8px;
+		/* Reset margin to position it cleanly after the tag/category */
+		margin-top: 0;
 		margin-bottom: 6px;
+		flex-basis: 100%; /* Ensure the request text takes the full width below the tags */
+		order: 10; /* Make sure it appears below the tags */
 	}
 
 	.category {
 		font-size: 13px;
 		font-weight: 600;
+		margin-right: 10px;
+		order: 1;
 	}
+
+	/* 👇 NEW: Styling for the Answered Tag */
+	.answered-tag {
+		display: inline-block;
+		background-color: #00b894; /* Green color for answered */
+		color: white;
+		font-size: 11px;
+		font-weight: bold;
+		padding: 4px 8px;
+		border-radius: 4px;
+		margin-right: 10px;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		order: 2; /* Position after the category */
+	}
+	/* ------------------------------------ */
 
 	.prayer-actions {
 		display: flex;
 		gap: 8px;
 		margin-top: 12px;
-		/* Ensure actions are all aligned nicely */
 		align-items: center;
 		flex-wrap: wrap;
 	}
 
 	.prayer-dates {
 		opacity: 0.6;
+		flex-basis: 100%; /* Ensure dates take up full width */
+		order: 20;
 	}
 
 	button.action {
@@ -167,7 +211,7 @@
 		border-radius: 8px;
 		border: none;
 		cursor: pointer;
-		flex-shrink: 0; /* Prevent buttons from being squished */
+		flex-shrink: 0;
 	}
 	.save {
 		background: #00b894;
@@ -185,17 +229,16 @@
 		background: #ffffff14;
 	}
 
-	/* NEW: Styling for Reorder Arrows */
 	.reorder-controls {
 		display: flex;
-		gap: 4px; /* Small gap between arrows */
-		border-right: 1px solid #ffffff33; /* Visual separator */
+		gap: 4px;
+		border-right: 1px solid #ffffff33;
 		padding-right: 8px;
 		margin-right: 4px;
 	}
 
 	button.arrow-action {
-		background: #9c27b052; /* A distinct color for reordering */
+		background: #9c27b052;
 		color: white;
 		padding: 6px;
 		border-radius: 4px;

@@ -47,7 +47,6 @@
 
 		<!-- Right column: New prayer request form and help dialog -->
 		<div class="right-col">
-		 
 			<DialogVideo videoUrl="prayerjournal">
 				<HelpButton slot="trigger" />
 			</DialogVideo>

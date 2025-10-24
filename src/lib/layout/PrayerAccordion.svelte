@@ -20,7 +20,7 @@
 				'Claiming Promises',
 				'Intercession',
 				'Petitions',
-				'Thanksgiving',
+				'Thanksgiving', // Target category for answered prayers in this group
 				'Scripture Reading',
 				'Meditation',
 				'Listening - Yielding',
@@ -29,12 +29,36 @@
 		}
 	];
 
-	// FIX: Reverting to traditional Svelte reactivity (let keyword)
+	// Standard Svelte reactivity model (Svelte 4/5)
 	let groupedPrayers = {};
 	let openMain = {};
 	let openSub = {};
 	let addingNew = {};
 	let newPrayerText = {};
+
+	// --- NEW LOGIC: Determine the destination category based on the old category's parent group ---
+	/**
+	 * Determines the correct destination category ('Praise' or 'Thanksgiving')
+	 * based on which main group the prayer's current category belongs to.
+	 * @param {string} oldCategory
+	 * @returns {string} The name of the destination category.
+	 */
+	function getDestinationCategory(oldCategory) {
+		for (const group of mainGroups) {
+			if (group.subcategories.includes(oldCategory)) {
+				if (group.label === 'PRAY') {
+					// All categories under 'PRAY' move to 'Praise'
+					return 'Praise';
+				} else if (group.label === 'Hour that changes the world') {
+					// All categories under 'Hour that changes the world' move to 'Thanksgiving'
+					return 'Thanksgiving';
+				}
+			}
+		}
+		// Fallback, though ideally, all categories are covered
+		return 'Thanksgiving';
+	}
+	// ---------------------------------------------------------------------------------------------
 
 	// Load prayers from the database and group them by subcategory, sorted by order.
 	async function loadPrayers() {
@@ -47,15 +71,13 @@
 					.sort((a, b) => (a.order || 0) - (b.order || 0));
 			});
 		});
-		// FIX: Reassign the variable to trigger reactivity
 		groupedPrayers = newGroupedPrayers;
 	}
 
 	onMount(() => {
 		// Initialize accordion open states (all closed by default)
 		mainGroups.forEach((group) => (openMain[group.label] = false));
-		// FIX: Reassigning objects to ensure initial reactivity is setup
-		openMain = openMain;
+		openMain = openMain; // Trigger reactivity for initial state
 
 		mainGroups
 			.flatMap((group) => group.subcategories)
@@ -83,9 +105,8 @@
 			})
 		);
 
-		// FIX: Reassign the specific array within the object to trigger reactivity
 		groupedPrayers[subCategory] = newItems;
-		groupedPrayers = groupedPrayers; // Necessary if you want the array assignment to work reliably on the object
+		groupedPrayers = groupedPrayers;
 	}
 
 	/**
@@ -109,23 +130,78 @@
 			return;
 		}
 
-		// 1. Swap the elements in the local array
-		// Use a temporary array to ensure we don't modify the state directly before the swap
 		const tempItems = [...items];
 		const [movedItem] = tempItems.splice(oldIndex, 1);
 		tempItems.splice(newIndex, 0, movedItem);
 
-		// 2. Update the 'order' field for *all* items in the subcategory
 		const updates = tempItems.map((prayer, index) => {
 			prayer.order = index;
 			return db.prayers.put(prayer);
 		});
-
-		// 3. Commit the order changes to the database
 		await Promise.all(updates);
 
-		// 4. FIX: Reassign the array and the main object for UI update
 		groupedPrayers[subCategory] = tempItems;
+		groupedPrayers = groupedPrayers;
+	}
+
+	/**
+	 * HANDLES PRAYER MARKED AS ANSWERED (moves to group-specific target).
+	 */
+	async function handleAnswered(event) {
+		const { id, oldCategory } = event.detail; // Only need id and oldCategory
+
+		// --- NEW: Calculate the destination based on the old category's parent group ---
+		const newCategory = getDestinationCategory(oldCategory);
+
+		// 1. If already at the destination, do nothing (or just refresh)
+		if (oldCategory === newCategory) {
+			groupedPrayers = groupedPrayers;
+			return;
+		}
+
+		// 2. Find the item and remove it from the old list
+		const oldItems = groupedPrayers[oldCategory] || [];
+		const itemIndex = oldItems.findIndex((p) => p.id === id);
+		if (itemIndex === -1) return;
+
+		const [movedItem] = oldItems.splice(itemIndex, 1);
+		groupedPrayers[oldCategory] = oldItems; // Remove from old list UI
+
+		// 3. Update category, calculate new order, and save to database
+		movedItem.category = newCategory;
+		const newItems = groupedPrayers[newCategory] || [];
+		movedItem.order = newItems.length > 0 ? Math.max(...newItems.map((p) => p.order || 0)) + 1 : 0;
+		await db.prayers.put(movedItem);
+
+		// 4. Add to the new list and update the UI
+		groupedPrayers[newCategory] = [...newItems, movedItem];
+		groupedPrayers = groupedPrayers;
+	}
+
+	/**
+	 * HANDLES PRAYER MARKED AS UNANSWERED (moves back to 'Ask').
+	 * Note: For simplicity, all unmarked prayers go to 'Ask', regardless of group.
+	 */
+	async function handleUnanswered(event) {
+		const { id, oldCategory } = event.detail;
+		const newCategory = 'Ask'; // Target for all unmarked prayers
+
+		// 1. Find the item and remove it from the old list
+		const oldItems = groupedPrayers[oldCategory] || [];
+		const itemIndex = oldItems.findIndex((p) => p.id === id);
+		if (itemIndex === -1) return;
+
+		const [movedItem] = oldItems.splice(itemIndex, 1);
+		groupedPrayers[oldCategory] = oldItems; // Remove from old list UI
+
+		// 2. Update category, calculate new order, and save to database
+		movedItem.category = newCategory;
+		const newItems = groupedPrayers[newCategory] || [];
+		movedItem.order = newItems.length > 0 ? Math.max(...newItems.map((p) => p.order || 0)) + 1 : 0;
+		await db.prayers.put(movedItem);
+
+		// 3. Add to the new list and update the UI
+		groupedPrayers[newCategory] = [...newItems, movedItem];
 		groupedPrayers = groupedPrayers;
 	}
 
@@ -146,22 +222,21 @@
 			const id = await db.prayers.add(newPrayer);
 			newPrayer.id = id;
 
-			// FIX: Reassign the array and the main object for UI update
 			groupedPrayers[sub] = [...currentPrayers, newPrayer];
 			groupedPrayers = groupedPrayers;
 
 			newPrayerText[sub] = '';
-			newPrayerText = newPrayerText; // Reassign to clear input
+			newPrayerText = newPrayerText;
 			addingNew[sub] = false;
-			addingNew = addingNew; // Reassign to hide form
+			addingNew = addingNew;
 		}
 	}
 
 	function cancelAdd(sub) {
 		newPrayerText[sub] = '';
-		newPrayerText = newPrayerText; // Reassign to clear input
+		newPrayerText = newPrayerText;
 		addingNew[sub] = false;
-		addingNew = addingNew; // Reassign to hide form
+		addingNew = addingNew;
 	}
 </script>
 
@@ -200,7 +275,12 @@
 								>
 									{#if groupedPrayers[sub] && groupedPrayers[sub].length > 0}
 										{#each groupedPrayers[sub] as prayer (prayer.id)}
-											<Request {prayer} on:move={(e) => handleMove(e, sub)} />
+											<Request
+												{prayer}
+												on:move={(e) => handleMove(e, sub)}
+												on:answered={(e) => handleAnswered(e)}
+												on:unanswered={(e) => handleUnanswered(e)}
+											/>
 										{/each}
 									{:else}
 										<div class="empty">No prayer requests in this category.</div>
@@ -222,7 +302,7 @@
 											class="add-new-btn"
 											on:click={() => {
 												addingNew[sub] = true;
-												addingNew = addingNew; // Reassign to show form
+												addingNew = addingNew;
 												newPrayerText[sub] = '';
 											}}
 										>
@@ -249,6 +329,7 @@
 		border-radius: 8px;
 	}
 
+	/* A11y & Styling for Main Header */
 	.main-header {
 		background-color: #444;
 		color: #fff;
@@ -277,6 +358,7 @@
 		border-radius: 6px;
 	}
 
+	/* A11y & Styling for Sub Header */
 	.sub-header {
 		background-color: #555;
 		color: #fff;
