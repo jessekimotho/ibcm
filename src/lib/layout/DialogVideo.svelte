@@ -7,8 +7,8 @@
 
 	// Map your existing keys -> YouTube video IDs
 	const YT_MAP = {
-		introduction: 'lO0kEoXh25k',
-		gettingstarted: '364cl9DMeSM', // How to use the Journal
+		introduction: '364cl9DMeSM',
+		gettingstarted: 'lO0kEoXh25k', // How to use the Journal
 		biblereading: 'PTCFXaBw-Yo', // Meeting God in his Word
 		prayerjournal: '0l69NQYh5Zo'
 	};
